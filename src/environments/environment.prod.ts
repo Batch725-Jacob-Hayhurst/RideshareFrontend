@@ -6,7 +6,7 @@ const baseUri = ``;
 /**
  * Set the port var
  */
-const port = '8080';
+const port = '9001';
 
   /**
  * These are the constants for the production config
