@@ -43,7 +43,12 @@ export class ProfileLocationComponent implements OnInit {
     this.success = "Updated Successfully!";
   }
 
-  displayBtn() {
-    this.showAddress2 = true;
+  wAddressExist() {
+    if (this.address2 != null) {
+        return true;
+    }
+    else {
+      return false;
+    }
   }
 }

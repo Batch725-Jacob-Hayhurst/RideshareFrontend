@@ -75,7 +75,7 @@ export class SignupModalComponent implements OnInit {
     this.hCityError='';
     this.hZipError='';
     this.success='';
-    this.user.wAddress = this.user.hAddress;
+    // this.user.wAddress = this.user.hAddress;
     this.user.wState = this.user.hState;
     this.user.wCity = this.user.hCity;
     this.user.wZip = this.user.hZip;
