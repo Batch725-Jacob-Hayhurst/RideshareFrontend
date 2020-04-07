@@ -1,0 +1,168 @@
+<div class="container centerMe">
+    <img src="https://i.imgur.com/B8F2L7B.jpg" alt="Car" class="blackFade" style="width:100%; height: 85vh;">
+    <div class="centered" [hidden]="!isLogin || !isSignUp">
+
+        <h1 class="orangeText">RideForce</h1>
+        <p class="orangeText"><strong>Introducing Revature employees to their forever rides.</strong></p>
+
+
+        <div>
+
+            <button mat-raised-button (click)="toggleLogin()">Login</button>
+            <p id="signupid" (click)="toggleSignUp()">Create an Account</p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- LOGIN DIV -->
+
+    <div class="centered">
+        <mat-card [hidden]="isLogin">
+
+
+            <div class="container">
+                <div class="text-center" id="login-form" (keydown.enter)="login()">
+
+                    <div class="modal-title-container">
+                        <button type="button" class="close pull-right"
+                            (click)="toggleLogin()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="content">
+                        <div class="form-group">
+                            <p class="error">{{userNotFound}}</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Username</label><br>
+                            <input type="text" [(ngModel)]="userName" class="form-control"
+                                id="formGroupExampleInput" placeholder="Enter Username">
+                            <p class="error">{{usernameError}}</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Password</label><br>
+                            <input type="password" [(ngModel)]="passWord" class="form-control"
+                                id="formGroupExampleInput2" placeholder="Enter Password">
+                            <p class="error">{{pwdError}}</p>
+                        </div>
+
+                        <p class="alert alert-danger" *ngIf="failed"><strong>Login Failed!</strong></p>
+                        <p class="alert alert-danger" *ngIf="banned"><strong>You are banned</strong></p>
+                        <button type="submit" class="btn btn-primary" id="sign-in-btn"
+                            (click)="login()">Login</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+
+        </mat-card>
+
+
+
+        <!-- SIGN UP DIV -->
+
+        <mat-card [hidden]="isSignUp">
+
+            <div class="container">
+                <div class="text-center" id="login-form" (keydown.enter)="login()">
+
+                    <div class="modal-title-container">
+                        <button type="button" class="close pull-right"
+                            (click)="toggleSignUp()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Sign Up</h4>
+                    </div>
+
+                    <mat-grid-list cols="5" rowHeight="25vh">
+
+                        <mat-grid-tile background-color="lightblue" colspan="2" rowspan="1">1</mat-grid-tile>
+                        <mat-grid-tile background-color="lightgreen" colspan="2" rowspan="1">2</mat-grid-tile>
+                        <mat-grid-tile background-color="lightpink" colspan="1" rowspan="2">3</mat-grid-tile>
+                        <mat-grid-tile background-color="purple" colspan="2" rowspan="1">4</mat-grid-tile>
+                        <mat-grid-tile background-color="orange" colspan="2" rowspan="1">5</mat-grid-tile>
+                    
+                    </mat-grid-list>
+
+
+
+
+                    <!-- <div class="content">
+                        <div class="form-group">
+                            <p class="error">{{userNotFound}}</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Username</label><br>
+                            <input type="text" [(ngModel)]="userName" class="form-control"
+                                id="formGroupExampleInput" placeholder="Enter Username">
+                            <p class="error">{{usernameError}}</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Password</label><br>
+                            <input type="password" [(ngModel)]="passWord" class="form-control"
+                                id="formGroupExampleInput2" placeholder="Enter Password">
+                            <p class="error">{{pwdError}}</p>
+                        </div>
+
+                        <p class="alert alert-danger" *ngIf="failed"><strong>Sign Up Failed!</strong></p>
+                        <p class="alert alert-danger" *ngIf="banned"><strong>You are banned</strong></p>
+                        <button type="submit" class="btn btn-primary" id="sign-in-btn"
+                            (click)="login()">Login</button>
+                        <br><br>
+                    </div> -->
+                </div>
+            
+
+
+            </div>
+
+        </mat-card>
+    </div>
+
+
+
+</div>
+<div class="container mBot">
+    <div class="row cBorder">
+        <div class="col-sm-4 mBot">
+            <div class="card">
+                <i class="fa fa-blind  fa-3x center1" aria-hidden="true"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Find Drivers</h5>
+                    <p class="card-text">Find drivers in your area.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 mBot">
+            <div class="card">
+                <i class="fa fa-group  fa-3x center1" aria-hidden="true"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Gain Relationships</h5>
+                    <p class="card-text">Meet fellow Revature employees.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 mBot">
+            <div class="card">
+                <i class="fa fa-cc-mastercard    fa-3x center1" aria-hidden="true"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Save Money</h5>
+                    <p class="card-text">Carpooling is the new green!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

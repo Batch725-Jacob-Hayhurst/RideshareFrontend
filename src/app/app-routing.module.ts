@@ -20,6 +20,7 @@ import { DriverContactModalComponent } from './components/driver-contact-modal/d
 import { DriverListComponent } from './components/driver-list/driver-list.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginreduxComponent } from './components/loginredux/loginredux.component';
 
 
 const routes: Routes = [
@@ -43,7 +44,8 @@ const routes: Routes = [
 {path: 'profile/location', component: ProfileLocationComponent},
 {path: 'driver', component: DriverContactModalComponent},
 {path: 'navbar', component: NavbarComponent},
-{path: '', component: HomePageComponent},
+// {path: '', component: HomePageComponent},
+{path: '', component: LoginreduxComponent },
 {path: '**', pathMatch: 'full', redirectTo: ''}];
 
 
