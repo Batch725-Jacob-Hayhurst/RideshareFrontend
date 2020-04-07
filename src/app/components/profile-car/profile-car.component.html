@@ -23,10 +23,26 @@
 
         <div class="form-group row">
             <div class="col-sm-1"></div>
-                <label for="Nrseats" class="col-sm-4 col-form-label ">Number of seats:</label>
+                <label for="Nseats" class="col-sm-4 col-form-label ">Number of seats:</label>
                 <div class="col-sm-4">
-                <select class="form-control" id="Nrseats" [(ngModel)]=nrSeats>
+                <select class="form-control" id="Nseats" [(ngModel)]=nrSeats>
                     <option>Choose the number of seats</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1"></div>
+                <label for="Avseats" class="col-sm-4 col-form-label ">Available seats:</label>
+                <div class="col-sm-4">
+                <select class="form-control" id="Avseats" [(ngModel)]=avSeats>
+                    <option>Choose the number of available seats</option>
+                    <option value="1">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
