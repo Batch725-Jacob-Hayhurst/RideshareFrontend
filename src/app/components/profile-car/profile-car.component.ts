@@ -12,6 +12,7 @@ export class ProfileCarComponent implements OnInit {
   make: string;
   model:string;
   nrSeats:number;
+  avSeats:number;
   currentCar: Car;
   success :string;
 
@@ -24,6 +25,7 @@ export class ProfileCarComponent implements OnInit {
       this.make = response.make;
       this.model = response.model;
       this.nrSeats = response.seats;
+      this.avSeats = response.availableSeats;
 
     });
   }
