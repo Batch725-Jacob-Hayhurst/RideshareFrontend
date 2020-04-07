@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'node_modules/ngx-bootstrap';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DriverComponent} from './components/driver/driver.component';
@@ -37,11 +37,9 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { LoginreduxComponent } from './components/loginredux/loginredux.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import { MatTableModule } from '@angular/material';
-
-
+import { MaterialModule } from 'src/app/material.module';
 
 
 @NgModule({
@@ -70,7 +68,10 @@ import { MatTableModule } from '@angular/material';
     DriverListComponent,
     UserRegisterComponent,
     HomePageComponent,
-    BsNavbarComponent
+    BsNavbarComponent,
+    LoginreduxComponent,
+
+    
     
   ],
   imports: [
@@ -83,9 +84,7 @@ import { MatTableModule } from '@angular/material';
     ModalModule.forRoot(),
     NgbModule,
     BrowserAnimationsModule,
-    MatPaginatorModule,
-    MatTableModule
-
+    MaterialModule
   ],
   providers: [
     UserService,
