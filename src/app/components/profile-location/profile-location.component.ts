@@ -16,6 +16,7 @@ export class ProfileLocationComponent implements OnInit {
   hState: string;
   currentUser: User;
   success :string;
+  showAddress2: boolean = false;
 
   constructor(private userService: UserService) { }
 
@@ -40,5 +41,9 @@ export class ProfileLocationComponent implements OnInit {
     //console.log(this.currentUser);
     this.userService.updateUserInfo(this.currentUser);
     this.success = "Updated Successfully!";
+  }
+
+  displayBtn() {
+    this.showAddress2 = true;
   }
 }
