@@ -1,0 +1,17 @@
+
+
+.googleapi {
+    margin-top: 25px;
+}
+
+
+#map{
+    margin: auto;
+    height: 18vw;
+    width: 18vw;
+}
+@media (min-width : 1000px) {
+    #map{
+        width: 40vw;
+    }
+}
