@@ -5,7 +5,7 @@ export interface Driver {
     'origin': string;
     'email': string;
     'phone': string;
-    'distance': string;
+    'distance': number;
     'duration': string;
 
 }
