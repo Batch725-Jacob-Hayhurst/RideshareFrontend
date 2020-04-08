@@ -25,7 +25,7 @@
 
     <!-- LOGIN DIV -->
 
-    <div class="centered">
+    <div class="centered-login">
         <mat-card [hidden]="isLogin">
 
 
@@ -66,6 +66,8 @@
 
         </mat-card>
 
+    </div>
+    <div class="centered">
 
 
         <!-- SIGN UP DIV -->
@@ -84,13 +86,11 @@
 
                     <form>
 
-                        <mat-grid-list cols="5" rowHeight="25vh">
+                        <mat-grid-list cols="6" rowHeight="25vh">
 
                             <mat-grid-tile style='background-color:lightblue;' colspan="2" rowspan="1">
 
                                 <!-- FIRST NAME / LAST NAME -->
-
-
                                 <div class="namesForm">
 
                                     <div class="row">
@@ -130,17 +130,15 @@
                                         </mat-form-field>
                                     </div>
 
-
-
                                 </div>
 
                             </mat-grid-tile>
 
-                            <mat-grid-tile style='background-color:lightslategray;' colspan="1" rowspan="2">3
-
+                            <mat-grid-tile style='background-color:lightslategray;' colspan="2" rowspan="2">3
+                            Map
                             </mat-grid-tile>
 
-                            <!-- GOOGLE MAP -->
+                            
 
                             <mat-grid-tile style='background-color:lightsteelblue;' colspan="2" rowspan="1">4
 
@@ -194,6 +192,7 @@
 
                         </mat-grid-list>
                     </form>
+
 
 
 

@@ -63,7 +63,18 @@ mat-grid-tile {
   /* Centered text */
 
   .centered {
-    position: relative;
+    width: 53vw;
+    min-width: 640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Overpass",sans-serif;
+  }
+
+  .centered-login {
+    width: 26vw;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
