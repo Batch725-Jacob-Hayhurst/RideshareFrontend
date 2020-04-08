@@ -42,10 +42,6 @@ export class MapComponent implements OnInit {
 
  }
 
- ngOnChanges(): void {
-  console.log(this.mapProperties);
- }
-
 sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }

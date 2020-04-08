@@ -44,13 +44,13 @@
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Username</label><br>
-                            <input type="text" [(ngModel)]="userName" class="form-control" id="formGroupExampleInput"
-                                placeholder="Enter Username">
+                            <input type="text" [(ngModel)]="user.userName" #userName="ngModel" class="form-control"
+                                id="formGroupExampleInput" placeholder="Enter Username">
                             <p class="error">{{usernameError}}</p>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Password</label><br>
-                            <input type="password" [(ngModel)]="passWord" class="form-control"
+                            <input type="password" [(ngModel)]="user.password" class="form-control"
                                 id="formGroupExampleInput2" placeholder="Enter Password">
                             <p class="error">{{pwdError}}</p>
                         </div>
@@ -75,7 +75,7 @@
         <mat-card [hidden]="isSignUp">
 
             <div class="container">
-                <div class="text-center" id="login-form" (keydown.enter)="login()">
+                <div class="text-center" id="signUp-form" (keydown.enter)="signUp()">
 
                     <div class="modal-title-container">
                         <button type="button" class="close pull-right" (click)="toggleSignUp()">
@@ -84,113 +84,111 @@
                         <h4 class="modal-title">Sign Up</h4>
                     </div>
 
-                    <form>
+                    <mat-grid-list cols="6" rowHeight="25vh">
 
-                        <mat-grid-list cols="6" rowHeight="25vh">
+                        <mat-grid-tile colspan="2" rowspan="1">
 
-                            <mat-grid-tile  colspan="2" rowspan="1">
+                            <!-- FIRST NAME / LAST NAME -->
+                            <div class="namesForm">
 
-                                <!-- FIRST NAME / LAST NAME -->
-                                <div class="namesForm">
-
-                                    <div class="row">
-                                        <mat-form-field class="firstNameInput">
-                                            <mat-label>First Name</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
-                                    <div class="row">
-                                        <mat-form-field class="lastNameInput">
-                                            <mat-label>Last Name</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
-                                </div>
-                            </mat-grid-tile>
-
-                            <mat-grid-tile  colspan="2" rowspan="1">
-
-                                <!-- EMAIL / PHONE NUMBER -->
-
-                                <div class="emailAndPhoneForm">
-
-                                    <div class="row">
-                                        <mat-form-field class="firstNameInput">
-                                            <mat-label>Email</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
-                                    <div class="row">
-                                        <mat-form-field class="lastNameInput">
-                                            <mat-label>Phone Number</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
+                                <div class="row">
+                                    <mat-form-field class="firstNameInput">
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput [(ngModel)]="user.firstName">
+                                    </mat-form-field>
                                 </div>
 
-                            </mat-grid-tile>
-
-                            <mat-grid-tile colspan="2" rowspan="2">
-                                <map></map>
-                            </mat-grid-tile>
-
-                            
-                            <mat-grid-tile  colspan="2" rowspan="1">
-
-
-                                <!-- ADDRESS / CITY -->
-                                <!-- STATE / ZIP CODE  -->
-
-                                <div class="addressForm">
-
-                                    <div class="row">
-                                        <mat-form-field class="addressInput">
-                                            <mat-label>Address</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
-                                    <div class="row">
-                                        <mat-form-field class="cityInput">
-                                            <mat-label>City</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
-                                </div>
-                            </mat-grid-tile>
-
-
-
-                            <mat-grid-tile  colspan="2" rowspan="1">
-
-                                <div class="addressForm">
-
-                                    <div class="row">
-                                        <mat-form-field class="stateInput">
-                                            <mat-label>State</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-                                    <div class="row">
-                                        <mat-form-field class="zipInput">
-                                            <mat-label>Zip Code</mat-label>
-                                            <input matInput>
-                                        </mat-form-field>
-                                    </div>
-
+                                <div class="row">
+                                    <mat-form-field class="lastNameInput">
+                                        <mat-label>Last Name</mat-label>
+                                        <input matInput [(ngModel)]="user.lastName">
+                                    </mat-form-field>
                                 </div>
 
-                            </mat-grid-tile>
+                            </div>
+                        </mat-grid-tile>
 
-                            <!-- DRIVER? / RIDER? / SUBMIT? -->
+                        <mat-grid-tile colspan="2" rowspan="1">
 
-                        </mat-grid-list>
-                    </form>
+                            <!-- EMAIL / PHONE NUMBER -->
+
+                            <div class="emailAndPhoneForm">
+
+                                <div class="row">
+                                    <mat-form-field class="emailInput">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput [(ngModel)]="user.email">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field class="phoneNumberInput">
+                                        <mat-label>Phone Number</mat-label>
+                                        <input matInput [(ngModel)]="user.phoneNumber">
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+
+                        </mat-grid-tile>
+
+                        <mat-grid-tile colspan="2" rowspan="2">
+                            <map></map>
+                        </mat-grid-tile>
+
+
+                        <mat-grid-tile colspan="2" rowspan="1">
+
+
+                            <!-- ADDRESS / CITY -->
+                            <!-- STATE / ZIP CODE  -->
+
+                            <div class="addressForm">
+
+                                <div class="row">
+                                    <mat-form-field class="addressInput">
+                                        <mat-label>Address</mat-label>
+                                        <input matInput [(ngModel)]="user.hAddress">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field class="cityInput">
+                                        <mat-label>City</mat-label>
+                                        <input matInput [(ngModel)]="user.hCity">
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                        </mat-grid-tile>
+
+
+
+                        <mat-grid-tile colspan="2" rowspan="1">
+
+                            <div class="addressForm">
+
+                                <div class="row">
+                                    <mat-form-field class="stateInput">
+                                        <mat-label>State</mat-label>
+                                        <input matInput [(ngModel)]="user.hState">
+                                    </mat-form-field>
+                                </div>
+                                <div class="row">
+                                    <mat-form-field class="zipInput">
+                                        <mat-label>Zip Code</mat-label>
+                                        <input matInput [(ngModel)]="user.hZip">
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+
+                        </mat-grid-tile>
+
+                        <!-- DRIVER? / RIDER? / SUBMIT? -->
+
+                    </mat-grid-list>
+
 
 
 

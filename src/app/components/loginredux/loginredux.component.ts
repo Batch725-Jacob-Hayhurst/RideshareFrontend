@@ -22,20 +22,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./loginredux.component.css']
 })
 export class LoginreduxComponent implements OnInit {
-  users: User[] = [];
-  allUsers: User[] = [];
 
-  chosenUser: User;
-  chosenUserFullName: string = '';
-  userName: string = '';
-  passWord: string = '';
-  totalPage: number = 1;
-  curPage: number = 1;
-
-  showDropDown: boolean = false;
-  failed: boolean = false;
-  banned: boolean = false;
-
+  user: User;
   pwdError: string;
   usernameError: string;
   userNotFound: string;
@@ -43,10 +31,10 @@ export class LoginreduxComponent implements OnInit {
   isLogin: boolean;
   isSignUp: boolean;
 
-
   constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
     this.isLogin = true;
     this.isSignUp = true;
+    this.user = new User();
   }
 
   ngOnInit(): void {
@@ -66,7 +54,7 @@ export class LoginreduxComponent implements OnInit {
     this.pwdError = '';
     this.usernameError = '';
 
-    this.http.get(`${environment.loginUri}?userName=${this.userName}&passWord=${this.passWord}`)
+    this.http.get(`${environment.loginUri}?userName=${this.user.userName}&passWord=${this.user.password}`)
       .subscribe(
         (response) => {
           //console.log(response);
@@ -91,6 +79,8 @@ export class LoginreduxComponent implements OnInit {
       );
   }
 
-
+  signUp() {
+    
+  }
 
 }
