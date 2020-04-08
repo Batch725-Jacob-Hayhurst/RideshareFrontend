@@ -33,8 +33,7 @@
                 <div class="text-center" id="login-form" (keydown.enter)="login()">
 
                     <div class="modal-title-container">
-                        <button type="button" class="close pull-right"
-                            (click)="toggleLogin()">
+                        <button type="button" class="close pull-right" (click)="toggleLogin()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title">Login</h4>
@@ -45,8 +44,8 @@
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Username</label><br>
-                            <input type="text" [(ngModel)]="userName" class="form-control"
-                                id="formGroupExampleInput" placeholder="Enter Username">
+                            <input type="text" [(ngModel)]="userName" class="form-control" id="formGroupExampleInput"
+                                placeholder="Enter Username">
                             <p class="error">{{usernameError}}</p>
                         </div>
                         <div class="form-group">
@@ -58,8 +57,7 @@
 
                         <p class="alert alert-danger" *ngIf="failed"><strong>Login Failed!</strong></p>
                         <p class="alert alert-danger" *ngIf="banned"><strong>You are banned</strong></p>
-                        <button type="submit" class="btn btn-primary" id="sign-in-btn"
-                            (click)="login()">Login</button>
+                        <button type="submit" class="btn btn-primary" id="sign-in-btn" (click)="login()">Login</button>
                         <br><br>
                     </div>
                 </div>
@@ -78,22 +76,126 @@
                 <div class="text-center" id="login-form" (keydown.enter)="login()">
 
                     <div class="modal-title-container">
-                        <button type="button" class="close pull-right"
-                            (click)="toggleSignUp()">
+                        <button type="button" class="close pull-right" (click)="toggleSignUp()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title">Sign Up</h4>
                     </div>
 
-                    <mat-grid-list cols="5" rowHeight="25vh">
+                    <form>
 
-                        <mat-grid-tile background-color="lightblue" colspan="2" rowspan="1">1</mat-grid-tile>
-                        <mat-grid-tile background-color="lightgreen" colspan="2" rowspan="1">2</mat-grid-tile>
-                        <mat-grid-tile background-color="lightpink" colspan="1" rowspan="2">3</mat-grid-tile>
-                        <mat-grid-tile background-color="purple" colspan="2" rowspan="1">4</mat-grid-tile>
-                        <mat-grid-tile background-color="orange" colspan="2" rowspan="1">5</mat-grid-tile>
-                    
-                    </mat-grid-list>
+                        <mat-grid-list cols="5" rowHeight="25vh">
+
+                            <mat-grid-tile style='background-color:lightblue;' colspan="2" rowspan="1">
+
+                                <!-- FIRST NAME / LAST NAME -->
+
+
+                                <div class="namesForm">
+
+                                    <div class="row">
+                                        <mat-form-field class="firstNameInput">
+                                            <mat-label>First Name</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="row">
+                                        <mat-form-field class="lastNameInput">
+                                            <mat-label>Last Name</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile style='background-color:lightskyblue;' colspan="2" rowspan="1">
+
+                                <!-- EMAIL / PHONE NUMBER -->
+
+                                <div class="emailAndPhoneForm">
+
+                                    <div class="row">
+                                        <mat-form-field class="firstNameInput">
+                                            <mat-label>Email</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="row">
+                                        <mat-form-field class="lastNameInput">
+                                            <mat-label>Phone Number</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+
+
+                                </div>
+
+                            </mat-grid-tile>
+
+                            <mat-grid-tile style='background-color:lightslategray;' colspan="1" rowspan="2">3
+
+                            </mat-grid-tile>
+
+                            <!-- GOOGLE MAP -->
+
+                            <mat-grid-tile style='background-color:lightsteelblue;' colspan="2" rowspan="1">4
+
+
+                                <!-- ADDRESS / CITY -->
+                                <!-- STATE / ZIP CODE  -->
+
+                                <div class="addressForm">
+
+                                    <div class="row">
+                                        <mat-form-field class="addressInput">
+                                            <mat-label>Address</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="row">
+                                        <mat-form-field class="cityInput">
+                                            <mat-label>City</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                            </mat-grid-tile>
+
+
+
+                            <mat-grid-tile style='background-color:lightseagreen;' colspan="2" rowspan="1">5
+
+                                <div class="addressForm">
+
+                                    <div class="row">
+                                        <mat-form-field class="stateInput">
+                                            <mat-label>State</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="row">
+                                        <mat-form-field class="zipInput">
+                                            <mat-label>Zip Code</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+
+                            </mat-grid-tile>
+
+                            <!-- DRIVER? / RIDER? / SUBMIT? -->
+
+                        </mat-grid-list>
+                    </form>
+
+
 
 
 
@@ -122,7 +224,7 @@
                         <br><br>
                     </div> -->
                 </div>
-            
+
 
 
             </div>

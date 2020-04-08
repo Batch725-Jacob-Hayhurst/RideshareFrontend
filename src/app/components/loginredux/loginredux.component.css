@@ -9,9 +9,27 @@
 #signupid {
   cursor: pointer;
 }
+
+mat-card{
+  size: 100vw, 60vh;
+ 
+}
+
+mat-form-grid {
+  size: 80vw, 60vh;
+
+}
   
-i{
+/* i{
   padding-top:5px;
+} */
+
+mat-form-field {
+
+}
+
+mat-grid-tile {
+  size: 100px, 100px;
 }
 
   /* Bottom left text */
@@ -43,8 +61,9 @@ i{
   }
   
   /* Centered text */
+
   .centered {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

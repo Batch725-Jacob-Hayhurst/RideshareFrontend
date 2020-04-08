@@ -56,8 +56,8 @@ sleep(ms) {
                          script.addEventListener('load', r => resolve());
                          script.src = `http://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
                          document.head.appendChild(script);      
-                   }); 
-             }    
+                   });
+             }
          }
      );
  }
