@@ -28,7 +28,7 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
 
-  displayedColumns: string[] = ['name', 'distance', 'time', 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
   // dataSource = new MatTableDataSource();
   dataSource = new MatTableDataSource<Driver>(this.drivers);
 
@@ -38,29 +38,49 @@ export class DriverListComponent implements OnInit {
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  constructor(private http: HttpClient, private userService: UserService) { }
+  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
 
   ngOnInit() {
 
     this.drivers = [];
 
     
-    this.userService.getRidersForLocation1(this.location).subscribe(
+    this.carService.getAllCars().subscribe(
       res => {
         //console.log(res);
-        res.forEach(element => {
+        res.slice(0,5).forEach(element => {
           this.drivers.push({
-            'id': element.userId,
-            'name': element.firstName + " " + element.lastName,
-            'origin': element.hCity + "," + element.hState,
-            'email': element.email,
-            'phone': element.phoneNumber,
+            'id': element.user.userId,
+            'name': element.user.firstName + " " + element.user.lastName,
+            'origin': element.user.hCity + "," + element.user.hState,
+            'email': element.user.email,
+            'phone': element.user.phoneNumber,
+            'spots': element.availableSeats,
             'distance': '',
             'duration': ''
           });
         });
         this.dataSource.data = this.drivers;
       });
+
+      // this.userService.getRidersForLocation1(this.location).subscribe(
+      //   res => {
+      //     //console.log(res);
+      //     res.forEach(element => {
+      //       this.drivers.push({
+      //         'id': element.userId,
+      //         'name': element.firstName + " " + element.lastName,
+      //         'origin': element.hCity + "," + element.hState,
+      //         'email': element.email,
+      //         'phone': element.phoneNumber,
+      //         'spots': 0,
+      //         'distance': '',
+      //         'duration': ''
+      //       });
+      //     });
+      //     this.dataSource.data = this.drivers;
+      //   });
+        
       
 
     this.dataSource.paginator = this.paginator;
