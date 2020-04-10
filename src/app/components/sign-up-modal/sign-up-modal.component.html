@@ -43,8 +43,8 @@
     <input (keydown)="hAddressError = ''" id="hAddress" type="text" [(ngModel)]="user.hAddress" class="form-control" />
     <p *ngIf="hAddressError != ''" class="error">{{hAddressError}}</p>
 
-    <label for="wAddress">Address 2 (optional)</label>
-    <input id="wAddress" type="text" [(ngModel)]="user.wAddress" class="form-control" />
+    <label for="hAddress2">Address 2 (optional)</label>
+    <input id="hAddress2" type="text" [(ngModel)]="user.hAddress2" class="form-control" />
 
     <label id="hCity">City</label>
     <input (keydown)="hCityError = ''" type="text" [(ngModel)]="user.hCity" class="form-control" />
