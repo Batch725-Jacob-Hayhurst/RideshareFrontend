@@ -47,6 +47,7 @@ export class User {
     isAcceptingRides: boolean;
     hState: string;
     hAddress: string;
+    hAddress2: string;
     hCity: string;
     hZip: number;
     wAddress: string;
