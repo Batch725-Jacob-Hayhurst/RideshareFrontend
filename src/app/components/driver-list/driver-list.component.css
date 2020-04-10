@@ -49,6 +49,7 @@
 } */
 #gmap { 
     height: 369px; 
+    top: 56px;
 }
 .googleapi {
  
@@ -141,4 +142,13 @@ table {
 
   td {
     font-size: 20px;
+  }
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 30%;
   }

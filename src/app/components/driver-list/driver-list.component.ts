@@ -14,7 +14,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Driver } from '../../models/driver';
 import { MatTableDataSource } from '@angular/material/';
 import { MatTableModule } from '@angular/material/table';
-
+import { MatSort } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-driver-list',
@@ -37,6 +38,14 @@ export class DriverListComponent implements OnInit {
   map: google.maps.Map;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  // this.dataSource.  = filterValue.trim().toLowerCase();
 
   constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
 
@@ -71,27 +80,12 @@ export class DriverListComponent implements OnInit {
         this.dataSource.data = this.drivers;
       });
 
-    // this.userService.getRidersForLocation1(this.location).subscribe(
-    //   res => {
-    //     //console.log(res);
-    //     res.forEach(element => {
-    //       this.drivers.push({
-    //         'id': element.userId,
-    //         'name': element.firstName + " " + element.lastName,
-    //         'origin': element.hCity + "," + element.hState,
-    //         'email': element.email,
-    //         'phone': element.phoneNumber,
-    //         'spots': 0,
-    //         'distance': '',
-    //         'duration': ''
-    //       });
-    //     });
-    //     this.dataSource.data = this.drivers;
-    //   });
+
 
 
 
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
 
     console.log(this.drivers);
 
@@ -115,6 +109,7 @@ export class DriverListComponent implements OnInit {
       //show drivers on map
       this.showDriversOnMap(this.location, this.drivers);
     });
+    console.log(this.drivers);
   }
 
   sleep(ms) {
@@ -169,7 +164,7 @@ export class DriverListComponent implements OnInit {
   displayDriversList(origin, drivers) {
     let origins = [];
     //set origin
-    origins.push(origin)
+    origins.push(origin);
 
     var outputDiv = document.getElementById('output');
     drivers.forEach(element => {
@@ -189,41 +184,9 @@ export class DriverListComponent implements OnInit {
           var originList = response.originAddresses;
           var destinationList = response.destinationAddresses;
           var results = response.rows[0].elements;
-          //console.log(results[0].distance.text);
           var name = element.name;
           element.distance = results[0].distance.text;
           element.duration = results[0].duration.text;
-          // outputDiv.innerHTML += `<tr><td class="col">${name}</td>
-          //                         <td class="col">${results[0].distance.text}</td>
-          //                         <td class="col">${results[0].duration.text}</td>
-          //                         <td class="col">
-          // <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCentered${element.id}"> View</button>
-          //   <div class="col-lg-5">
-          //    <div class="modal" id="exampleModalCentered${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-          //     <div class="modal-dialog modal-dialog-centered" role="document">
-          //         <div class="modal-content">
-          //             <div class="modal-header">
-          //                 <h5 class="modal-title" id="exampleModalCenteredLabel">Contact Info:</h5>
-          //                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          //                    <span aria-hidden="true">×</span>
-          //                  </button>
-          //             </div>
-          //             <div class="modal-body">
-          //                 <h1>${name}</h1>
-          //                 <h3>Email: ${element.email}</h3>         
-          //                 <h3>Phone: ${element.phone}</h3>                 
-          //             </div>
-          //             <div class="modal-footer">
-          //               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          //             </div>
-          //           </div>
-          //        </div>
-          //      </div>
-          // </div>
-          // <div class="col-lg-6">
-          //     <div #maps id="gmap" class="img-responsive"></div>
-          // </div>
-          //                       </td></tr>`;
         }
       });
 

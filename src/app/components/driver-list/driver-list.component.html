@@ -1,4 +1,4 @@
-<div class = " justify-content-center ml-3 mr-3">
+<div class = " justify-content-between ml-5 mr-5">
     <div class="row">
     <div class="col-lg-7">
      <!--<div class="form-group">
@@ -28,25 +28,29 @@
        </thead>
        <tbody id="output"></tbody>
       </table> -->
-
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
+      </mat-form-field>
       <div class="mat-elevation-z24" >
-        <table mat-table [dataSource]="dataSource" class= "justify-content-center table-striped">
+        
+        <table mat-table [dataSource]="dataSource" matSort class= "justify-content-center table-striped">
       
           <!-- Name Column -->
           <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
             <td mat-cell *matCellDef="let element"> {{element.name}} </td>
           </ng-container>
       
           <!-- Distance Column -->
           <ng-container matColumnDef="distance">
-            <th mat-header-cell *matHeaderCellDef> Distance </th>
-            <td mat-cell *matCellDef="let element"> {{element.distance}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Distance </th>
+            <td mat-cell *matCellDef="let element" > {{element.distance}} </td>
           </ng-container>
       
           <!-- Time Column -->
           <ng-container matColumnDef="time">
-            <th mat-header-cell *matHeaderCellDef> Time </th>
+            <th mat-header-cell *matHeaderCellDef > Time </th>
             <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
           </ng-container>
 

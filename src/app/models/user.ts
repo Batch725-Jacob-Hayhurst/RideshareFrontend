@@ -12,7 +12,7 @@ export class User {
     /**
      * Attached a batch object
      */
-    batch: Batch = new Batch();
+    batch: Batch;
     /**
      * Set password as a string
      */
