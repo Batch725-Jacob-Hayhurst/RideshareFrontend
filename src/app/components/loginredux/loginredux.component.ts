@@ -9,12 +9,14 @@ import { AuthService } from 'src/app/services/auth-service/auth.service';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Batch } from 'src/app/models/batch';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
   declarations: [LoginreduxComponent],
   imports: [
-    MaterialModule
+    MaterialModule,
+    TextMaskModule
   ]
 })
 
@@ -41,6 +43,8 @@ export class LoginreduxComponent implements OnInit {
             'WI','WY'];
   
   workCities = ['Reston', 'Morgantown', 'Dallas', 'Tampa', 'New York City', 'Orlando'];
+
+  phonemask = [/\d/, /\d/, /\d/, '-', /\d/, /\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
   constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
     this.isLogin = true;

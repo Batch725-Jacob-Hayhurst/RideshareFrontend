@@ -40,6 +40,7 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { LoginreduxComponent } from './components/loginredux/loginredux.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material.module';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { MaterialModule } from 'src/app/material.module';
     ModalModule.forRoot(),
     NgbModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    TextMaskModule
   ],
   providers: [
     UserService,
