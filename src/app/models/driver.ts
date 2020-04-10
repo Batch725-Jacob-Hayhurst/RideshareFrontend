@@ -8,5 +8,7 @@ export interface Driver {
     'spots': number;
     'distance': string;
     'duration': string;
-
+    'active': boolean;
+    'driver': boolean;
+    'acceptingRides': boolean;
 }

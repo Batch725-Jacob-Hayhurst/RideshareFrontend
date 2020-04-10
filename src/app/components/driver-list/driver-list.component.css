@@ -103,6 +103,14 @@ table {
     text-align: center;
   }
 
+  .mat-column-spots {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 15% !important;
+    width: 15% !important;
+    text-align: center;
+  }
+
   .mat-column-time {
     word-wrap: break-word !important;
     white-space: unset !important;
