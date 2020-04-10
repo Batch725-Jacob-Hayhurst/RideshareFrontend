@@ -23,13 +23,13 @@ import { MatInputModule } from '@angular/material/input';
   styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent implements OnInit {
-
+  activedrivers: any = [];
   location: string = 'Morgantown, WV';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
 
-  displayedColumns: string[] = ['name', 'distance', 'time', 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
   // dataSource = new MatTableDataSource();
   dataSource = new MatTableDataSource<Driver>(this.drivers);
 
@@ -47,28 +47,41 @@ export class DriverListComponent implements OnInit {
 
   // this.dataSource.  = filterValue.trim().toLowerCase();
 
-  constructor(private http: HttpClient, private userService: UserService) { }
+  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
 
   ngOnInit() {
 
     this.drivers = [];
 
-    this.userService.getRidersForLocation1(this.location).subscribe(
+    this.carService.getAllCars().subscribe(
       res => {
         //console.log(res);
         res.forEach(element => {
-          this.drivers.push({
-            'id': element.userId,
-            'name': element.firstName + " " + element.lastName,
-            'origin': element.hCity + "," + element.hState,
-            'email': element.email,
-            'phone': element.phoneNumber,
-            'distance': null,
-            'duration': ''
-          });
+          console.log(element.user.acceptingRides);
+          console.log(element.user.active);
+          console.log(element.user.driver);
+          if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
+            this.drivers.push({
+              'id': element.user.userId,
+              'name': element.user.firstName + " " + element.user.lastName,
+              'origin': element.user.hCity + "," + element.user.hState,
+              'email': element.user.email,
+              'phone': element.user.phoneNumber,
+              'spots': element.availableSeats,
+              'distance': '',
+              'duration': '',
+              'active': element.user.active,
+              'driver': element.user.driver,
+              'acceptingRides': element.user.acceptingRides,
+            })
+          };
         });
+        console.log(this.drivers);
         this.dataSource.data = this.drivers;
       });
+
+
+
 
 
     this.dataSource.paginator = this.paginator;

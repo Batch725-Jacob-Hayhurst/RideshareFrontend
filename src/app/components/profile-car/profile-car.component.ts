@@ -31,15 +31,18 @@ export class ProfileCarComponent implements OnInit {
   }
 
   updatesCarInfo() {
-    this.currentCar.make = this.make;
-    this.currentCar.model = this.model;
-    if (this.nrSeats >= this.avSeats) {
+    console.log(this.nrSeats);
+    if (this.currentCar.make !== this.make || this.currentCar.model !== this.model || this.currentCar.seats !== this.nrSeats || this.currentCar.availableSeats !== this.avSeats) {
+      this.currentCar.make = this.make;
+      this.currentCar.model = this.model;
       this.currentCar.seats = this.nrSeats;
       this.currentCar.availableSeats = this.avSeats;
+      this.carService.updateCarInfo(this.currentCar);
+      this.success = 'Updated Successfully!';
+      this.success.fontcolor('red');
+    } else {
+      this.success = 'No Values Changed';
     }
-    console.log(this.currentCar);
-    this.carService.updateCarInfo(this.currentCar);
-    this.success = 'Updated Successfully!';
   }
 
 }
