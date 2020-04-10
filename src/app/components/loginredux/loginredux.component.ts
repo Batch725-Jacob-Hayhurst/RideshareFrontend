@@ -31,6 +31,13 @@ export class LoginreduxComponent implements OnInit {
   isLogin: boolean;
   isSignUp: boolean;
 
+  states = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS',
+            'KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY',
+            'NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV',
+            'WI','WY'];
+  
+  workCities = ['Reston', 'Morgantown', 'Dallas', 'Tampa', 'New York City'];
+
   constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
     this.isLogin = true;
     this.isSignUp = true;

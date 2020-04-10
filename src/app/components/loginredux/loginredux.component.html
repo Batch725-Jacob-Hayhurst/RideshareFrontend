@@ -81,15 +81,17 @@
                         <button type="button" class="close pull-right" (click)="toggleSignUp()">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title">Sign Up</h4>
+                        <h3><u>Sign Up</u></h3>
                     </div>
 
-                    <mat-grid-list cols="6" rowHeight="25vh">
+                    <mat-grid-list cols="4" rowHeight="20vh">
 
-                        <mat-grid-tile colspan="2" rowspan="1">
+                        <mat-grid-tile colspan="2" rowspan="2">
 
                             <!-- FIRST NAME / LAST NAME -->
                             <div class="namesForm">
+                                <div class="row">
+                                </div>
 
                                 <div class="row">
                                     <mat-form-field class="firstNameInput">
@@ -105,12 +107,33 @@
                                     </mat-form-field>
                                 </div>
 
+                                <div class="row">
+                                    <mat-form-field class="emailInput">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput [(ngModel)]="user.email">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field class="phoneNumberInput">
+                                        <mat-label>Phone Number</mat-label>
+                                        <input matInput [(ngModel)]="user.phoneNumber">
+                                    </mat-form-field>
+                                </div>
+                                <div class="row">
+                                    <mat-form-field class="workInput">
+                                        <mat-label>Work Location</mat-label>
+                                        <mat-select [(ngModel)]="user.wCity">
+                                            <mat-option *ngFor="let city of workCities" [value]="city">{{city}}</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
                             </div>
                         </mat-grid-tile>
 
-                        <mat-grid-tile colspan="2" rowspan="1">
+                        <!-- <mat-grid-tile colspan="2" rowspan="1">
 
-                            <!-- EMAIL / PHONE NUMBER -->
+                            EMAIL / PHONE NUMBER
 
                             <div class="emailAndPhoneForm">
 
@@ -130,14 +153,14 @@
 
                             </div>
 
-                        </mat-grid-tile>
+                        </mat-grid-tile> -->
+
+                        <!-- <mat-grid-tile colspan="2" rowspan="2">
+                            
+                        </mat-grid-tile> -->
+
 
                         <mat-grid-tile colspan="2" rowspan="2">
-                            <map></map>
-                        </mat-grid-tile>
-
-
-                        <mat-grid-tile colspan="2" rowspan="1">
 
 
                             <!-- ADDRESS / CITY -->
@@ -147,8 +170,15 @@
 
                                 <div class="row">
                                     <mat-form-field class="addressInput">
-                                        <mat-label>Address</mat-label>
+                                        <mat-label>Home Address</mat-label>
                                         <input matInput [(ngModel)]="user.hAddress">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field class="addressInput">
+                                        <mat-label>Apt Number</mat-label>
+                                        <input matInput [(ngModel)]="user.hAddress2">
                                     </mat-form-field>
                                 </div>
 
@@ -159,15 +189,30 @@
                                     </mat-form-field>
                                 </div>
 
+                                <div class="row">
+                                    <mat-form-field class="stateInput">
+                                        <mat-label>State</mat-label>
+                                        <!-- <input matInput [(ngModel)]="user.hState"> -->
+                                        <mat-select [(ngModel)]="user.hState">
+                                            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="row">
+                                    <mat-form-field class="zipInput">
+                                        <mat-label>Zip Code</mat-label>
+                                        <input matInput [(ngModel)]="user.hZip">
+                                    </mat-form-field>
+                                </div>
+
                             </div>
                         </mat-grid-tile>
 
 
 
-                        <mat-grid-tile colspan="2" rowspan="1">
+                        <!-- <mat-grid-tile colspan="2" rowspan="1">
 
                             <div class="addressForm">
-
                                 <div class="row">
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
@@ -181,15 +226,20 @@
                                     </mat-form-field>
                                 </div>
 
+
                             </div>
 
-                        </mat-grid-tile>
+                        </mat-grid-tile> -->
 
                         <!-- DRIVER? / RIDER? / SUBMIT? -->
-
+                    </mat-grid-list>
+                    <mat-grid-list cols="4" rowHeight="7vh">
+                        <mat-grid-tile colspan="4" rowspan="1">
+                            <button mat-raised-button (click)="signUp()">Register</button>
+                        </mat-grid-tile>
                     </mat-grid-list>
 
-
+                    
 
 
 
@@ -221,10 +271,8 @@
                     </div> -->
                 </div>
 
-
-
             </div>
-
+            
         </mat-card>
     </div>
 
