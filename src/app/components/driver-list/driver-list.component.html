@@ -28,12 +28,12 @@
        </thead>
        <tbody id="output"></tbody>
       </table> -->
-
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
+      </mat-form-field>
       <div class="mat-elevation-z24" >
-        <mat-form-field>
-          <mat-label>Filter</mat-label>
-          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
-        </mat-form-field>
+        
         <table mat-table [dataSource]="dataSource" matSort class= "justify-content-center table-striped">
       
           <!-- Name Column -->

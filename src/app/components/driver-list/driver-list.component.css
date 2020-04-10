@@ -49,6 +49,7 @@
 } */
 #gmap { 
     height: 369px; 
+    top: 56px;
 }
 .googleapi {
  

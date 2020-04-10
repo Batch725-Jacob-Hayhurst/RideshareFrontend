@@ -8,6 +8,7 @@ import { UserService } from 'src/app/services/user-service/user.service';
 import { AuthService } from 'src/app/services/auth-service/auth.service';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { Batch } from 'src/app/models/batch';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ export class LoginreduxComponent implements OnInit {
             'NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV',
             'WI','WY'];
   
-  workCities = ['Reston', 'Morgantown', 'Dallas', 'Tampa', 'New York City'];
+  workCities = ['Reston', 'Morgantown', 'Dallas', 'Tampa', 'New York City', 'Orlando'];
 
   constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
     this.isLogin = true;
@@ -90,7 +91,49 @@ export class LoginreduxComponent implements OnInit {
   }
 
   signUp() {
+    console.log("before switch")
+    switch(this.user.wCity){
+      case "Morgantown":
+          this.user.wState = "WV";
+          this.user.wAddress = "496 High st.";
+          this.user.wZip = 26505;
+          this.user.batch = new Batch(1, 'Morgantown');
+          break;
+      case "Reston":
+          this.user.wState = "VA";
+          this.user.wAddress = "11730 Plaza America Dr 2nd Floor";
+          this.user.wZip = 20190;
+          this.user.batch = new Batch(2, 'Reston');
+          break;
+      case "Dallas":
+          this.user.wState = "TX";
+          this.user.wAddress = "701 S. Nedderman Drive";
+          this.user.wCity="Arlington";
+          this.user.wZip = 76019;
+          this.user.batch = new Batch(3, 'Dallas');
+          break;
+      case "Tampa":
+          this.user.wState = "FL";
+          this.user.wAddress = "4202 E. Fowler Avenue";
+          this.user.wZip = 33620;
+          this.user.batch = new Batch(4, 'Tampa');
+          break;
+      case "New York City":
+          this.user.wState = "NY";
+          this.user.wAddress = "65-30 Kissena Blvd. | Queens";
+          this.user.wZip = 11367;
+          this.user.batch = new Batch(5, 'New York City');
+          break;
+      case "Orlando":
+          this.user.wState = "FL";
+          this.user.wAddress = "6200 Metrowest Blvd Suite 208";
+          this.user.wZip = 32835;          ;
+          this.user.batch = new Batch(6, 'Orlando');
+          break;
+    }
+    console.log(this.user);
     
+      
   }
 
 }
