@@ -46,12 +46,10 @@ export class ProfileLocationComponent implements OnInit {
   }
 
   hAddress2Exist() {
-    if (this.address2 != null) {
-        return true;
-    } else if (this.address2 === '') {
+    if (this.address2 == null || this.address2 == undefined || this.address2 == '') {
       return false;
     } else {
-      return false;
+      return true;
     }
   }
 }
