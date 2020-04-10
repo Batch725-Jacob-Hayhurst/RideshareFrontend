@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule, TemplateRef } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { User } from 'src/app/models/user';
 import { HttpClient } from '@angular/common/http';
@@ -22,6 +23,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./loginredux.component.css']
 })
 export class LoginreduxComponent implements OnInit {
+
+  signUpForm: FormGroup;
 
   user: User;
   pwdError: string;

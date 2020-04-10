@@ -5,21 +5,12 @@
         <h1 class="orangeText">RideForce</h1>
         <p class="orangeText"><strong>Introducing Revature employees to their forever rides.</strong></p>
 
-
         <div>
 
             <button mat-raised-button (click)="toggleLogin()">Login</button>
             <p id="signupid" (click)="toggleSignUp()">Create an Account</p>
 
         </div>
-
-
-
-
-
-
-
-
 
     </div>
 
@@ -69,13 +60,12 @@
     </div>
     <div class="centered">
 
-
         <!-- SIGN UP DIV -->
 
         <mat-card [hidden]="isSignUp">
 
             <div class="container">
-                <div class="text-center" id="signUp-form" (keydown.enter)="signUp()">
+                <form class="text-center" id="signUp-form" (submit)="signUp(); signUpForm.resetForm()" (keydown.enter)="signUp(); signUpForm.resetForm()" #signUpForm="ngForm">
 
                     <div class="modal-title-container">
                         <button type="button" class="close pull-right" (click)="toggleSignUp()">
@@ -96,21 +86,46 @@
                                 <div class="row">
                                     <mat-form-field class="firstNameInput">
                                         <mat-label>First Name</mat-label>
-                                        <input matInput [(ngModel)]="user.firstName">
+                                       
+                                        <input matInput 
+                                               [(ngModel)]="user.firstName"
+                                               name="fName"
+                                               required
+                                               minlength="2"
+                                               maxlength="50"
+                                               #fName="ngModel">
+
+                                        <mat-error *ngIf="fName.invalid && fName.dirty">*Required Field</mat-error>
                                     </mat-form-field>
                                 </div>
 
                                 <div class="row">
                                     <mat-form-field class="lastNameInput">
                                         <mat-label>Last Name</mat-label>
-                                        <input matInput [(ngModel)]="user.lastName">
+                                        
+                                        <input matInput
+                                               [(ngModel)]="user.lastName"
+                                               name="lName"
+                                               required
+                                               minlength="1"
+                                               maxlength="50"
+                                               #lName="ngModel">
+                                        <mat-error *ngIf="lName.invalid && lName.dirty">*Required Field</mat-error>
                                     </mat-form-field>
                                 </div>
 
                                 <div class="row">
                                     <mat-form-field class="emailInput">
                                         <mat-label>Email</mat-label>
-                                        <input matInput [(ngModel)]="user.email">
+                                        
+                                        <input matInput
+                                               [(ngModel)]="user.email"
+                                               name="email"
+                                               type="email"
+                                               pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                               required
+                                               #email="ngModel">
+                                        <mat-error *ngIf="email.invalid && email.dirty">*Required. Email Not Valid.</mat-error>
                                     </mat-form-field>
                                 </div>
 
@@ -131,37 +146,7 @@
                             </div>
                         </mat-grid-tile>
 
-                        <!-- <mat-grid-tile colspan="2" rowspan="1">
-
-                            EMAIL / PHONE NUMBER
-
-                            <div class="emailAndPhoneForm">
-
-                                <div class="row">
-                                    <mat-form-field class="emailInput">
-                                        <mat-label>Email</mat-label>
-                                        <input matInput [(ngModel)]="user.email">
-                                    </mat-form-field>
-                                </div>
-
-                                <div class="row">
-                                    <mat-form-field class="phoneNumberInput">
-                                        <mat-label>Phone Number</mat-label>
-                                        <input matInput [(ngModel)]="user.phoneNumber">
-                                    </mat-form-field>
-                                </div>
-
-                            </div>
-
-                        </mat-grid-tile> -->
-
-                        <!-- <mat-grid-tile colspan="2" rowspan="2">
-                            
-                        </mat-grid-tile> -->
-
-
                         <mat-grid-tile colspan="2" rowspan="2">
-
 
                             <!-- ADDRESS / CITY -->
                             <!-- STATE / ZIP CODE  -->
@@ -192,7 +177,6 @@
                                 <div class="row">
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
-                                        <!-- <input matInput [(ngModel)]="user.hState"> -->
                                         <mat-select [(ngModel)]="user.hState">
                                             <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
                                         </mat-select>
@@ -208,30 +192,8 @@
                             </div>
                         </mat-grid-tile>
 
-
-
-                        <!-- <mat-grid-tile colspan="2" rowspan="1">
-
-                            <div class="addressForm">
-                                <div class="row">
-                                    <mat-form-field class="stateInput">
-                                        <mat-label>State</mat-label>
-                                        <input matInput [(ngModel)]="user.hState">
-                                    </mat-form-field>
-                                </div>
-                                <div class="row">
-                                    <mat-form-field class="zipInput">
-                                        <mat-label>Zip Code</mat-label>
-                                        <input matInput [(ngModel)]="user.hZip">
-                                    </mat-form-field>
-                                </div>
-
-
-                            </div>
-
-                        </mat-grid-tile> -->
-
-                        <!-- DRIVER? / RIDER? / SUBMIT? -->
+                        <!-- SUBMIT? -->
+                        
                     </mat-grid-list>
                     <mat-grid-list cols="4" rowHeight="7vh">
                         <mat-grid-tile colspan="4" rowspan="1">
@@ -269,7 +231,7 @@
                             (click)="login()">Login</button>
                         <br><br>
                     </div> -->
-                </div>
+                </form>
 
             </div>
             
