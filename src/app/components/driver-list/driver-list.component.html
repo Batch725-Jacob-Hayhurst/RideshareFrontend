@@ -49,6 +49,11 @@
             <th mat-header-cell *matHeaderCellDef> Time </th>
             <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
           </ng-container>
+
+          <ng-container matColumnDef="spots">
+            <th mat-header-cell *matHeaderCellDef> Seats </th>
+            <td mat-cell *matCellDef="let element"> {{element.spots}} </td>
+          </ng-container>
       
           <!-- View Column -->
           <ng-container matColumnDef="view">
