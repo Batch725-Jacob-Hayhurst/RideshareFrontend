@@ -64,7 +64,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     DriverListComponent,
     UserRegisterComponent,
     BsNavbarComponent,
-    LoginreduxComponent,
+    LoginreduxComponent
 
     
     
