@@ -1,27 +1,26 @@
-
 /* Container holding the image and the text */
 .centerMe {
-    position: relative;
-    text-align: center;
-    color: white;
-  } 
+  position: relative;
+  text-align: center;
+  color: white;
+} 
 
 #signupid {
-  cursor: pointer;
+cursor: pointer;
 }
 
 mat-card{
-  size: 100vw, 60vh;
- 
+size: 100vw, 60vh;
+
 }
 
 mat-form-grid {
-  size: 80vw, 60vh;
+size: 80vw, 60vh;
 
 }
-  
+
 /* i{
-  padding-top:5px;
+padding-top:5px;
 } */
 
 mat-form-field {
@@ -81,95 +80,95 @@ mat-grid-tile {
     font-family: "Overpass",sans-serif;
   }
 /* 
-  .orangeText {
-      color: black;
-  } */
+.orangeText {
+    color: black;
+} */
 
 .blackFade{
-    background-color: rgba(0, 0, 0, 1);
-    border:1px outset black;
+  background-color: rgba(0, 0, 0, 1);
+  border:1px outset black;
 }
 
 #loginbutton{
-  margin-top:10px;
-  background-color: #F26925;
-  color:white;
-  width:300px;
-  font-family:"Overpass";
-  font-weight:bold;
-  font-size:22px;
-  border-radius:27px;
-  letter-spacing:1px;
-  height:45px;
-  display:inline-block;
+margin-top:10px;
+background-color: #F26925;
+color:white;
+width:300px;
+font-family:"Overpass";
+font-weight:bold;
+font-size:22px;
+border-radius:27px;
+letter-spacing:1px;
+height:45px;
+display:inline-block;
 }
 
 #loginbutton:hover{
-  background-color:white;
-  color:#F26925;
-  border: 2px solid #F26925;
-  border-radius: 22px ;
-  font-family:"Overpass";
-  font-size:23px;
+background-color:white;
+color:#F26925;
+border: 2px solid #F26925;
+border-radius: 22px ;
+font-family:"Overpass";
+font-size:23px;
 }
 
 .center1{
 margin: 0 auto;
 }
 .cBorder{
-  margin-top: 15px;
+margin-top: 15px;
 }
 
 .mBot{
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .card{
-  box-shadow: 2px 2px 5px black;
+box-shadow: 2px 2px 5px black;
 }
 
 .card-body{
-  font-family: "Overpass",sans-serif;
+font-family: "Overpass",sans-serif;
 }
 
 @media(max-width:767px){
-  .card{
-    max-height:200px;
-  }
-  .card-title{
-    font-size:17px;
-  }
-  .card-text{
-    font-size:15px;
-  }
+.card{
+  max-height:200px;
+}
+.card-title{
+  font-size:17px;
+}
+.card-text{
+  font-size:15px;
+}
 }
 
 @media(max-width:574px){
-  .card-title{
-    font-size:20px;
-  }
-  .card-text{
-    font-size:17px;
-  }
+.card-title{
+  font-size:20px;
+}
+.card-text{
+  font-size:17px;
+}
 }
 
 @media(max-width:232px){
 
-  .card{height:210px;}
+.card{height:210px;}
 }
 
 @media(max-width:370px){
 
-  .btn-outline-light{
-    font-size:17px;
-  }
+.btn-outline-light{
+  font-size:17px;
+}
 
-  p.orangeText{
-    font-size:14px;
-  }
+p.orangeText{
+  font-size:14px;
+}
 
-  h1.orangeText{
-    font-size:36px;
-  }
+h1.orangeText{
+  font-size:36px;
+}
 
 }
