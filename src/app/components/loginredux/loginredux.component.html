@@ -122,7 +122,7 @@
                                                [(ngModel)]="user.phoneNumber" 
                                                name="phoneNumber"
                                                [textMask]="{mask: phonemask, guide: false}"
-                                               
+                                               minlength="12"
                                                #phoneNumber="ngModel"
                                                >
                                         <mat-error *ngIf="phoneNumber.invalid && phoneNumber.dirty">*10 Digit Phone-numbers only
@@ -224,7 +224,7 @@
                     </mat-grid-list>
                     <mat-grid-list cols="4" rowHeight="7vh">
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit">Register</button>
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid">Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
 

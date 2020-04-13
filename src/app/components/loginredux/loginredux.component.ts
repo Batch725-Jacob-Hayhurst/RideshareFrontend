@@ -131,7 +131,7 @@ export class LoginreduxComponent implements OnInit {
       case "Orlando":
           this.user.wState = "FL";
           this.user.wAddress = "6200 Metrowest Blvd Suite 208";
-          this.user.wZip = 32835;          ;
+          this.user.wZip = 32835;          
           this.user.batch = new Batch(6, 'Orlando');
           break;
     }
