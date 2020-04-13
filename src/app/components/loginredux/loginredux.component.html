@@ -194,16 +194,16 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Password</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
+                                        <input matInput type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="6">
+                                        <mat-error *ngIf="password.invalid && password.dirty">*Required length of at least 6</mat-error>
                                     </mat-form-field>
                                 </div>
 
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Confirm Password</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
+                                        <input matInput type="password" name="confirmPW" required>
+                                        <mat-error *ngIf="">Must match password field.</mat-error>
                                     </mat-form-field>
                                 </div>
 
