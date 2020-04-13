@@ -22,11 +22,8 @@ export class SignupModalComponent implements OnInit {
   isRider: boolean;
 
   user :User = new User();
-<<<<<<< HEAD
   batch: Batch;
-=======
   // batch: Batch = new Batch();
->>>>>>> 8f3343daa60559db4c74c67f9a3c4984af8a3462
   batches: Batch[];
   // validation
   firstNameError :string;
