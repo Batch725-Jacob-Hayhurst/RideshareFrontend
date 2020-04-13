@@ -4,15 +4,14 @@ import { ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/services/user-service/user.service';
 import { environment } from '../../../environments/environment';
-import { GoogleApiService } from '../../services/googleapi/google-api.service';
 
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class MapComponent implements OnInit {
 
   location_s : string =''; //sample: Morgantown, WV
  
@@ -22,14 +21,14 @@ export class LandingPageComponent implements OnInit {
   
   mapProperties :{};
 
-  constructor(private http: HttpClient,private userService: UserService, private googleapi: GoogleApiService) {
+  constructor(private http: HttpClient,private userService: UserService) {
     //load google map api
   }
 
   ngOnInit(): void {
      //load google map  api
     
-    this.googleapi.getGoogleApi();
+    this.getGoogleApi();
 
     this.sleep(2000).then(() => {
       this.mapProperties = {
@@ -38,6 +37,7 @@ export class LandingPageComponent implements OnInit {
          mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
+      
    });
 
  }
@@ -46,22 +46,22 @@ sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//  getGoogleApi()  {
-//   this.http.get(`${environment.loginUri}getGoogleApi`)
-//      .subscribe(
-//                (response) => {
-//                    //console.log(response);
-//                    if(response["googleMapAPIKey"] != undefined){
-//                        new Promise((resolve) => {
-//                          let script: HTMLScriptElement = document.createElement('script');
-//                          script.addEventListener('load', r => resolve());
-//                          script.src = `http://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}&libraries=places&language=en`;
-//                          document.head.appendChild(script);      
-//                    }); 
-//              }    
-//          }
-//      );
-//  }
+ getGoogleApi()  {
+  this.http.get(`${environment.loginUri}getGoogleApi`)
+     .subscribe(
+               (response) => {
+                   //console.log(response);
+                   if(response["googleMapAPIKey"] != undefined){
+                       new Promise((resolve) => {
+                         let script: HTMLScriptElement = document.createElement('script');
+                         script.addEventListener('load', r => resolve());
+                         script.src = `https://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
+                         document.head.appendChild(script);      
+                   });
+             }
+         }
+     );
+ }
 
  searchDriver(){
   //call service search algorithm ()

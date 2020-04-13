@@ -10,31 +10,39 @@ import { Car } from 'src/app/models/car';
 export class ProfileCarComponent implements OnInit {
 
   make: string;
-  model:string;
-  nrSeats:number;
+  model: string;
+  nrSeats: number;
+  avSeats: number;
   currentCar: Car;
-  success :string;
+  success: string;
 
   constructor(private carService: CarService) { }
 
   ngOnInit() {
 
-    this.carService.getCarByUserId2(sessionStorage.getItem("userid")).subscribe((response)=>{
+    this.carService.getCarByUserId2(sessionStorage.getItem('userid')).subscribe((response) => {
       this.currentCar = response;
       this.make = response.make;
       this.model = response.model;
       this.nrSeats = response.seats;
+      this.avSeats = response.availableSeats;
 
     });
   }
 
-  updatesCarInfo(){
-    this.currentCar.make = this.make;
-    this.currentCar.model= this.model;
-    this.currentCar.seats = this.nrSeats;
-    //console.log(this.currentUser);
-    this.carService.updateCarInfo(this.currentCar);
-    this.success = "Updated Successfully!";
+  updatesCarInfo() {
+    console.log(this.nrSeats);
+    if (this.currentCar.make !== this.make || this.currentCar.model !== this.model || this.currentCar.seats !== this.nrSeats || this.currentCar.availableSeats !== this.avSeats) {
+      this.currentCar.make = this.make;
+      this.currentCar.model = this.model;
+      this.currentCar.seats = this.nrSeats;
+      this.currentCar.availableSeats = this.avSeats;
+      this.carService.updateCarInfo(this.currentCar);
+      this.success = 'Updated Successfully!';
+      this.success.fontcolor('red');
+    } else {
+      this.success = 'No Values Changed';
+    }
   }
 
 }

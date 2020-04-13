@@ -26,7 +26,8 @@ export class ProfileLocationComponent implements OnInit {
       this.zipcode = response.hZip;
       this.city = response.hCity;
       this.address = response.hAddress;
-      this.address2 = response.wAddress;
+      // this.address2 = response.wAddress;
+      this.address2 = response.hAddress2;
       this.hState = response.hState;
 
     });
@@ -36,18 +37,20 @@ export class ProfileLocationComponent implements OnInit {
     this.currentUser.hZip = this.zipcode;
     this.currentUser.hCity = this.city;
     this.currentUser.hAddress = this.address;
-    this.currentUser.wAddress = this.address2;
+    //this.currentUser.wAddress = this.address2;
+    this.currentUser.hAddress2 = this.address2;
     this.currentUser.hState = this.hState;
     //console.log(this.currentUser);
     this.userService.updateUserInfo(this.currentUser);
     this.success = "Updated Successfully!";
   }
 
-  wAddressExist() {
+  hAddress2Exist() {
     if (this.address2 != null) {
         return true;
-    }
-    else {
+    } else if (this.address2 === '') {
+      return false;
+    } else {
       return false;
     }
   }

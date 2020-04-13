@@ -1,44 +1,59 @@
 <div class="container mainContainer" (keydown.enter)="updatesCarInfo()">
-    
-        <i class="fa fa-car" style="font-family:'FontAwesome';"></i>
-        
-    
-        <h4>Car Information:</h4>
-        
-        <div class="form-group row">
-            <div class="col-sm-1"></div>
-                <label for="make" class="col-sm-4 col-form-label">Make:</label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" id="make" [(ngModel)]=make>
-                </div>
-        </div>
-        
-        <div class="form-group row">
-                <div class="col-sm-1"></div>
-            <label for="model" class="col-sm-4 col-form-label">Model:</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="model" [(ngModel)]=model>
-            </div>
-        </div>
 
-        <div class="form-group row">
-            <div class="col-sm-1"></div>
-                <label for="Nrseats" class="col-sm-4 col-form-label ">Number of seats:</label>
-                <div class="col-sm-4">
-                <select class="form-control" id="Nrseats" [(ngModel)]=nrSeats>
-                    <option>Choose the number of seats</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <p *ngIf="success != ''" class="success">{{success}}</p>
-            </div>
+    <i class="fa fa-car" style="font-family:'FontAwesome';"></i>
+
+
+    <h4>Car Information:</h4>
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <label for="make" class="col-sm-4 col-form-label">Make:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="make" [(ngModel)]=make>
         </div>
-        
-        <button type="submit" class="btn btn-primary myBtn" (click)="updatesCarInfo()">Save</button>
     </div>
-    
-        
-    
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <label for="model" class="col-sm-4 col-form-label">Model:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="model" [(ngModel)]=model>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <label for="Nseats" class="col-sm-4 col-form-label ">Number of seats:</label>
+        <div class="col-sm-4">
+            <select class="form-control" id="Nseats" [(ngModel)]=nrSeats>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <label for="Avseats" class="col-sm-4 col-form-label ">Available seats:</label>
+        <div class="col-sm-4">
+            <select class="form-control" id="Avseats" [(ngModel)]=avSeats>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option *ngIf='nrSeats>=2' value="2">2</option>
+                <option *ngIf='nrSeats>=3' value="3">3</option>
+                <option *ngIf='nrSeats>=4' value="4">4</option>
+                <option *ngIf='nrSeats>=5' value="5">5</option>
+            </select>
+        </div>
+    </div>
+    <div *ngIf="success === 'Updated Successfully!'; else Failure">
+        <p class="success">{{success}}</p>
+    </div>
+    <ng-template #Failure>
+        <p class="failure">{{success}}</p>
+    </ng-template>
+    <button type="submit" class="btn btn-primary myBtn" (click)="updatesCarInfo()">Save</button>
+</div>
