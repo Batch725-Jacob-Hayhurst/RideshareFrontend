@@ -7,11 +7,11 @@ import { environment } from '../../../environments/environment';
 
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class MapComponent implements OnInit {
 
   location_s : string =''; //sample: Morgantown, WV
  
@@ -37,6 +37,7 @@ export class LandingPageComponent implements OnInit {
          mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
+      
    });
 
  }

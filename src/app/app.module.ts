@@ -26,7 +26,7 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
 import { DriverInfoComponent } from './components/driver-info/driver-info.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SignupModalComponent } from './components/sign-up-modal/sign-up-modal.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { MapComponent } from './components/map/map.component';
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
 import { ProfileCarComponent } from './components/profile-car/profile-car.component';
 import { ProfileLocationComponent } from './components/profile-location/profile-location.component';
@@ -40,6 +40,7 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { LoginreduxComponent } from './components/loginredux/loginredux.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material.module';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
@@ -59,7 +60,7 @@ import { MaterialModule } from 'src/app/material.module';
     DriverInfoComponent,
     LandingComponent,
     SignupModalComponent,
-    LandingPageComponent,
+    MapComponent,
     ProfileContactComponent,
     ProfileCarComponent,
     ProfileLocationComponent,
@@ -84,7 +85,8 @@ import { MaterialModule } from 'src/app/material.module';
     ModalModule.forRoot(),
     NgbModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    TextMaskModule
   ],
   providers: [
     UserService,

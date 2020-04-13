@@ -49,6 +49,7 @@
 } */
 #gmap { 
     height: 369px; 
+    top: 56px;
 }
 .googleapi {
  
@@ -103,17 +104,25 @@ table {
     text-align: center;
   }
 
+  .mat-column-spots {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 15% !important;
+    width: 15% !important;
+    text-align: center;
+  }
+
   .mat-column-time {
     word-wrap: break-word !important;
     white-space: unset !important;
     flex: 0 0 35% !important;
-    width: 35% !important;
+    width: 20% !important;
   }
 
   .mat-column-distance {
     word-wrap: break-word !important;
     white-space: unset !important;
-    flex: 0 0 20% !important;
+    flex: 0 0 20% !important; 
     width: 20% !important;
   }
   
@@ -133,4 +142,13 @@ table {
 
   td {
     font-size: 20px;
+  }
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 30%;
   }

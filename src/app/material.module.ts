@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 
 //import {MatPaginatorModule} from '@angular/material/paginator';
 //import { MatTableModule } from '@angular/material';
+//import {MatSort} from '@angular/material/sort';
+//import {MatInputModule} from '@angular/material/input';
 
 import {
   MatButtonModule,
@@ -12,8 +14,9 @@ import {
   MatGridListModule,
   MatPaginatorModule,
   MatTableModule,
+  MatSortModule,
   MatInputModule,
-  MatInput
+  MatSelectModule
 } from '@angular/material';
 
 @NgModule({
@@ -26,7 +29,9 @@ import {
     MatGridListModule,
     MatPaginatorModule,
     MatTableModule,
-    MatInputModule
+    MatSortModule,
+    MatInputModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -37,7 +42,9 @@ import {
     MatGridListModule,
     MatPaginatorModule,
     MatTableModule,
-    MatInputModule
+    MatSortModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule {}

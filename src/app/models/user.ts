@@ -12,7 +12,11 @@ export class User {
     /**
      * Attached a batch object
      */
-    batch: Batch = new Batch();
+    batch: Batch;
+    /**
+     * Set password as a string
+     */
+    password: string;
     /**
      * Set first name as a string
      */
@@ -36,13 +40,14 @@ export class User {
     /**
      * Set driver as a boolean
      */
-    isDriver: boolean;
+    driver: boolean;
     /**
      * Set accepting ride as a boolean
      */
-    isAcceptingRides: boolean;
+    acceptingRides: boolean;
     hState: string;
     hAddress: string;
+    hAddress2: string;
     hCity: string;
     hZip: number;
     wAddress: string;
