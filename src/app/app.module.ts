@@ -24,18 +24,15 @@ import { PreferenceComponent } from './components/preference/preference.componen
 import { ValidationService } from './services/validation-service/validation.service';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { DriverInfoComponent } from './components/driver-info/driver-info.component';
-import { LandingComponent } from './components/landing/landing.component';
 import { SignupModalComponent } from './components/sign-up-modal/sign-up-modal.component';
 import { MapComponent } from './components/map/map.component';
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
 import { ProfileCarComponent } from './components/profile-car/profile-car.component';
 import { ProfileLocationComponent } from './components/profile-location/profile-location.component';
 import { ProfileMembershipComponent } from './components/profile-membership/profile-membership.component';
-import { DriverContactModalComponent } from './components/driver-contact-modal/driver-contact-modal.component';
 import { DriverListComponent } from './components/driver-list/driver-list.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { LoginreduxComponent } from './components/loginredux/loginredux.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,17 +55,14 @@ import { TextMaskModule } from 'angular2-text-mask';
     PreferenceComponent,
     AdminLoginComponent,
     DriverInfoComponent,
-    LandingComponent,
     SignupModalComponent,
     MapComponent,
     ProfileContactComponent,
     ProfileCarComponent,
     ProfileLocationComponent,
     ProfileMembershipComponent,
-    DriverContactModalComponent,
     DriverListComponent,
     UserRegisterComponent,
-    HomePageComponent,
     BsNavbarComponent,
     LoginreduxComponent,
 
