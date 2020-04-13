@@ -145,19 +145,6 @@
                                     </mat-form-field>
                                 </div>
 
-<<<<<<< HEAD
-                            </mat-grid-tile>
-
-                            <mat-grid-tile style='background-color:lightslategray;' colspan="1" rowspan="2">
-
-                                <!-- GOOGLE MAP -->
-                                
-
-
-                            </mat-grid-tile>
-
-                            
-=======
                                 <div class="row">
                                     <mat-form-field class="addressInput">
                                         <mat-label>Apt Number</mat-label>
@@ -168,10 +155,17 @@
                                 <div class="row">
                                     <mat-form-field class="cityInput">
                                         <mat-label>City</mat-label>
-                                        <input matInput [(ngModel)]="user.hCity" name="hCity">
+                                        <input matInput 
+                                               [(ngModel)]="user.hCity"
+                                               name="hCity"
+                                               required
+                                               minlength="3"
+                                               #hCity="ngModel"
+                                               [textMask]="{mask: citymask, guide: false}">
+                                               <mat-error *ngIf="hCity.invalid && hCity.dirty">*Required. City Not Valid.
+                                            </mat-error>
                                     </mat-form-field>
                                 </div>
->>>>>>> Front-Eric
 
                                 <div class="row">
                                     <mat-form-field class="stateInput">
@@ -185,7 +179,14 @@
                                 <div class="row">
                                     <mat-form-field class="zipInput">
                                         <mat-label>Zip Code</mat-label>
-                                        <input matInput [(ngModel)]="user.hZip" name="hZip">
+                                        <input matInput
+                                               [(ngModel)]="user.hZip"
+                                               name="hZip"
+                                               required
+                                               #hZip="ngModel"
+                                               [textMask]="{mask: zipmask, guide: false}">
+                                               <mat-error *ngIf="hZip.invalid && hZip.dirty">*Required. Zip Code Not Valid.
+                                            </mat-error>
                                     </mat-form-field>
                                 </div>
 
