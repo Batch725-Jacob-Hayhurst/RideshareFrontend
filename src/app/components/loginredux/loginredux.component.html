@@ -121,8 +121,9 @@
                                         <input matInput 
                                                [(ngModel)]="user.phoneNumber" 
                                                name="phoneNumber"
-                                               [textMask]="{mask: phonemask, guide: false}"
-                                               
+                                               required minlength="12"
+                                                maxlength="12"                                            
+                                                [textMask]="{mask: phonemask, guide: false}"  
                                                #phoneNumber="ngModel"
                                                >
                                         <mat-error *ngIf="phoneNumber.invalid && phoneNumber.dirty">*10 Digit Phone-numbers only
