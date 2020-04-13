@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule, TemplateRef } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
-import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { User } from 'src/app/models/user';
 import { HttpClient } from '@angular/common/http';
@@ -10,13 +10,15 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Batch } from 'src/app/models/batch';
 import { TextMaskModule } from 'angular2-text-mask';
+import { CrossFieldErrorMatcher } from 'src/app/directives/fieldsMatch/cross-field-error-matcher';
 
 
 @NgModule({
   declarations: [LoginreduxComponent],
   imports: [
     MaterialModule,
-    TextMaskModule
+    TextMaskModule,
+    ReactiveFormsModule
   ]
 })
 
@@ -27,8 +29,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 })
 export class LoginreduxComponent implements OnInit {
 
-  signUpForm: FormGroup;
-
+  myForm: FormGroup;
+  confirmPWord: string = '';
   user: User;
   pwdError: string;
   usernameError: string;
@@ -36,6 +38,7 @@ export class LoginreduxComponent implements OnInit {
   modalRef: BsModalRef;
   isLogin: boolean;
   isSignUp: boolean;
+  errorMatcher = new CrossFieldErrorMatcher();
 
   states = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS',
             'KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY',
@@ -46,13 +49,24 @@ export class LoginreduxComponent implements OnInit {
 
   phonemask = [/\d/, /\d/, /\d/, '-', /\d/, /\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
-  constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
+  constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router, private formBuilder: FormBuilder) {
     this.isLogin = true;
     this.isSignUp = true;
     this.user = new User();
   }
 
   ngOnInit(): void {
+    this.myForm = this.formBuilder.group({
+      password: ['', Validators.required],
+      confirmPW: ['']
+    }, {validator: this.checkPasswords});
+  }
+
+  checkPasswords(group: FormGroup) {
+    const pass = group.get('password').value;
+    const confirmPass = group.get('confirmPW').value;
+
+    return pass === confirmPass ? null : { notSame: true };
   }
 
   toggleLogin() {

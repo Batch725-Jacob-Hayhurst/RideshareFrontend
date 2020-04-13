@@ -65,7 +65,7 @@
         <mat-card [hidden]="isSignUp">
 
             <div class="container">
-                <form class="text-center" id="signUp-form" (submit)="signUp()" #signUpForm="ngForm">
+                <form [formGroup]="myForm" class="text-center" id="signUp-form" (submit)="signUp()" #signUpForm="ngForm">
 
                     <div class="modal-title-container">
                         <button type="button" class="close pull-right" (click)="toggleSignUp()">
@@ -191,11 +191,12 @@
                                         <mat-error *ngIf=""></mat-error>
                                     </mat-form-field>
                                 </div>
-
+                            
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Password</mat-label>
-                                        <input matInput type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="6">
+                                        <input matInput type="password" [(ngModel)]="user.password" name="password" formControlName="password"  
+                                        [errorStateMatcher]="errorMatcher" required minlength="6">
                                         <mat-error *ngIf="password.invalid && password.dirty">*Required length of at least 6</mat-error>
                                     </mat-form-field>
                                 </div>
@@ -203,8 +204,8 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Confirm Password</mat-label>
-                                        <input matInput type="password" name="confirmPW" required>
-                                        <mat-error *ngIf="">Must match password field.</mat-error>
+                                        <input matInput type="password" [(ngModel)]="confirmPWord" name="confirmPW" formControlName="confirmPW" required>
+                                        <mat-error *ngIf="myForm.hasError('notSame')">Must match password field.</mat-error>
                                     </mat-form-field>
                                 </div>
 
