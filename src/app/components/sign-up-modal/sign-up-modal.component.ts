@@ -23,6 +23,7 @@ export class SignupModalComponent implements OnInit {
 
   user :User = new User();
   batch: Batch;
+  // batch: Batch = new Batch();
   batches: Batch[];
   // validation
   firstNameError :string;
