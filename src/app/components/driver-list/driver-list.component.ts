@@ -29,7 +29,7 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
 
-  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
   // dataSource = new MatTableDataSource();
   dataSource = new MatTableDataSource<Driver>(this.drivers);
 
@@ -67,7 +67,8 @@ export class DriverListComponent implements OnInit {
               'origin': element.user.hCity + "," + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
-              'spots': element.availableSeats,
+              'seats': element.availableSeats,
+              'totalseats': element.seats,
               'distance': '',
               'duration': '',
               'active': element.user.active,

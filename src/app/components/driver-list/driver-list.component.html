@@ -54,9 +54,14 @@
             <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="spots">
+          <ng-container matColumnDef="seats">
             <th mat-header-cell *matHeaderCellDef> Seats </th>
-            <td mat-cell *matCellDef="let element"> {{element.spots}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="totalseats">
+            <th mat-header-cell *matHeaderCellDef> Total Seats </th>
+            <td mat-cell *matCellDef="let element"> {{element.totalseats}} </td>
           </ng-container>
       
           <!-- View Column -->
