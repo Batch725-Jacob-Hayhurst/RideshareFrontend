@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Batch } from 'src/app/models/batch';
 import { TextMaskModule } from 'angular2-text-mask';
-import { AddressVerificationService } from '../../services/address-verification/address-verification.service'
+import { AddressVerificationService } from '../../services/address-verification/address-verification.service';
 
 
 @NgModule({
@@ -141,7 +141,7 @@ export class LoginreduxComponent implements OnInit {
     
   }
 
-  //this will check if address-varification service is working
+  // this will check if address-varification service is working
 
   // this would be the street from form field
   testStreet: string = '1600 Amphitheatre Parkway';
@@ -151,9 +151,12 @@ export class LoginreduxComponent implements OnInit {
   testState: string = 'CA';
   // this would be from the zip/postal code field
   testZipCode: string = '94043';
-  testService(){
+
+  // make sure to make the method that calls the service method async
+  async testService(){
     let test;
-    test = this.addressVerify.isAddressValid(this.testStreet, this.testCity, this.testState, this.testZipCode);
+    // this await keyword makes sure that the promise finished before moving on.
+    await this.addressVerify.isAddressValid(this.testStreet, this.testCity, this.testState, this.testZipCode).then(result => test = result);
     console.log(test);
   }
 
