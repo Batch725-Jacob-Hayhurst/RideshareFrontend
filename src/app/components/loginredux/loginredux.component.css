@@ -9,6 +9,40 @@
 cursor: pointer;
 }
 
+h1.orangeText {
+  color: rgb(252, 123, 4);
+}
+
+mat-button-raised {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 10px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.mat-success {
+  color: white;
+  background-color: rgb(37, 87, 179);
+  border-color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  
+  width: 150px;
+  height: 50px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0;
+
+}
+
 mat-card{
 size: 100vw, 60vh;
 
@@ -114,6 +148,9 @@ font-size:23px;
 
 .center1{
 margin: 0 auto;
+margin-bottom: 0px;
+margin-top: 15px;
+
 }
 .cBorder{
 margin-top: 15px;
@@ -165,10 +202,16 @@ font-family: "Overpass",sans-serif;
 
 p.orangeText{
   font-size:14px;
+  /* color: orange; */
 }
 
 h1.orangeText{
   font-size:36px;
+  /* color: orange; */
+}
+
+.orangeText {
+  color: orange;
 }
 
 }
