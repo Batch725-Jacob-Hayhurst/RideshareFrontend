@@ -56,10 +56,10 @@ export class LoginreduxComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.myForm = this.formBuilder.group({
-      password: ['', Validators.required],
-      confirmPW: ['']
-    }, {validator: this.checkPasswords});
+    // this.myForm = this.formBuilder.group({
+    //   password: ['', Validators.required],
+    //   confirmPW: ['']
+    // }, {validator: this.checkPasswords});
   }
 
   checkPasswords(group: FormGroup) {

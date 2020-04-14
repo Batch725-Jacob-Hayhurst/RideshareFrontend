@@ -7,5 +7,6 @@ export class CrossFieldErrorMatcher implements ErrorStateMatcher {
         const invalidParent = !!(control && control.parent && control.parent.invalid && control.parent.dirty);
 
         return (invalidCtrl || invalidParent);
+        // return control.dirty && form.invalid;
     }
 }

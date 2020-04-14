@@ -6,7 +6,7 @@ export const passwordMatchValidator: ValidatorFn = (control: FormGroup): Validat
   const confirm = control.get('confirmPW');
   console.log(control);
 
-  return password && confirm && password.value !== confirm.value ? {'fieldsNotMatching': true} : null;
+  return password && confirm && password.value !== confirm.value ? {'notSame': true} : null;
 };
 
 @Directive({
