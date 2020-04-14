@@ -124,6 +124,7 @@
                                                name="phoneNumber"
                                                [textMask]="{mask: phonemask, guide: false}"
                                                minlength="12"
+                                               required
                                                #phoneNumber="ngModel"
                                                >
                                         <mat-error *ngIf="phoneNumber.invalid && phoneNumber.dirty">*10 Digit Phone-numbers only
@@ -210,8 +211,13 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Password</mat-label>
-                                        <input matInput type="password" [(ngModel)]="user.password" name="password" #password="ngModel"
-                                         required minlength="6">
+                                        <input matInput 
+                                               type="password" 
+                                               [(ngModel)]="user.password" 
+                                               name="password" 
+                                               #password="ngModel"
+                                               required 
+                                               minlength="6">
                                         <mat-error *ngIf="password.invalid && password.dirty">*Required length of at least 6</mat-error>
                                     </mat-form-field>
                                 </div>
@@ -219,7 +225,13 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Confirm Password</mat-label>
-                                        <input matInput type="password" [(ngModel)]="confirmPWord" name="confirmPW" #confirmPW="ngModel" [errorStateMatcher]="errorMatcher" required>
+                                        <input matInput
+                                               type="password" 
+                                               [(ngModel)]="confirmPWord" 
+                                               name="confirmPW" 
+                                               #confirmPW="ngModel" 
+                                               [errorStateMatcher]="errorMatcher" 
+                                               required>
                                         <mat-error *ngIf="passwordForm.hasError('notSame') && confirmPW.dirty">Must match password field.</mat-error>
                                     </mat-form-field>
                                 </div>
