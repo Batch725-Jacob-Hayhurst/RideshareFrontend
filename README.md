@@ -30,8 +30,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running tests e2e with Selenium Webdriver
 
 -run the command `webdriver-manager start`
--default port for selenium is `4444`
--if issues encountered, run the command `webdriver-manager clean` then try to start again
+    -if issues encountered, run the command `webdriver-manager clean` then try to start again
+    -default port for selenium is `4444`
+-`ng serve` the application, then run the command `ng e2e -s false`
+
 
 ## Generate Documentation for Angular using Compodoc
 
