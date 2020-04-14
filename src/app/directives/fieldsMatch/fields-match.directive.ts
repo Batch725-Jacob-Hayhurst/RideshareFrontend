@@ -4,7 +4,6 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors, ValidatorF
 export const passwordMatchValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
   const password = control.get('password');
   const confirm = control.get('confirmPW');
-  console.log(control);
 
   return password && confirm && password.value !== confirm.value ? {'notSame': true} : null;
 };

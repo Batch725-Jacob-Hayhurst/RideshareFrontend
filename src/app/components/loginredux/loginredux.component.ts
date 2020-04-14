@@ -49,24 +49,13 @@ export class LoginreduxComponent implements OnInit {
 
   phonemask = [/\d/, /\d/, /\d/, '-', /\d/, /\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
-  constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router, private formBuilder: FormBuilder) {
+  constructor(private modalService: BsModalService, private userService: UserService, private http: HttpClient, private authService: AuthService, public router: Router) {
     this.isLogin = true;
     this.isSignUp = true;
     this.user = new User();
   }
 
   ngOnInit(): void {
-    // this.myForm = this.formBuilder.group({
-    //   password: ['', Validators.required],
-    //   confirmPW: ['']
-    // }, {validator: this.checkPasswords});
-  }
-
-  checkPasswords(group: FormGroup) {
-    const pass = group.get('password').value;
-    const confirmPass = group.get('confirmPW').value;
-
-    return pass === confirmPass ? null : { notSame: true };
   }
 
   toggleLogin() {
