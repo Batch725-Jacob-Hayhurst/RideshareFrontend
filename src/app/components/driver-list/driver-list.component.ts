@@ -30,7 +30,7 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
   dataSource = new MatTableDataSource<Driver>();
 
 
