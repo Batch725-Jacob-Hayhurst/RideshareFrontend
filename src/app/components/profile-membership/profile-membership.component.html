@@ -1,41 +1,43 @@
-<div class="container mainContainer" (keydown.enter)="updatesMembershipInfo()"> 
-        <i class="fa fa-users" style="font-family:'FontAwesome';"></i>
-            <h4 class="title">Membership:</h4>
-            <div class="innercontainer">
-            <div class="form-group row">
-            
-                    <div class="col-sm-12">
-                       <h5>Batch:</h5>
-                       <span *ngIf='profileObject.batch != undefined'> {{profileObject.batch.batchNumber}} - {{profileObject.batch.batchLocation}}</span>
-                    </div>
-                </div>
-                
-                <div class="form-group row">
-                     <div class="col-sm-4 t">
-                    <h6>Status:</h6>
-                    <select class="form-control mySelect" name="rider" id="rider" [(ngModel)]=isDriver value="{{profileObject.isDriver}}">
-                        <option value="true">Driver</option>
-                        <option value="false">Rider</option>
-                    </select>
-                    <select class="form-control mySelect" name="active" id="active" [(ngModel)]=active value="{{profileObject.active}}">
-                        <option value="true">Active</option>
-                        <option value="false">Disabled</option>
-                    </select>
-                    <p *ngIf="success != ''" class="success">{{success}}</p>
-                    <!-- <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-success mybtngroup">Rider</button>
-                        <button type="button" class="btn btn-outline-success mybtngroup">Driver</button>
-                        <button type="button" class="btn btn-outline-danger mybtngroup">Off</button>
-                    </div> -->
-            
-                <button type="submit" class="btn btn-primary myBtn" (click)="updatesMembershipInfo()">Save</button>
-                </div>
+<div class="container mainContainer" (keydown.enter)="updatesMembershipInfo()">
+    <i class="fa fa-users" style="font-family:'FontAwesome';"></i>
+    <h4 class="title">Membership:</h4>
+    <div class="innercontainer">
+        <div class="form-group row">
+
+            <div class="col-sm-12">
+                <h5>Batch:</h5>
+                <span *ngIf='profileObject.batch != undefined'> {{profileObject.batch.batchNumber}} -
+                    {{profileObject.batch.batchLocation}}</span>
             </div>
         </div>
+
+        <div class="form-group row">
+            <div class="col-sm-4 t">
+                <h6>Status:</h6>
+                <select class="form-control mySelect" name="rider" id="rider" [(ngModel)]=isDriver
+                    value="{{profileObject.isDriver}}">
+                    <option value="true">Driver</option>
+                    <option value="false">Rider</option>
+                </select>
+                <select class="form-control mySelect" name="active" id="active" [(ngModel)]=active
+                    value="{{profileObject.active}}">
+                    <option value="true">Active</option>
+                    <option value="false">Disabled</option>
+                </select>
+            </div>
+        </div>
+        <div *ngIf="success === 'Updated Successfully!'; else Failure">
+            <p class="success">{{success}}</p>
+        </div>
+        <ng-template #Failure>
+            <p class="failure">{{success}}</p>
+        </ng-template>
+        <button type="submit" class="btn btn-primary myBtn" (click)="updatesMembershipInfo()">Save</button>
     </div>
-            
-       
-                    <!-- <h4>To drive or not to drive?</h4>
+</div>
+
+
+<!-- <h4>To drive or not to drive?</h4>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="rider" name="customRadioInline1" class="custom-control-input">
                         <label class="custom-control-label" for="rider">Rider</label>
@@ -48,6 +50,5 @@
                         <input type="radio" id="off" name="customRadioInline1" class="custom-control-input">
                         <label class="custom-control-label" for="off">Off</label>
                     </div> -->
-                <!-- </div> -->
-            <!-- </div> --> 
-    
+<!-- </div> -->
+<!-- </div> -->

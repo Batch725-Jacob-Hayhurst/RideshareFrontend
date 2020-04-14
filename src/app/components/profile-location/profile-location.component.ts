@@ -10,18 +10,18 @@ import { User } from 'src/app/models/user';
 export class ProfileLocationComponent implements OnInit {
 
   zipcode: number;
-  city:string;
-  address:string;
-  address2:string;
+  city: string;
+  address: string;
+  address2: string;
   hState: string;
   currentUser: User;
-  success :string;
-  showAddress2: boolean = false;
+  success: string;
+  showAddress2 = false;
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-   this.userService.getUserById2(sessionStorage.getItem("userid")).subscribe((response)=>{
+   this.userService.getUserById2(sessionStorage.getItem('userid')).subscribe((response) => {
       this.currentUser = response;
       this.zipcode = response.hZip;
       this.city = response.hCity;
@@ -33,16 +33,20 @@ export class ProfileLocationComponent implements OnInit {
     });
   }
 
-  updatesContactInfo(){
-    this.currentUser.hZip = this.zipcode;
-    this.currentUser.hCity = this.city;
-    this.currentUser.hAddress = this.address;
-    //this.currentUser.wAddress = this.address2;
-    this.currentUser.hAddress2 = this.address2;
-    this.currentUser.hState = this.hState;
-    //console.log(this.currentUser);
-    this.userService.updateUserInfo(this.currentUser);
-    this.success = "Updated Successfully!";
+  updatesContactInfo() {
+    if (this.currentUser.hZip !== this.zipcode || this.currentUser.hCity !== this.city
+      || this.currentUser.hAddress !== this.address || this.currentUser.hAddress2 !== this.address2
+      || this.currentUser.hState !== this.hState) {
+        this.currentUser.hZip = this.zipcode;
+        this.currentUser.hCity = this.city;
+        this.currentUser.hAddress = this.address;
+        this.currentUser.hAddress2 = this.address2;
+        this.currentUser.hState = this.hState;
+        this.userService.updateUserInfo(this.currentUser);
+        this.success = 'Updated Successfully!';
+      } else {
+        this.success = 'No Values Changed';
+      }
   }
 
   hAddress2Exist() {

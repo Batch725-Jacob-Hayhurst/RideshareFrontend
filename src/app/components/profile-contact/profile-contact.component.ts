@@ -10,17 +10,17 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileContactComponent implements OnInit {
 
-  profileObject : User;
+  profileObject: User;
   currentUser: any = '';
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
-  success :string;
+  success: string;
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.currentUser = this.userService.getUserById2(sessionStorage.getItem("userid")).subscribe((response)=>{
+    this.currentUser = this.userService.getUserById2(sessionStorage.getItem('userid')).subscribe((response) => {
       this.profileObject = response;
 
       this.firstName = this.profileObject.firstName;
@@ -29,17 +29,21 @@ export class ProfileContactComponent implements OnInit {
       this.phone = this.profileObject.phoneNumber;
 
     });
-    
+
   }
 
-  updatesContactInfo(){
-    this.profileObject.firstName = this.firstName;
-    this.profileObject.lastName = this.lastName;
-    this.profileObject.email = this.email;
-    this.profileObject.phoneNumber = this.phone;
-
-    this.userService.updateUserInfo(this.profileObject);
-    this.success = "Updated Successfully!";
+  updatesContactInfo() {
+    if (this.profileObject.firstName !== this.firstName || this.profileObject.lastName !== this.lastName
+      || this.profileObject.email !== this.email || this.profileObject.phoneNumber !== this.phone) {
+        this.profileObject.firstName = this.firstName;
+        this.profileObject.lastName = this.lastName;
+        this.profileObject.email = this.email;
+        this.profileObject.phoneNumber = this.phone;
+        this.userService.updateUserInfo(this.profileObject);
+        this.success = 'Updated Successfully!';
+      } else {
+        this.success = 'No Values Changed';
+      }
   }
 
 

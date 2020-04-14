@@ -93,9 +93,13 @@
         <label for="zipcode" class="col-sm-4 col-form-label">Zipcode:</label>
         <div class="col-sm-4">
             <input [(ngModel)]=zipcode type="text" class="form-control" id="zipcode">
-            <p *ngIf="success != ''" class="success">{{success}}</p>
         </div>
     </div>
-
+    <div *ngIf="success === 'Updated Successfully!'; else Failure">
+        <p class="success">{{success}}</p>
+    </div>
+    <ng-template #Failure>
+        <p class="failure">{{success}}</p>
+    </ng-template>
     <button type="submit" class="btn btn-primary myBtn" (click)="updatesContactInfo()">Save</button>
 </div>
