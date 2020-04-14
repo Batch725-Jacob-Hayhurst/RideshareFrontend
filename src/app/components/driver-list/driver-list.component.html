@@ -1,7 +1,7 @@
-<div class = " justify-content-between ml-5 mr-5">
-    <div class="row">
+<div class=" justify-content-between ml-5 mr-5">
+  <div class="row">
     <div class="col-lg-7">
-     <!--<div class="form-group">
+      <!--<div class="form-group">
         <h4>Origin</h4>
         <input [(ngModel)]="origin" id="origin" class="form-control" placeholder="Morgantown, WV"/>
       </div>
@@ -16,8 +16,8 @@
       </div>
       <p id="total"></p>-->
       <h4>Driver's List</h4>
-      
-     <!-- <table class="table table-striped" >
+
+      <!-- <table class="table table-striped" >
        <thead class="thead-dark">
          <tr>
            <th scope="col">Name</th>
@@ -32,25 +32,30 @@
         <mat-label>Filter</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
       </mat-form-field>
-      <div class="mat-elevation-z24" >
-        
-        <table mat-table [dataSource]="dataSource" matSort class= "justify-content-center table-striped">
-      
+      <div class="mat-elevation-z24">
+        <!-- <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+          <mat-spinner></mat-spinner>
+        </div> -->
+
+        <table mat-table [dataSource]="dataSource" matSort matSortDisableClear
+          class="justify-content-center table-striped" matSortActive="distance" matSortDirection="asc">
+
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
             <td mat-cell *matCellDef="let element"> {{element.name}} </td>
           </ng-container>
-      
+
           <!-- Distance Column -->
           <ng-container matColumnDef="distance">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Distance </th>
-            <td mat-cell *matCellDef="let element" > {{element.distance}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.distance | distanceConversion: 'M-MI':0 }}
+            </td>
           </ng-container>
-      
+
           <!-- Time Column -->
           <ng-container matColumnDef="time">
-            <th mat-header-cell *matHeaderCellDef > Time </th>
+            <th mat-header-cell *matHeaderCellDef> Time </th>
             <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
           </ng-container>
 
@@ -63,55 +68,58 @@
             <th mat-header-cell *matHeaderCellDef> Total Seats </th>
             <td mat-cell *matCellDef="let element"> {{element.totalseats}} </td>
           </ng-container>
-      
+
           <!-- View Column -->
           <ng-container matColumnDef="view">
             <th mat-header-cell *matHeaderCellDef> View Info </th>
             <td mat-cell *matCellDef="let element"> {{element.view}}
-              <button type="button" class="btn btn-primary" data-toggle="modal" [attr.data-target]="'#exampleModalCentered' + element.id"> View</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal"
+                [attr.data-target]="'#exampleModalCentered' + element.id"> View</button>
               <div class="col-lg-5">
-               <div class="modal" [id]="'exampleModalCentered' + element.id" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal" [id]="'exampleModalCentered' + element.id" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenteredLabel">Contact Info:</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                               <span aria-hidden="true">×</span>
-                             </button>
-                        </div>
-                        <div class="modal-body">
-                            <h1>{{element.name}}</h1>
-                            <h3>Email: {{element.email}}</h3>         
-                            <h3>Phone: {{element.phone}}</h3>                 
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenteredLabel">Contact Info:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
                       </div>
-                   </div>
-                 </div>
-            </div>
-            <!-- <div class="col-lg-6">
+                      <div class="modal-body">
+                        <h1>{{element.name}}</h1>
+                        <h3>Email: {{element.email}}</h3>
+                        <h3>Phone: {{element.phone}}</h3>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-lg-6">
                 <div #maps id="gmap" class="img-responsive"></div>
             </div> -->
             </td>
           </ng-container>
-      
+
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-      
+        <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+          <mat-progress-spinner color="primary" mode="indeterminate">
+          </mat-progress-spinner>
+        </mat-card>
         <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
       </div>
 
-      <mat-paginator [length]="100"
-              [pageSize]="5"
-              [pageSizeOptions]="[1, 3, 5, 10, 25, 50]">
+      <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[1, 3, 5, 10, 25, 50]">
       </mat-paginator>
-     </div>
-     <div class="col-lg-5">
-       <h4>Directions:</h4>
-       <div #map id="gmap" class="img-responsive"></div>
-     </div>
+    </div>
+    <div class="col-lg-5">
+      <h4>Directions:</h4>
+      <div #map id="gmap" class="img-responsive"></div>
     </div>
   </div>
+</div>
