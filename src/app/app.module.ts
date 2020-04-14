@@ -2,7 +2,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'node_modules/ngx-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -39,6 +39,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material.module';
 import { TextMaskModule } from 'angular2-text-mask';
 import { DistanceConversion } from 'src/app/pipes/distance-conversion';
+import { FieldsMatchDirective } from './directives/fieldsMatch/fields-match.directive';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +67,11 @@ import { DistanceConversion } from 'src/app/pipes/distance-conversion';
     UserRegisterComponent,
     BsNavbarComponent,
     LoginreduxComponent,
-    DistanceConversion
+    DistanceConversion,
+    FieldsMatchDirective,
+
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -78,7 +84,8 @@ import { DistanceConversion } from 'src/app/pipes/distance-conversion';
     NgbModule,
     BrowserAnimationsModule,
     MaterialModule,
-    TextMaskModule
+    TextMaskModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService,

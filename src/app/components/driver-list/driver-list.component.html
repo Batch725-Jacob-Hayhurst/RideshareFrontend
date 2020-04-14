@@ -32,13 +32,20 @@
         <mat-label>Filter</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
       </mat-form-field>
+      <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
+        <mat-label>Filter {{filter.name}}</mat-label>
+        <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
+          (change)="filterChange(filter,$event)">
+          <option value="">-- Select {{filter.name}} --</option>
+          <option [value]="item" *ngFor="let item of filter.options">{{item | distanceConversion: 'M-MI':0 }}</option>
+        </select>
+      </mat-form-field>
       <div class="mat-elevation-z24">
         <!-- <div class="spinner-container" *ngIf="dataSource.loading$ | async">
           <mat-spinner></mat-spinner>
         </div> -->
 
-        <table mat-table [dataSource]="dataSource" matSort matSortDisableClear
-          class="justify-content-center table-striped" matSortActive="distance" matSortDirection="asc">
+        <table mat-table [dataSource]="dataSource" matSort matSortDisableClear class="justify-content-center table-striped" matSortActive="distance" matSortDirection="asc">
 
           <!-- Name Column -->
           <ng-container matColumnDef="name">
@@ -64,10 +71,10 @@
             <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="totalseats">
+          <!-- <ng-container matColumnDef="spots">
             <th mat-header-cell *matHeaderCellDef> Total Seats </th>
             <td mat-cell *matCellDef="let element"> {{element.totalseats}} </td>
-          </ng-container>
+          </ng-container> -->
 
           <!-- View Column -->
           <ng-container matColumnDef="view">

@@ -30,9 +30,11 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', /* 'spots', */ 'view'];
   dataSource = new MatTableDataSource<Driver>();
-
+ // distance filter
+  filterValues = {};
+  filterSelectObj = [];
 
   @ViewChild('map', null) mapElement: any;
   map: google.maps.Map;
@@ -45,7 +47,25 @@ export class DriverListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
+  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) {
+     // Object to create Filter for
+     this.filterSelectObj = [
+      {
+        name: 'DISTANCE',
+        columnProp: 'distance',
+        options: [
+          1609.34,
+          8046.72,
+          16093.44,
+          // '1 mi',
+          // '5 mi',
+          // '10 mi',
+          // '25 mi',
+          // '35+ mi'
+        ]
+      }
+    ];
+  }
 
   ngOnInit() {
 
@@ -55,14 +75,14 @@ export class DriverListComponent implements OnInit {
       res => {
         // console.log(res);
         res.forEach(element => {
-          console.log(element.user.acceptingRides);
-          console.log(element.user.active);
-          console.log(element.user.driver);
+          // console.log(element.user.acceptingRides);
+          // console.log(element.user.active);
+          // console.log(element.user.driver);
           if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
             this.drivers.push({
               'id': element.user.userId,
-              'name': element.user.firstName + " " + element.user.lastName,
-              'origin': element.user.hCity + "," + element.user.hState,
+              'name': element.user.firstName + ' ' + element.user.lastName,
+              'origin': element.user.hCity + ',' + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
               'seats': element.availableSeats,
@@ -82,17 +102,17 @@ export class DriverListComponent implements OnInit {
 
     this.sleep(2000).then(() => {
       this.mapProperties = {
-        center: new google.maps.LatLng(Number(sessionStorage.getItem("lat")), Number(sessionStorage.getItem("lng"))),
+        center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
-      // get all routes 
+      // get all routes
       this.displayDriversList(this.location, this.drivers);
       // show drivers on map
       this.showDriversOnMap(this.location, this.drivers);
     });
-    console.log(this.drivers);
+    // console.log(this.drivers);
   }
 
   sleep(ms) {
@@ -104,11 +124,11 @@ export class DriverListComponent implements OnInit {
       .subscribe(
         (response) => {
           //console.log(response);
-          if (response["googleMapAPIKey"] != undefined) {
+          if (response['googleMapAPIKey'] != undefined) {
             new Promise((resolve) => {
               let script: HTMLScriptElement = document.createElement('script');
               script.addEventListener('load', r => resolve());
-              script.src = `http://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
+              script.src = `http://maps.googleapis.com/maps/api/js?key=${response['googleMapAPIKey'][0]}`;
               document.head.appendChild(script);
             });
           }
@@ -175,6 +195,78 @@ export class DriverListComponent implements OnInit {
 
     });
     setTimeout(myFunc => {
-      this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false; } , 2000);
+      this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false;
+      this.filterSelectObj.filter((o) => {
+        // o.options = this.getFilterObject(drivers, o.columnProp);
+      });
+      this.dataSource.filterPredicate = this.createFilter();
+
+    } , 2000);
+  }
+  // Get Uniqu values from columns to build filter
+  getFilterObject(fullObj, key) {
+    const uniqChk = [];
+    fullObj.filter((obj) => {
+      if (!uniqChk.includes(obj[key])) {
+        uniqChk.push(obj[key]);
+      }
+      return obj;
+    });
+    return uniqChk;
+  }
+  // Called on Filter change
+  filterChange(filter, event) {
+    // let filterValues = {}
+    this.filterValues[filter.columnProp] = event.target.value.trim().toLowerCase();
+    this.dataSource.filter = JSON.stringify(this.filterValues);
+  }
+
+  // Custom filter method fot Angular Material Datatable
+  createFilter() {
+    let filterFunction = function(data: any, filter: string): boolean {
+      let searchTerms = JSON.parse(filter);
+      let isFilterSet = false;
+      for (const col in searchTerms) {
+        if (searchTerms[col].toString() !== '') {
+          isFilterSet = true;
+        } else {
+          delete searchTerms[col];
+        }
+      }
+
+      // console.log(searchTerms);
+
+      const nameSearch = () => {
+        let found = false;
+        if (isFilterSet) {
+          for (const col in searchTerms) {
+            // console.log(searchTerms[col]);
+            // searchTerms[col].array.forEach(meter => {
+            //   if (data[col] <= meter && isFilterSet) {
+            //     found = true;
+            //   }
+            // });
+
+            console.log(parseFloat(searchTerms[col]));
+            searchTerms[col].split(' ').forEach(word => {
+              if (parseFloat(data[col].toString().toLowerCase().indexOf(word)) <= parseFloat(word) && isFilterSet) {
+                found = true;
+              }
+            });
+
+            // searchTerms[col].trim().toLowerCase().split(' ').forEach(word => {
+            //   if (data[col].toString().toLowerCase().indexOf(word) != -1 && isFilterSet) {
+            //     found = true;
+            //   }
+            // });
+          }
+          return found;
+        } else {
+          return true;
+        }
+      };
+      return nameSearch();
+    };
+    return filterFunction;
   }
 }
