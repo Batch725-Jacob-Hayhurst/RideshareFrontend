@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Batch } from 'src/app/models/batch';
 import { TextMaskModule } from 'angular2-text-mask';
+import { AddressVerificationService } from '../../services/address-verification/address-verification.service';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ export class LoginreduxComponent implements OnInit {
               private userService: UserService,
               private http: HttpClient,
               private authService: AuthService,
+              private addressVery: AddressVerificationService,
               public router: Router) {
     this.isLogin = true;
     this.isSignUp = true;
