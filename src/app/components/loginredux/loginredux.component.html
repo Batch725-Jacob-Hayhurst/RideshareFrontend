@@ -196,8 +196,7 @@
 
                         <mat-grid-tile colspan="1" rowspan="2">
 
-                            <div class="rightForm">
-
+                            <div class="rightForm"> 
 
                                 <div class="row">
                                     <mat-form-field>
@@ -206,11 +205,13 @@
                                         <mat-error *ngIf=""></mat-error>
                                     </mat-form-field>
                                 </div>
-
+                            
+                            <form appFieldsMatch #passwordForm="ngForm">
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Password</mat-label>
-                                        <input matInput type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="6">
+                                        <input matInput type="password" [(ngModel)]="user.password" name="password" #password="ngModel"
+                                         required minlength="6">
                                         <mat-error *ngIf="password.invalid && password.dirty">*Required length of at least 6</mat-error>
                                     </mat-form-field>
                                 </div>
@@ -218,10 +219,11 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Confirm Password</mat-label>
-                                        <input matInput type="password" name="confirmPW" required>
-                                        <mat-error *ngIf="">Must match password field.</mat-error>
+                                        <input matInput type="password" [(ngModel)]="confirmPWord" name="confirmPW" #confirmPW="ngModel" [errorStateMatcher]="errorMatcher" required>
+                                        <mat-error *ngIf="passwordForm.hasError('notSame') && confirmPW.dirty">Must match password field.</mat-error>
                                     </mat-form-field>
                                 </div>
+                            </form>
 
                                 <div class="row">
                                     <mat-form-field class="workInput">
