@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, OnChanges } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user-service/user.service';
@@ -16,6 +16,7 @@ import { MatTableDataSource } from '@angular/material/';
 import { MatTableModule } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
+import { DistanceConversion } from '../../pipes/distance-conversion';
 
 @Component({
   selector: 'app-driver-list',
@@ -28,10 +29,9 @@ export class DriverListComponent implements OnInit {
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
-
+  isLoading = true;
   displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
-  // dataSource = new MatTableDataSource();
-  dataSource = new MatTableDataSource<Driver>(this.drivers);
+  dataSource = new MatTableDataSource<Driver>();
 
 
   @ViewChild('map', null) mapElement: any;
@@ -45,8 +45,6 @@ export class DriverListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  // this.dataSource.  = filterValue.trim().toLowerCase();
-
   constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
 
   ngOnInit() {
@@ -55,7 +53,7 @@ export class DriverListComponent implements OnInit {
 
     this.carService.getAllCars().subscribe(
       res => {
-        //console.log(res);
+        // console.log(res);
         res.forEach(element => {
           console.log(element.user.acceptingRides);
           console.log(element.user.active);
@@ -67,34 +65,19 @@ export class DriverListComponent implements OnInit {
               'origin': element.user.hCity + "," + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
-              'spots': element.availableSeats,
+              'seats': element.availableSeats,
+              'totalseats': element.seats,
               'distance': '',
               'duration': '',
               'active': element.user.active,
               'driver': element.user.driver,
               'acceptingRides': element.user.acceptingRides,
-            })
-          };
+            });
+          }
         });
-        console.log(this.drivers);
-        this.dataSource.data = this.drivers;
       });
-
-
-
-
-
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
-    console.log(this.drivers);
-
-    /*this.drivers.push({'id': '1','name': 'Ed Ogeron','origin':'Reston, VA', 'email': 'ed@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '2','name': 'Nick Saban','origin':'Oklahoma, OK', 'email': 'nick@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '3','name': 'Bobbie sfsBowden','origin':'Texas, TX', 'email': 'bobbie@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '4','name': 'Les Miles','origin':'New York, NY', 'email': 'les@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '5','name': 'Bear Bryant','origin':'Arkansas, AR', 'email': 'bear@gmail.com', 'phone':'555-555-5555'});*/
-    //console.log(this.drivers);
     this.getGoogleApi();
 
     this.sleep(2000).then(() => {
@@ -104,9 +87,9 @@ export class DriverListComponent implements OnInit {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
-      //get all routes 
+      // get all routes 
       this.displayDriversList(this.location, this.drivers);
-      //show drivers on map
+      // show drivers on map
       this.showDriversOnMap(this.location, this.drivers);
     });
     console.log(this.drivers);
@@ -150,7 +133,7 @@ export class DriverListComponent implements OnInit {
       origin: origin,
       destination: destination,
       travelMode: 'DRIVING',
-      //avoidTolls: true
+      // avoidTolls: true
     }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
@@ -161,7 +144,7 @@ export class DriverListComponent implements OnInit {
   }
 
 
-  displayDriversList(origin, drivers) {
+  displayDriversList(origin, drivers)  {
     let origins = [];
     //set origin
     origins.push(origin);
@@ -185,14 +168,13 @@ export class DriverListComponent implements OnInit {
           var destinationList = response.destinationAddresses;
           var results = response.rows[0].elements;
           var name = element.name;
-          element.distance = results[0].distance.text;
+          element.distance = results[0].distance.value;
           element.duration = results[0].duration.text;
         }
       });
 
-
     });
+    setTimeout(myFunc => {
+      this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false; } , 2000);
   }
-
-
 }
