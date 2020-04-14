@@ -39,6 +39,10 @@ export class CarService {
 		return this.http.get<Car[]>(this.url);
 	}
 
+	getCarsForLocation(location: string): Observable <any>{
+		return this.http.get(this.url + 'driver/'+ location)
+	}
+
 	/**
 	 * This function returns an car by user ID.
 	 * @param userId 

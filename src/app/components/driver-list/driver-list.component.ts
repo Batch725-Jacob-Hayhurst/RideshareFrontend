@@ -24,7 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = 'Morgantown, WV';
+  location: string = 'Morgantown';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
@@ -53,7 +53,7 @@ export class DriverListComponent implements OnInit {
 
     this.drivers = [];
 
-    this.carService.getAllCars().subscribe(
+    this.carService.getCarsForLocation(this.location).subscribe(
       res => {
         //console.log(res);
         res.forEach(element => {
