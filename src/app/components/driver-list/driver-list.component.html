@@ -45,8 +45,7 @@
           <mat-spinner></mat-spinner>
         </div> -->
 
-        <table mat-table [dataSource]="dataSource" matSort matSortDisableClear
-          class="justify-content-center table-striped" matSortActive="distance" matSortDirection="asc">
+        <table mat-table [dataSource]="dataSource" matSort matSortDisableClear class="justify-content-center table-striped" matSortActive="distance" matSortDirection="asc">
 
           <!-- Name Column -->
           <ng-container matColumnDef="name">
@@ -72,10 +71,10 @@
             <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="totalseats">
+          <!-- <ng-container matColumnDef="spots">
             <th mat-header-cell *matHeaderCellDef> Total Seats </th>
             <td mat-cell *matCellDef="let element"> {{element.totalseats}} </td>
-          </ng-container>
+          </ng-container> -->
 
           <!-- View Column -->
           <ng-container matColumnDef="view">
