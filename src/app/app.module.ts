@@ -38,7 +38,7 @@ import { LoginreduxComponent } from './components/loginredux/loginredux.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material.module';
 import { TextMaskModule } from 'angular2-text-mask';
-
+import { DistanceConversion } from 'src/app/pipes/distance-conversion';
 
 @NgModule({
   declarations: [
@@ -64,10 +64,8 @@ import { TextMaskModule } from 'angular2-text-mask';
     DriverListComponent,
     UserRegisterComponent,
     BsNavbarComponent,
-    LoginreduxComponent
-
-    
-    
+    LoginreduxComponent,
+    DistanceConversion,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +78,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     NgbModule,
     BrowserAnimationsModule,
     MaterialModule,
-    TextMaskModule
+    TextMaskModule,
   ],
   providers: [
     UserService,
