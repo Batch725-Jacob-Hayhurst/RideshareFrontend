@@ -17,7 +17,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { DistanceConversion } from '../../pipes/distance-conversion';
-import { DistancefilterService } from 'src/app/services/distancefilter-service/distancefilter.service';
 
 @Component({
   selector: 'app-driver-list',
@@ -31,8 +30,10 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', /* 'spots', */ 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'spots', 'view'];
   dataSource = new MatTableDataSource<Driver>();
+ // distance filter
+  filterValues = {};
   filterSelectObj = [];
 
   @ViewChild('map', null) mapElement: any;
@@ -46,7 +47,7 @@ export class DriverListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  constructor(private http: HttpClient, private distFilterService: DistancefilterService, private carService: CarService) {
+  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) {
      // Object to create Filter for
      this.filterSelectObj = [
       {
@@ -57,8 +58,7 @@ export class DriverListComponent implements OnInit {
           8046.72,
           16093.44,
           40233.6,
-          56327.1,
-          371869 //234 mi to double check it works
+          56327.1
           // '1 mi',
           // '5 mi',
           // '10 mi',
@@ -87,8 +87,7 @@ export class DriverListComponent implements OnInit {
               'origin': element.user.hCity + ',' + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
-              'seats': element.availableSeats,
-              'totalseats': element.seats,
+              'spots': element.availableSeats,
               'distance': '',
               'duration': '',
               'active': element.user.active,
@@ -198,18 +197,82 @@ export class DriverListComponent implements OnInit {
     });
     setTimeout(myFunc => {
       this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false;
-
-      // this.dataSource.filterPredicate = (data: Driver, filter: string) => {
-      //   return data.distance <= filter;   // returns data to table where distance is less than filtered distance
-      //   };
-      this.distFilterService.runFilter();
+      this.filterSelectObj.filter((o) => {
+        // o.options = this.getFilterObject(drivers, o.columnProp);
+      });
+      this.dataSource.filterPredicate = this.createFilter();
 
     } , 2000);
   }
-
-  filterChange(filterValue: string) {
-    this.dataSource.filter = filterValue;
-
+  // Get Uniqu values from columns to build filter
+  getFilterObject(fullObj, key) {
+    const uniqChk = [];
+    fullObj.filter((obj) => {
+      if (!uniqChk.includes(obj[key])) {
+        uniqChk.push(obj[key]);
+      }
+      return obj;
+    });
+    return uniqChk;
+  }
+  // Called on Filter change
+  filterChange(filter, event) {
+    this.filterValues[filter.columnProp] = event.target.value.trim().toLowerCase();
+    this.dataSource.filter = JSON.stringify(this.filterValues);
+    // this.dataSource.filter = (data: Driver, filterValues: string) => {
+    //   if (data.distance === filterValues) {
+    //     return JSON.stringify(this.filterValues);
+    //   }
+    //  };
   }
 
+  // Custom filter method fot Angular Material Datatable
+  createFilter() {
+    let filterFunction = function(data: any, filter: string): boolean {
+      let searchTerms = JSON.parse(filter);
+      let isFilterSet = false;
+      for (const col in searchTerms) {
+        if (searchTerms[col].toString() !== '') {
+          isFilterSet = true;
+        } else {
+          delete searchTerms[col];
+        }
+      }
+
+      // console.log(searchTerms);
+
+      const nameSearch = () => {
+        let found = false;
+        if (isFilterSet) {
+          for (const col in searchTerms) {
+            // console.log(searchTerms[col]);
+            // searchTerms[col].array.forEach(meter => {
+            //   if (data[col] <= meter && isFilterSet) {
+            //     found = true;
+            //   }
+            // });
+
+            // console.log(parseFloat(searchTerms[col]));
+            // searchTerms[col].trim().toLowerCase().split(' ').forEach(word => {
+            //   if (parseFloat(data[col].toString().toLowerCase().indexOf(word)) <= parseFloat(searchTerms[col]) && isFilterSet) {
+            //     found = true;
+            //   }
+            // });
+
+            console.log(parseFloat(searchTerms[col]));
+            searchTerms[col].trim().toLowerCase().split(' ').forEach(word => {
+              if (data[col].toString().toLowerCase().indexOf(word) != -1 && isFilterSet) {
+                found = true;
+              }
+            });
+          }
+          return found;
+        } else {
+          return true;
+        }
+      };
+      return nameSearch();
+    };
+    return filterFunction;
+  }
 }
