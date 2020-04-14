@@ -49,7 +49,7 @@
           <!-- Distance Column -->
           <ng-container matColumnDef="distance">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Distance </th>
-            <td mat-cell *matCellDef="let element"> {{element.distance | distanceConversion: 'M-MI':0 | sortBy: asc}}
+            <td mat-cell *matCellDef="let element"> {{element.distance | distanceConversion: 'M-MI':0 }}
             </td>
           </ng-container>
 
