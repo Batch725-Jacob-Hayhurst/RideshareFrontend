@@ -83,7 +83,7 @@ export class AddressVerificationService {
                               
                               // it is a valid address.
 
-                              console.log(this.parseRoads('parkway'));
+
                               console.log('respsonse: '+formatedResponse+'\n'+ 'inputed:   ' +this.formatedInput);
                               if (formatedResponse === this.formatedInput){
                                 this.valid = true;

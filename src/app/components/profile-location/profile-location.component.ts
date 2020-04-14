@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user-service/user.service';
 import { User } from 'src/app/models/user';
+import { AddressVerificationService } from '../../services/address-verification/address-verification.service';
 
 @Component({
   selector: 'app-profile-location',
@@ -18,7 +19,7 @@ export class ProfileLocationComponent implements OnInit {
   success :string;
   showAddress2: boolean = false;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private addressVery: AddressVerificationService) { }
 
   ngOnInit() {
    this.userService.getUserById2(sessionStorage.getItem("userid")).subscribe((response)=>{
@@ -33,16 +34,26 @@ export class ProfileLocationComponent implements OnInit {
     });
   }
 
-  updatesContactInfo(){
+  async updatesContactInfo(){
     this.currentUser.hZip = this.zipcode;
     this.currentUser.hCity = this.city;
     this.currentUser.hAddress = this.address;
-    //this.currentUser.wAddress = this.address2;
+    // this.currentUser.wAddress = this.address2;
     this.currentUser.hAddress2 = this.address2;
     this.currentUser.hState = this.hState;
-    //console.log(this.currentUser);
-    this.userService.updateUserInfo(this.currentUser);
-    this.success = "Updated Successfully!";
+    // console.log(this.currentUser);
+
+    let result: boolean;
+    await this.addressVery.isAddressValid(this.address, this.city, this.hState, this.zipcode.toString()).then(result2 => result = result2);
+    console.log(result);
+    if (result) {
+      this.userService.updateUserInfo(this.currentUser);
+      this.success = 'Updated successfully!';
+    } else {
+      this.success = 'Incorrect address, try again!';
+    }
+
+    
   }
 
   hAddress2Exist() {
