@@ -25,12 +25,12 @@ import { DistanceConversion } from '../../pipes/distance-conversion';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = 'Morgantown, WV';
+  location: string = 'Morgantown';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', /* 'spots', */ 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
   dataSource = new MatTableDataSource<Driver>();
  // distance filter
   filterValues = {};
@@ -71,7 +71,7 @@ export class DriverListComponent implements OnInit {
 
     this.drivers = [];
 
-    this.carService.getAllCars().subscribe(
+    this.carService.getCarsForLocation(this.location).subscribe(
       res => {
         // console.log(res);
         res.forEach(element => {
