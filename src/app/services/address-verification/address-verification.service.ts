@@ -29,12 +29,16 @@ export class AddressVerificationService {
  // =============================================================================================
 
 
-
+    // this function's purpose is to change all street suffixes/street types from a long form to a short form.
     private parseRoads(road: string): string{
 
+      // this is the long form of street suffixes.
       const longNames = ['parkway', 'saint', 'street', 'circle', 'court', 'creek', 'grove', 'avenue', 'drive', 'lane', 'road', 'place'];
+      // this is the short form of street suffixes.
       const shortNames = ['pkwy', 'st', 'st', 'cir', 'ct', 'ck', 'grv', 'ave', 'dr', 'ln', 'rd', 'pl'];
-      const longToShort = {'parkway':'pkwy',
+      // this is a map/dictionary of the street suffixes long form to short form.
+      // this is currently not being used.
+      const longToShort = {'parkway': 'pkwy',
       'saint': 'st',
       'street': 'st',
       'circle': 'cir',
@@ -46,10 +50,13 @@ export class AddressVerificationService {
       'lane': 'ln',
       'road': 'rd',
       'place': 'pl'};
-      let result:string = road.toLowerCase();
-      for (let i = 0; i< longNames.length; i++) {
 
-        if(result.includes(longNames[i])){
+      // this will check the function's input string for substrings of each long form suffix and replace
+      // them with the short form suffix.
+      let result: string = road.toLowerCase();
+      for (let i = 0; i < longNames.length; i++) {
+
+        if (result.includes(longNames[i])){
           result = result.replace(longNames[i], shortNames[i]);
         }
       }
@@ -58,14 +65,15 @@ export class AddressVerificationService {
     }
 
 
-    // this will check a address and see if it is a valid address. returns true or false.
-    async isAddressValid(street: string, city: string, state: string, zip: string){
+    // this will check a address and see if it is a valid address. returns boolean true or false.
+    // note: when this function is called, a async and await will most likey be required for proper use.
+    async isAddressValid(street: string, city: string, state: string, zip: string) {
       // these two lines of code will replace spaces with "+", which is needed for the url
-      let plusStreet = street.replace(/ /g, "+");
-      let plusCity = city.replace(/ /g, "+");
+      const plusStreet = street.replace(/ /g, '+');
+      const plusCity = city.replace(/ /g, '+');
       // this combines all the address strings into one string
-      this.address = '' + plusStreet+'+'+ plusCity+'+'+state+'+'+zip;
-      
+      this.address = '' + plusStreet + '+' + plusCity + '+' + state + '+' + zip;
+
       // this will combine all the componenents needed
       this.url = '' + this.baseUrl + this.address + this.apiKey;
 
@@ -74,23 +82,27 @@ export class AddressVerificationService {
 
       console.log(this.formatedInput);
 
-      // this will call call the check Address function and return it's observable
+      // this will send the request to the google maps geocoding api with the parameters
       return await this.http.get(this.url).toPromise()
                           .then(
                             (response2) => {
-                              // this looks through the response for the returned formatted address
+                              // this looks through the response JSON for the returned formatted address
                               const formatedResponse = (response2['results'][0].formatted_address).toLowerCase();
-                              
-                              // it is a valid address.
 
+                              // this will show the compairason of the inputted address versus the
+                              // returned address from google api in the console.
+                              console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
 
-                              console.log('respsonse: '+formatedResponse+'\n'+ 'inputed:   ' +this.formatedInput);
-                              if (formatedResponse === this.formatedInput){
+                              // this is the compairison to see if the address that was inputted has an exact
+                              // response from the google maps geocoding api.
+                              if (formatedResponse === this.formatedInput) {
                                 this.valid = true;
                               } else {
                                 this.valid = false;
+                                // this will throw the returned address into session storage for possible later manipulation.
+                                // possibly need to split up the formatedResponse with formatedResponse.split(',')
+                                sessionStorage.setItem('returnedAddress', formatedResponse);
                               }
-
 
                               // this will return the boolean on whether it is a valid address or not.
                               return this.valid;

@@ -142,7 +142,7 @@
                                 <div class="row">
                                     <mat-form-field class="addressInput">
                                         <mat-label>Home Address</mat-label>
-                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress">
+                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress" (blur)='checkAddressStatus()'>
                                     </mat-form-field>
                                 </div>
 
@@ -162,7 +162,8 @@
                                                required
                                                minlength="3"
                                                #hCity="ngModel"
-                                               [textMask]="{mask: citymask, guide: false}">
+                                               [textMask]="{mask: citymask, guide: false}"
+                                               (blur)='checkAddressStatus()'>
                                                <mat-error *ngIf="hCity.invalid && hCity.dirty">*Required. City Not Valid.
                                             </mat-error>
                                     </mat-form-field>
@@ -171,7 +172,7 @@
                                 <div class="row">
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
-                                        <mat-select [(ngModel)]="user.hState" name="hState">
+                                        <mat-select [(ngModel)]="user.hState" name="hState" (blur)='checkAddressStatus()'>
                                             <mat-option *ngFor="let state of states" [value]="state">{{state}}
                                             </mat-option>
                                         </mat-select>
@@ -185,13 +186,14 @@
                                                name="hZip"
                                                required
                                                #hZip="ngModel"
-                                               [textMask]="{mask: zipmask, guide: false}">
+                                               [textMask]="{mask: zipmask, guide: false}"
+                                               (blur)='checkAddressStatus()'>
                                                <mat-error *ngIf="hZip.invalid && hZip.dirty">*Required. Zip Code Not Valid.
                                             </mat-error>
                                     </mat-form-field>
+                                    <mat-error *ngIf='addressValid === false' style="font-size: x-small; color: red;">That address does not exist!</mat-error>
                                 </div>
-
-
+                              
                             </div>
                         </mat-grid-tile>
 
@@ -256,7 +258,7 @@
                         <hr>
 
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid">Register</button>
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true">Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
 
