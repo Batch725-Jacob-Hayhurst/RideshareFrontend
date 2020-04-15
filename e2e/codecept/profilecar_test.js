@@ -5,7 +5,7 @@ Before((I) => {
     I.click('Login');
     I.fillField('Username', 'hgledhill4');
     I.click('#sign-in-btn');
-    I.click('Hilda Gledhill');
+    I.click('#usernav');
     I.click('Profile');
     I.click('Car Information');
 });
