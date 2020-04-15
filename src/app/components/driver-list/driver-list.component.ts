@@ -17,7 +17,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { DistanceConversion } from '../../pipes/distance-conversion';
-import { DistancefilterService } from 'src/app/services/distancefilter-service/distancefilter.service';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+import { stringify } from 'querystring';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-driver-list',
@@ -34,6 +36,8 @@ export class DriverListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'distance', 'time', 'seats'/* , 'totalseats' */, 'view'];
   dataSource = new MatTableDataSource<Driver>();
   filterSelectObj = [];
+  filterOn = false;
+  globalFilter: string;
 
   @ViewChild('map', null) mapElement: any;
   map: google.maps.Map;
@@ -41,32 +45,23 @@ export class DriverListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-
-  constructor(private http: HttpClient, private distFilterService: DistancefilterService, private carService: CarService) {
-     // Object to create Filter for
+  constructor(private http: HttpClient, private carService: CarService, overlayContainer: OverlayContainer) {
+     // Object to create Filter for distance dropdown
      this.filterSelectObj = [
       {
         name: 'DISTANCE',
         columnProp: 'distance',
         options: [
-          1609.35,
-          8046.72,
-          16093.44,
-          40233.6,
-          56327.1,
-          371869 //234 mi to double check it works
-          // '1 mi',
-          // '5 mi',
-          // '10 mi',
-          // '25 mi',
-          // '35+ mi'
+          1609.35, // 1 mi
+          8046.72, // 5 mi
+          16093.44, // 10 mi
+          40233.6, // 25 mi
+          56327.1, // 35 mi
         ]
       }
     ];
+    // add in angular materials custom theme
+     overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
   }
 
   ngOnInit() {
@@ -82,23 +77,25 @@ export class DriverListComponent implements OnInit {
           // console.log(element.user.driver);
           if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
             this.drivers.push({
-              'id': element.user.userId,
-              'name': element.user.firstName + ' ' + element.user.lastName,
-              'origin': element.user.hCity + ',' + element.user.hState,
-              'email': element.user.email,
-              'phone': element.user.phoneNumber,
-              'seats': element.availableSeats,
-              'totalseats': element.seats,
-              'distance': '',
-              'duration': '',
-              'active': element.user.active,
-              'driver': element.user.driver,
-              'acceptingRides': element.user.acceptingRides,
+              id: element.user.userId,
+              name: element.user.firstName + ' ' + element.user.lastName,
+              origin: element.user.hCity + ',' + element.user.hState,
+              email: element.user.email,
+              phone: element.user.phoneNumber,
+              seats: element.availableSeats,
+              totalseats: element.seats,
+              distance: '',
+              duration: '',
+              active: element.user.active,
+              driver: element.user.driver,
+              acceptingRides: element.user.acceptingRides,
             });
           }
         });
       });
+    // allows pagination to work with the dataSource that is presented on the table
     this.dataSource.paginator = this.paginator;
+    // allows the sorter to work with the dataSource that is presented on the table
     this.dataSource.sort = this.sort;
     this.getGoogleApi();
 
@@ -125,10 +122,10 @@ export class DriverListComponent implements OnInit {
     this.http.get(`${environment.loginUri}getGoogleApi`)
       .subscribe(
         (response) => {
-          //console.log(response);
+          // console.log(response);
           if (response['googleMapAPIKey'] != undefined) {
             new Promise((resolve) => {
-              let script: HTMLScriptElement = document.createElement('script');
+              const script: HTMLScriptElement = document.createElement('script');
               script.addEventListener('load', r => resolve());
               script.src = `http://maps.googleapis.com/maps/api/js?key=${response['googleMapAPIKey'][0]}`;
               document.head.appendChild(script);
@@ -140,8 +137,8 @@ export class DriverListComponent implements OnInit {
 
   showDriversOnMap(origin, drivers) {
     drivers.forEach(element => {
-      var directionsService = new google.maps.DirectionsService;
-      var directionsRenderer = new google.maps.DirectionsRenderer({
+      const directionsService = new google.maps.DirectionsService();
+      const directionsRenderer = new google.maps.DirectionsRenderer({
         draggable: true,
         map: this.map
       });
@@ -152,11 +149,11 @@ export class DriverListComponent implements OnInit {
 
   displayRoute(origin, destination, service, display) {
     service.route({
-      origin: origin,
-      destination: destination,
+      origin,
+      destination,
       travelMode: 'DRIVING',
       // avoidTolls: true
-    }, function (response, status) {
+    }, function(response, status) {
       if (status === 'OK') {
         display.setDirections(response);
       } else {
@@ -165,51 +162,63 @@ export class DriverListComponent implements OnInit {
     });
   }
 
-
   displayDriversList(origin, drivers)  {
-    let origins = [];
-    //set origin
+    const origins = [];
+    // set origin
     origins.push(origin);
 
-    var outputDiv = document.getElementById('output');
     drivers.forEach(element => {
-
-      var service = new google.maps.DistanceMatrixService;
+      const service = new google.maps.DistanceMatrixService();
       service.getDistanceMatrix({
-        origins: origins,
+        origins,
         destinations: [element.origin],
         travelMode: google.maps.TravelMode.DRIVING,
         unitSystem: google.maps.UnitSystem.IMPERIAL,
         avoidHighways: false,
         avoidTolls: false
-      }, function (response, status) {
+      }, function(response, status) {
         if (status !== 'OK') {
           alert('Error was: ' + status);
         } else {
-          var originList = response.originAddresses;
-          var destinationList = response.destinationAddresses;
-          var results = response.rows[0].elements;
-          var name = element.name;
+          const originList = response.originAddresses;
+          const destinationList = response.destinationAddresses;
+          const results = response.rows[0].elements;
+          const name = element.name;
           element.distance = results[0].distance.value;
           element.duration = results[0].duration.text;
         }
       });
 
     });
+    // timeout for distance loading. fixes problem of google data coming in slower than the table loading
     setTimeout(myFunc => {
+      // this allows sorting AFTER the google data arrives on the table
       this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false;
 
-      // this.dataSource.filterPredicate = (data: Driver, filter: string) => {
-      //   return data.distance <= filter;   // returns data to table where distance is less than filtered distance
-      //   };
-      this.distFilterService.runFilter();
-
+      // override mat-table filter AFTER google data arrives on table
+      this.dataSource.filterPredicate = (data: Driver, filter: string) => {
+        if (this.filterOn) {
+          // inside applyFilter event
+          return data.name.toLowerCase().includes(filter) || data.phone.includes(filter)
+          || data.phone.replace('-', '').replace('-', '').includes(filter);
+        } else {
+          // inside filterChange event
+          return data.distance <= filter; // returns data to table where distance is less than filtered distance
+        }
+      };
     } , 2000);
   }
 
+  // distance filter event handler
   filterChange(filterValue: string) {
+    this.filterOn = false;
     this.dataSource.filter = filterValue;
-
+  }
+  // filter all event handler
+  applyFilter(event: Event) {
+    this.filterOn = true;
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }
