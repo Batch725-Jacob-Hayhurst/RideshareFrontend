@@ -40,6 +40,7 @@ export class LoginreduxComponent implements OnInit {
   isLogin: boolean;
   isSignUp: boolean;
   errorMatcher = new CrossFieldErrorMatcher();
+  addressValid: boolean;
 
   states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS',
             'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY',
@@ -147,6 +148,19 @@ export class LoginreduxComponent implements OnInit {
           break;
     }
     console.log(this.user);
+  }
+
+  // this function will check for filled out fields in the address form and if it is a valid address
+  async checkAddressStatus() {
+    // this check to see all the address fields are "dirty" or not
+    // if they are all dirty it will use the address validation service to check if the address is valid or not
+    if (this.user.hZip && this.user.hAddress && this.user.hCity && this.user.hState) {
+      console.log('checking address!');
+      await this.addressVery.isAddressValid(this.user.hAddress, this.user.hCity, this.user.hState, this.user.hZip.toString())
+        .then(response => this.addressValid = response);
+    } else {
+      console.log('need more info for address!');
+    }
   }
 
 }

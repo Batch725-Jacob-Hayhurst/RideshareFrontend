@@ -100,9 +100,9 @@ export class AddressVerificationService {
                               } else {
                                 this.valid = false;
                                 // this will throw the returned address into session storage for possible later manipulation.
+                                // possibly need to split up the formatedResponse with formatedResponse.split(',')
                                 sessionStorage.setItem('returnedAddress', formatedResponse);
                               }
-
 
                               // this will return the boolean on whether it is a valid address or not.
                               return this.valid;
