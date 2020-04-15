@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, OnChanges } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user-service/user.service';
@@ -16,6 +16,8 @@ import { MatTableDataSource } from '@angular/material/';
 import { MatTableModule } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
+import { DistanceConversion } from '../../pipes/distance-conversion';
+import { DistancefilterService } from 'src/app/services/distancefilter-service/distancefilter.service';
 
 @Component({
   selector: 'app-driver-list',
@@ -24,15 +26,14 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = 'Morgantown, WV';
+  location: string = 'Morgantown';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
-
-  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
-  // dataSource = new MatTableDataSource();
-  dataSource = new MatTableDataSource<Driver>(this.drivers);
-
+  isLoading = true;
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats'/* , 'totalseats' */, 'view'];
+  dataSource = new MatTableDataSource<Driver>();
+  filterSelectObj = [];
 
   @ViewChild('map', null) mapElement: any;
   map: google.maps.Map;
@@ -45,26 +46,45 @@ export class DriverListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  // this.dataSource.  = filterValue.trim().toLowerCase();
-
-  constructor(private http: HttpClient, private userService: UserService, private carService: CarService) { }
+  constructor(private http: HttpClient, private distFilterService: DistancefilterService, private carService: CarService) {
+     // Object to create Filter for
+     this.filterSelectObj = [
+      {
+        name: 'DISTANCE',
+        columnProp: 'distance',
+        options: [
+          1609.35,
+          8046.72,
+          16093.44,
+          40233.6,
+          56327.1,
+          371869 //234 mi to double check it works
+          // '1 mi',
+          // '5 mi',
+          // '10 mi',
+          // '25 mi',
+          // '35+ mi'
+        ]
+      }
+    ];
+  }
 
   ngOnInit() {
 
     this.drivers = [];
 
-    this.carService.getAllCars().subscribe(
+    this.carService.getCarsForLocation(this.location).subscribe(
       res => {
-        //console.log(res);
+        // console.log(res);
         res.forEach(element => {
-          console.log(element.user.acceptingRides);
-          console.log(element.user.active);
-          console.log(element.user.driver);
+          // console.log(element.user.acceptingRides);
+          // console.log(element.user.active);
+          // console.log(element.user.driver);
           if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
             this.drivers.push({
               'id': element.user.userId,
-              'name': element.user.firstName + " " + element.user.lastName,
-              'origin': element.user.hCity + "," + element.user.hState,
+              'name': element.user.firstName + ' ' + element.user.lastName,
+              'origin': element.user.hCity + ',' + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
               'seats': element.availableSeats,
@@ -74,43 +94,27 @@ export class DriverListComponent implements OnInit {
               'active': element.user.active,
               'driver': element.user.driver,
               'acceptingRides': element.user.acceptingRides,
-            })
-          };
+            });
+          }
         });
-        console.log(this.drivers);
-        this.dataSource.data = this.drivers;
       });
-
-
-
-
-
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
-    console.log(this.drivers);
-
-    /*this.drivers.push({'id': '1','name': 'Ed Ogeron','origin':'Reston, VA', 'email': 'ed@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '2','name': 'Nick Saban','origin':'Oklahoma, OK', 'email': 'nick@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '3','name': 'Bobbie sfsBowden','origin':'Texas, TX', 'email': 'bobbie@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '4','name': 'Les Miles','origin':'New York, NY', 'email': 'les@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '5','name': 'Bear Bryant','origin':'Arkansas, AR', 'email': 'bear@gmail.com', 'phone':'555-555-5555'});*/
-    //console.log(this.drivers);
     this.getGoogleApi();
 
     this.sleep(2000).then(() => {
       this.mapProperties = {
-        center: new google.maps.LatLng(Number(sessionStorage.getItem("lat")), Number(sessionStorage.getItem("lng"))),
+        center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
-      //get all routes 
+      // get all routes
       this.displayDriversList(this.location, this.drivers);
-      //show drivers on map
+      // show drivers on map
       this.showDriversOnMap(this.location, this.drivers);
     });
-    console.log(this.drivers);
+    // console.log(this.drivers);
   }
 
   sleep(ms) {
@@ -122,11 +126,11 @@ export class DriverListComponent implements OnInit {
       .subscribe(
         (response) => {
           //console.log(response);
-          if (response["googleMapAPIKey"] != undefined) {
+          if (response['googleMapAPIKey'] != undefined) {
             new Promise((resolve) => {
               let script: HTMLScriptElement = document.createElement('script');
               script.addEventListener('load', r => resolve());
-              script.src = `http://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
+              script.src = `http://maps.googleapis.com/maps/api/js?key=${response['googleMapAPIKey'][0]}`;
               document.head.appendChild(script);
             });
           }
@@ -151,7 +155,7 @@ export class DriverListComponent implements OnInit {
       origin: origin,
       destination: destination,
       travelMode: 'DRIVING',
-      //avoidTolls: true
+      // avoidTolls: true
     }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
@@ -162,7 +166,7 @@ export class DriverListComponent implements OnInit {
   }
 
 
-  displayDriversList(origin, drivers) {
+  displayDriversList(origin, drivers)  {
     let origins = [];
     //set origin
     origins.push(origin);
@@ -186,14 +190,26 @@ export class DriverListComponent implements OnInit {
           var destinationList = response.destinationAddresses;
           var results = response.rows[0].elements;
           var name = element.name;
-          element.distance = results[0].distance.text;
+          element.distance = results[0].distance.value;
           element.duration = results[0].duration.text;
         }
       });
 
-
     });
+    setTimeout(myFunc => {
+      this.dataSource.data = this.drivers.sort((a, b) => (a.distance > b.distance ? 1 : -1)); this.isLoading = false;
+
+      // this.dataSource.filterPredicate = (data: Driver, filter: string) => {
+      //   return data.distance <= filter;   // returns data to table where distance is less than filtered distance
+      //   };
+      this.distFilterService.runFilter();
+
+    } , 2000);
   }
 
+  filterChange(filterValue: string) {
+    this.dataSource.filter = filterValue;
+
+  }
 
 }

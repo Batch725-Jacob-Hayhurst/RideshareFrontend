@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule, TemplateRef } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
-import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { User } from 'src/app/models/user';
 import { HttpClient } from '@angular/common/http';
@@ -10,13 +10,16 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Batch } from 'src/app/models/batch';
 import { TextMaskModule } from 'angular2-text-mask';
+import { AddressVerificationService } from '../../services/address-verification/address-verification.service';
+import { CrossFieldErrorMatcher } from 'src/app/directives/fieldsMatch/cross-field-error-matcher';
 
 
 @NgModule({
   declarations: [LoginreduxComponent],
   imports: [
     MaterialModule,
-    TextMaskModule
+    TextMaskModule,
+    ReactiveFormsModule
   ]
 })
 
@@ -27,8 +30,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 })
 export class LoginreduxComponent implements OnInit {
 
-  signUpForm: FormGroup;
-
+  myForm: FormGroup;
+  confirmPWord: string = '';
   user: User;
   pwdError: string;
   usernameError: string;
@@ -36,6 +39,7 @@ export class LoginreduxComponent implements OnInit {
   modalRef: BsModalRef;
   isLogin: boolean;
   isSignUp: boolean;
+  errorMatcher = new CrossFieldErrorMatcher();
 
   states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS',
             'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY',
@@ -52,6 +56,7 @@ export class LoginreduxComponent implements OnInit {
               private userService: UserService,
               private http: HttpClient,
               private authService: AuthService,
+              private addressVery: AddressVerificationService,
               public router: Router) {
     this.isLogin = true;
     this.isSignUp = true;

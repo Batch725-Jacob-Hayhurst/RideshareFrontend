@@ -13,6 +13,12 @@ h5{
     font-size: 16px;
 }
 
+.failure {
+    border-radius: 5px;
+    color: red;
+    font-size: 16px;
+}
+
 .col-sm-6{
     width:100%;
     border:1px solid black;
