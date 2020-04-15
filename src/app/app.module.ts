@@ -40,6 +40,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { TextMaskModule } from 'angular2-text-mask';
 import { DistanceConversion } from 'src/app/pipes/distance-conversion';
 import { FieldsMatchDirective } from './directives/fieldsMatch/fields-match.directive';
+import { UsernameAvailabilityDirective } from './directives/usernameAvailability/username-availability.directive';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { FieldsMatchDirective } from './directives/fieldsMatch/fields-match.dire
     LoginreduxComponent,
     DistanceConversion,
     FieldsMatchDirective,
+    UsernameAvailabilityDirective,
 
     
     

@@ -202,8 +202,15 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
+                                        <input matInput
+                                               [(ngModel)]="user.userName"
+                                               appUsernameAvailability 
+                                               name="username" 
+                                               #username="ngModel"
+                                               [ngModelOptions]="{ updateOn: 'blur' }"
+                                               required 
+                                               minlength="6">
+                                        <mat-error *ngIf="username.dirty && username.hasError('usernameNotAvailable')">Username already exists.</mat-error>
                                     </mat-form-field>
                                 </div>
                             

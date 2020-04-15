@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +10,8 @@ export class ValidationService {
    /**
     * This is the contructor for the validation service.
 	*/
-  constructor() { }
-  
+  constructor(private myHttpCli: HttpClient) { }
+
    /** 
   * this function validates the number of seats of the car.
   * @function
@@ -73,5 +76,19 @@ export class ValidationService {
 	phoneFormat(phone: string) {
 		return phone.replace(/[^0-9]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
 	}
-  
+
+    checkUsernameAvailable(username: string): Observable<boolean> {
+		const httpPut = {
+			headers: new HttpHeaders({
+			  'Content-Type': 'application/json',
+			  withCredentials: 'true'
+			})
+		  };
+		  return this.myHttpCli.post<boolean>(
+			`${environment.userUri}username/validate`,
+			username,
+			httpPut
+		  );
+    }
+
 }

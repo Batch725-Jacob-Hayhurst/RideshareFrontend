@@ -12,6 +12,7 @@ import { Batch } from 'src/app/models/batch';
 import { TextMaskModule } from 'angular2-text-mask';
 import { AddressVerificationService } from '../../services/address-verification/address-verification.service';
 import { CrossFieldErrorMatcher } from 'src/app/directives/fieldsMatch/cross-field-error-matcher';
+import { ValidationService } from 'src/app/services/validation-service/validation.service';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ export class LoginreduxComponent implements OnInit {
   modalRef: BsModalRef;
   isLogin: boolean;
   isSignUp: boolean;
+  isUserAvailable: boolean = false;
   errorMatcher = new CrossFieldErrorMatcher();
 
   states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS',
@@ -57,7 +59,8 @@ export class LoginreduxComponent implements OnInit {
               private http: HttpClient,
               private authService: AuthService,
               private addressVery: AddressVerificationService,
-              public router: Router) {
+              public router: Router,
+              private validServ: ValidationService) {
     this.isLogin = true;
     this.isSignUp = true;
     this.user = new User();
@@ -147,6 +150,15 @@ export class LoginreduxComponent implements OnInit {
           break;
     }
     console.log(this.user);
+  }
+
+  getUsernameAvailability(){
+    this.validServ.checkUsernameAvailable(this.user.userName).subscribe(
+      data => {
+        console.log(data);
+        this.isUserAvailable = data;
+      }
+      );
   }
 
 }
