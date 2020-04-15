@@ -146,7 +146,6 @@ export class DriverListComponent implements OnInit {
     });
   }
 
-
   displayRoute(origin, destination, service, display) {
     service.route({
       origin,
