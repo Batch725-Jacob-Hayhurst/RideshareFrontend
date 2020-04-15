@@ -80,45 +80,38 @@ export class DriverListComponent implements OnInit {
           // console.log(element.user.acceptingRides);
           // console.log(element.user.active);
           // console.log(element.user.driver);
-          if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
-            this.drivers.push({
-              'id': element.user.userId,
-              'name': element.user.firstName + ' ' + element.user.lastName,
-              'origin': element.user.hCity + ',' + element.user.hState,
-              'email': element.user.email,
-              'phone': element.user.phoneNumber,
-              'seats': element.availableSeats,
-              'totalseats': element.seats,
-              'distance': '',
-              'duration': '',
-              'active': element.user.active,
-              'driver': element.user.driver,
-              'acceptingRides': element.user.acceptingRides,
-            });
-          }
+
+          this.drivers.push({
+            'id': element.user.userId,
+            'name': element.user.firstName + ' ' + element.user.lastName,
+            'origin': element.user.hCity + ',' + element.user.hState,
+            'email': element.user.email,
+            'phone': element.user.phoneNumber,
+            'seats': element.availableSeats,
+            'totalseats': element.seats,
+            'distance': '',
+            'duration': '',
+            'active': element.user.active,
+            'driver': element.user.driver,
+            'acceptingRides': element.user.acceptingRides,
+          });
         });
+
+        this.mapProperties = {
+          center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
+        // get all routes
+        this.displayDriversList(this.location, this.drivers);
+        // show drivers on map
+        this.showDriversOnMap(this.location, this.drivers);
       });
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.getGoogleApi();
 
-    this.sleep(2000).then(() => {
-      this.mapProperties = {
-        center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
-      // get all routes
-      this.displayDriversList(this.location, this.drivers);
-      // show drivers on map
-      this.showDriversOnMap(this.location, this.drivers);
-    });
-    // console.log(this.drivers);
-  }
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   getGoogleApi() {
@@ -149,7 +142,6 @@ export class DriverListComponent implements OnInit {
     });
   }
 
-
   displayRoute(origin, destination, service, display) {
     service.route({
       origin: origin,
@@ -164,7 +156,6 @@ export class DriverListComponent implements OnInit {
       }
     });
   }
-
 
   displayDriversList(origin, drivers)  {
     let origins = [];
@@ -209,7 +200,6 @@ export class DriverListComponent implements OnInit {
 
   filterChange(filterValue: string) {
     this.dataSource.filter = filterValue;
-
   }
 
 }
