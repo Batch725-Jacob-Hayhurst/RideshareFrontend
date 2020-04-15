@@ -4,11 +4,11 @@
 
 <div class="row">
   <div class="offset-lg-1 offset-sm-1 col-lg-9 col-sm-10">
-   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search by Username">
+   <input class="form-control" id="search-username" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search by Username">
 
  </div>
   <div class="col-lg-2 col-sm-1">
-     <button class="btn btn-primary" type="button" (click)="searchUser()">search</button>
+     <button class="btn btn-primary" id="searchbtn" type="button" (click)="searchUser()">search</button>
   </div>
 </div>
 
