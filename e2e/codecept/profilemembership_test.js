@@ -1,4 +1,4 @@
-Feature('profilemembership');
+Feature('profile-membership');
 
 Before((I) => {
     I.amOnPage('/');
@@ -6,6 +6,7 @@ Before((I) => {
     I.fillField('Username', 'gpichmann0');
     I.click('#sign-in-btn');
     I.click('Grady Pichmann');
+    I.click('Profile');
     I.click('Membership');
 });
 

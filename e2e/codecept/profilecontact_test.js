@@ -1,4 +1,4 @@
-Feature('profilecontact');
+Feature('profile-contact');
 
 Before((I) => {
     I.amOnPage('/');
@@ -26,11 +26,14 @@ Scenario('check for component information display', (I) => {
     I.see('Phone:')
 });
 
-Scenario('checks for form submission', (I) => {
+Scenario('test for filling initial form data', (I) => {
     I.seeInField('#f_name', 'Grady');
     I.seeInField('#l_name', 'Pichmann');
     I.seeInField('#user_email', 'gpichmann0@artisteer.com');
     I.seeInField('#phone', '212-374-3466');
+});
+
+Scenario('checks for form submission', (I) => {
     I.clearField('First Name');
     I.fillField('First Name','Man');
     I.clearField('Last Name');

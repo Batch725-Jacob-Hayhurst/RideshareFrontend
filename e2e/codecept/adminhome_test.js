@@ -1,4 +1,4 @@
-Feature('adminhome');
+Feature('admin-home');
 
 Before((I) => {
     I.amOnPage('/login/admin');

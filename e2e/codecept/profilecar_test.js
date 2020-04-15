@@ -1,4 +1,4 @@
-Feature('profilecar');
+Feature('profile-car');
 
 Before((I) => {
     I.amOnPage('/');

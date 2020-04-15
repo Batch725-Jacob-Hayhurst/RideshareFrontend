@@ -1,4 +1,4 @@
-Feature('adminlogin');
+Feature('admin-login');
 
 Scenario('test for admins proper number', (I) => {
     I.amOnPage('/login/admin');
