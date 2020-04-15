@@ -1,4 +1,4 @@
-Feature('profilecar');
+/* Feature('profilecar');
 
 Before((I) => {
     I.amOnPage('/');
@@ -64,3 +64,4 @@ After((I) => {
     I.appendField('#Avseats', '2');
     I.click('Save');
 });
+ */
