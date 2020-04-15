@@ -48,9 +48,9 @@ export class ProfileLocationComponent implements OnInit {
         console.log(result);
         if (result) {
           this.userService.updateUserInfo(this.currentUser);
-          this.success = 'Updated successfully!';
+          this.success = 'Updated Successfully!';
         } else {
-          this.success = 'Incorrect address, try again!';
+          this.success = 'Incorrect Address, Try Again!';
         }
       } else {
         this.success = 'No Values Changed';
@@ -58,7 +58,7 @@ export class ProfileLocationComponent implements OnInit {
     }
 
   hAddress2Exist() {
-    if (this.address2 == null || this.address2 == undefined || this.address2 == '') {
+    if (this.address2 == null || this.address2 === undefined || this.address2 === '') {
       return false;
     } else {
       return true;
