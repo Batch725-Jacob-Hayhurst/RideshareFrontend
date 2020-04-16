@@ -28,10 +28,10 @@ Scenario('check for component information display', (I) => {
 });
 
 Scenario('check for correct location information', (I) => {
-    I.seeInField('#address', '509 Shadow Oaks Dr');
-    I.seeInField('#city', 'Easley');
-    I.seeInField('#state', 'South Carolina');
-    I.seeInField('#zipcode', '29642');
+    I.seeInField('#address', '609 Legacy Pride Dr');
+    I.seeInField('#city', 'Herndon');
+    I.seeInField('#state', 'Virgina');
+    I.seeInField('#zipcode', '20170');
 });
 
 Scenario('check for incorrect address input', (I) => {
@@ -68,12 +68,12 @@ Scenario('check for data persistence with a real address', (I) => {
 
 After ((I) => {
     I.clearField('Address');
-    I.fillField('Address', '509 Shadow Oaks Dr');
+    I.fillField('Address', '609 Legacy Pride Dr');
     I.clearField('City');
-    I.fillField('City', 'Easley');
+    I.fillField('City', 'Herndon');
     I.click('#state');
-    I.appendField('#state', 'South Carolina');
+    I.appendField('#state', 'Virginia');
     I.clearField('Zipcode');
-    I.fillField('Zipcode', '29642');
+    I.fillField('Zipcode', '20170');
     I.click('Save');
 });
