@@ -173,7 +173,7 @@
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
                                         <mat-select [(ngModel)]="user.hState" name="hState" (blur)='checkAddressStatus()'>
-                                            <mat-option *ngFor="let state of states" [value]="state">{{state}}
+                                            <mat-option *ngFor="let state of states" id="state" [value]="state">{{state}}
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>
@@ -243,7 +243,7 @@
                                     <mat-form-field class="workInput">
                                         <mat-label>Work Location</mat-label>
                                         <mat-select [(ngModel)]="user.wCity" name="wCity">
-                                            <mat-option *ngFor="let city of workCities" [value]="city">{{city}}
+                                            <mat-option *ngFor="let city of workCities" id="city" [value]="city">{{city}}
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>

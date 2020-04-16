@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587064841413' stop='1587064853524'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587064841465' status='passed' stop='1587064853193'>
+            <name>testing valid and matching passwords</name>
+            <title>testing valid and matching passwords</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587064845425' status='passed' stop='1587064850332'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064850333' status='passed' stop='1587064850646'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064850646' status='passed' stop='1587064851287'>
+                    <name>I append field "Password *", "hello"</name>
+                    <title>I append field "Password *", "hello"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064851287' status='passed' stop='1587064852002'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852002' status='passed' stop='1587064852220'>
+                    <name>I see "*Required length of at least 6"</name>
+                    <title>I see "*Required length of at least 6"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852220' status='passed' stop='1587064852390'>
+                    <name>I append field "Password *", "world"</name>
+                    <title>I append field "Password *", "world"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852390' status='passed' stop='1587064852576'>
+                    <name>I dont see "*Required length of at least 6"</name>
+                    <title>I dont see "*Required length of at least 6"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852576' status='passed' stop='1587064852727'>
+                    <name>I append field "Confirm Password *", "hello"</name>
+                    <title>I append field "Confirm Password *", "hello"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852727' status='passed' stop='1587064852892'>
+                    <name>I see "Must match password field."</name>
+                    <title>I see "Must match password field."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064852892' status='passed' stop='1587064853009'>
+                    <name>I append field "Confirm Password *", "world"</name>
+                    <title>I append field "Confirm Password *", "world"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064853010' status='passed' stop='1587064853192'>
+                    <name>I dont see "Must match password field."</name>
+                    <title>I dont see "Must match password field."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

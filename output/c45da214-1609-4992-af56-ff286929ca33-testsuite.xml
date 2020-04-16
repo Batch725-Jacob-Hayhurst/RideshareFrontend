@@ -1,0 +1,88 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587064240540' stop='1587064260638'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587064240561' status='failed' stop='1587064259661'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587064244709' status='passed' stop='1587064250043'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064250043' status='passed' stop='1587064250334'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064250334' status='passed' stop='1587064251039'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064251039' status='passed' stop='1587064251276'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064251276' status='passed' stop='1587064251669'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064251669' status='passed' stop='1587064252092'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064252092' status='passed' stop='1587064252397'>
+                    <name>I append field "Zip Code *", "2964"</name>
+                    <title>I append field "Zip Code *", "2964"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064252397' status='passed' stop='1587064252807'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064252807' status='passed' stop='1587064253239'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064253239' status='passed' stop='1587064253414'>
+                    <name>I click "Register"</name>
+                    <title>I click "Register"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587064253414' status='failed' stop='1587064259659'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='abe6c4b8-cbce-4862-842a-629b3101b212-attachment.png' type='image/png' size='428002'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
