@@ -1,0 +1,172 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587068969235' stop='1587069072918'>
+    <name>profile-location:</name>
+    <title>profile-location:</title>
+    <test-cases>
+        <test-case start='1587068969237' status='failed' stop='1587068988366'>
+            <name>check for correct location information</name>
+            <title>check for correct location information</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587068983106' status='failed' stop='1587068988366'>
+                    <name>I see in field "#address", "609 Legacy Pride Dr"</name>
+                    <title>I see in field "#address", "609 Legacy Pride Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='e5e63e91-8af0-4976-b424-540e0eb95fb2-attachment.png' type='image/png' size='49123'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1587068991832' status='passed' stop='1587069008835'>
+            <name>check for incorrect address input</name>
+            <title>check for incorrect address input</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069006742' status='passed' stop='1587069006923'>
+                    <name>I clear field "Address"</name>
+                    <title>I clear field "Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069006923' status='passed' stop='1587069007225'>
+                    <name>I fill field "Address", "3700 Yes Ave"</name>
+                    <title>I fill field "Address", "3700 Yes Ave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069007225' status='passed' stop='1587069007341'>
+                    <name>I clear field "City"</name>
+                    <title>I clear field "City"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069007341' status='passed' stop='1587069007527'>
+                    <name>I fill field "City", "Porter"</name>
+                    <title>I fill field "City", "Porter"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069007527' status='passed' stop='1587069007725'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069007725' status='passed' stop='1587069007917'>
+                    <name>I append field "#state", "Massachusetts"</name>
+                    <title>I append field "#state", "Massachusetts"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069007917' status='passed' stop='1587069008052'>
+                    <name>I clear field "Zipcode"</name>
+                    <title>I clear field "Zipcode"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069008052' status='passed' stop='1587069008253'>
+                    <name>I fill field "Zipcode", "32165"</name>
+                    <title>I fill field "Zipcode", "32165"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069008254' status='passed' stop='1587069008374'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069008374' status='passed' stop='1587069008835'>
+                    <name>I see "Incorrect Address, Try Again!"</name>
+                    <title>I see "Incorrect Address, Try Again!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587069010517' status='failed' stop='1587069068646'>
+            <name>check for data persistence with a real address</name>
+            <title>check for data persistence with a real address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069050657' status='passed' stop='1587069050937'>
+                    <name>I clear field "Address"</name>
+                    <title>I clear field "Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069050937' status='passed' stop='1587069051832'>
+                    <name>I fill field "Address", "1291 S Crossbow Pl"</name>
+                    <title>I fill field "Address", "1291 S Crossbow Pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069051832' status='passed' stop='1587069052178'>
+                    <name>I clear field "City"</name>
+                    <title>I clear field "City"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069052178' status='passed' stop='1587069052949'>
+                    <name>I fill field "City", "Chandler"</name>
+                    <title>I fill field "City", "Chandler"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069052949' status='passed' stop='1587069058124'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069058124' status='passed' stop='1587069058346'>
+                    <name>I append field "#state", "Arizona"</name>
+                    <title>I append field "#state", "Arizona"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069058346' status='passed' stop='1587069058687'>
+                    <name>I clear field "Zipcode"</name>
+                    <title>I clear field "Zipcode"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069058687' status='passed' stop='1587069058993'>
+                    <name>I fill field "Zipcode", "85286"</name>
+                    <title>I fill field "Zipcode", "85286"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069058993' status='passed' stop='1587069063092'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069063093' status='failed' stop='1587069068646'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='123519a8-3b8f-4d6a-8631-9363c3871a79-attachment.png' type='image/png' size='52298'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -126,10 +126,19 @@ Feature('sign-up');
 //     I.dontSee('That address does not exist!');
 // });
 
-// not done
+// should work but need username validation to work first
 // Scenario('testing valid username', (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');
+//     I.click('Username');
+//     I.appendField('Username', 'gpichmann0');
+//     I.appendField('Last Name *', 'Mitchell');
+//     I.see(''); //invalid username prompt
+//     I.clearField('Username');
+//     I.appendField('Username', 'mitchelltim29');
+//     I.clearField('Last Name *');
+//     I.appendField('Last Name *', 'Mitchell');
+//     I.dontSee(''); //invalid username prompt
 // });
 
 // Scenario('testing valid and matching passwords', (I) => {
@@ -146,13 +155,7 @@ Feature('sign-up');
 //     I.dontSee('Must match password field.');
 // });
 
-// not done
-// Scenario('testing choose work location', (I) => {
-//     I.amOnPage('/');
-//     I.click('#signupid');
-// });
-
-// not done
+// not done, need sign up to work first
 // Scenario('testing correct sign up', (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');

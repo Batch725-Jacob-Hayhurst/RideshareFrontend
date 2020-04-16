@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587069345092' stop='1587069360556'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587069345096' status='failed' stop='1587069359484'>
+            <name>testing choose work location</name>
+            <title>testing choose work location</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069348904' status='passed' stop='1587069353333'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069353334' status='passed' stop='1587069353672'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069353672' status='passed' stop='1587069354140'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069354140' status='passed' stop='1587069354477'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069354477' status='failed' stop='1587069359483'>
+                    <name>I see in field "#city", "Reston"</name>
+                    <title>I see in field "#city", "Reston"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='b6faa0be-0580-432d-9bcd-256ecd2f7d12-attachment.png' type='image/png' size='431981'/>
+            </attachments>
+            <failure>
+                <message>Field "#city" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "#city" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1726:11)
+                    at Protractor.proceedSeeInField (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1672:3)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

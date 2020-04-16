@@ -1,0 +1,123 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587068847422' stop='1587068936185'>
+    <name>profile-location:</name>
+    <title>profile-location:</title>
+    <test-cases>
+        <test-case start='1587068847425' status='failed' stop='1587068869819'>
+            <name>check for correct location information</name>
+            <title>check for correct location information</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587068864532' status='failed' stop='1587068869819'>
+                    <name>I see in field "#address", "609 Legacy Pride Dr"</name>
+                    <title>I see in field "#address", "609 Legacy Pride Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='7c1fb024-1867-4b9a-a64d-1635ec8f669a-attachment.png' type='image/png' size='54219'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1587068873628' status='failed' stop='1587068894716'>
+            <name>check for incorrect address input</name>
+            <title>check for incorrect address input</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587068887937' status='passed' stop='1587068888115'>
+                    <name>I clear field "Address"</name>
+                    <title>I clear field "Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888115' status='passed' stop='1587068888359'>
+                    <name>I fill field "Address", "3700 Yes Ave"</name>
+                    <title>I fill field "Address", "3700 Yes Ave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888360' status='passed' stop='1587068888486'>
+                    <name>I clear field "City"</name>
+                    <title>I clear field "City"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888486' status='passed' stop='1587068888675'>
+                    <name>I fill field "City", "Porter"</name>
+                    <title>I fill field "City", "Porter"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888675' status='passed' stop='1587068888832'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888832' status='passed' stop='1587068888981'>
+                    <name>I append field "#state", "Massachusetts"</name>
+                    <title>I append field "#state", "Massachusetts"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068888981' status='passed' stop='1587068889113'>
+                    <name>I clear field "Zipcode"</name>
+                    <title>I clear field "Zipcode"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068889114' status='passed' stop='1587068889307'>
+                    <name>I fill field "Zipcode", "32165"</name>
+                    <title>I fill field "Zipcode", "32165"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068889307' status='passed' stop='1587068889415'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587068889415' status='failed' stop='1587068894716'>
+                    <name>I see "Incorrect address, try again!"</name>
+                    <title>I see "Incorrect address, try again!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='743a5b0d-3e5b-4664-80b7-811e4eb2608e-attachment.png' type='image/png' size='52520'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1587068896989' status='failed' stop='1587068935280'>
+            <name>check for data persistence with a real address</name>
+            <title>check for data persistence with a real address</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='3393fd18-ebb8-4898-9280-2dc58e8c8c77-attachment.png' type='image/png' size='56381'/>
+                <attachment title='Last Seen Screenshot' source='eb847557-a7b0-46b8-a713-f65ec30060c6-attachment.png' type='image/png' size='58037'/>
+            </attachments>
+            <failure>
+                <message>Field "Address" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "Address" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1726:11)
+                    at Protractor.clearField (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:639:5)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -70,10 +70,10 @@ Scenario('testing Distance filter', (I) => {
     I.see('Darren O Sullivan');
     I.see('Faythe Lancashire');
     I.see('Tobe Curd');
-    I.see('Hilda Gledhill');
-    I.see('Marilyn Edmunds');
-    I.dontSee('Salvidor Migheli');
-    I.dontSee('Fabien Braunroth');
+    I.dontSee('Hilda Gledhill');
+    I.dontSee('Marilyn Edmunds');
+    I.see('Salvidor Migheli');
+    I.see('Fabien Braunroth');
     I.see('201mi 4078ft');
     I.see('200mi 1100ft');
     I.see('3mi 512ft');
@@ -117,7 +117,7 @@ Scenario('testing Available Seats filter', (I) => {
     I.dontSee('Marilyn Edmunds');
 });
 
-Scenario('testing distance filter', (I) => {
+Scenario('testing distance dropdown filter', (I) => {
     I.appendField('Filter DISTANCE', '1mi 0ft');
     I.see('Marilyn Edmunds');
     I.dontSee('Hilda Gledhill');

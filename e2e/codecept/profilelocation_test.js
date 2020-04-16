@@ -30,7 +30,7 @@ Scenario('check for component information display', (I) => {
 Scenario('check for correct location information', (I) => {
     I.seeInField('#address', '609 Legacy Pride Dr');
     I.seeInField('#city', 'Herndon');
-    I.seeInField('#state', 'Virgina');
+    I.seeInField('#state', 'Virginia');
     I.seeInField('#zipcode', '20170');
 });
 
@@ -44,7 +44,7 @@ Scenario('check for incorrect address input', (I) => {
     I.clearField('Zipcode');
     I.fillField('Zipcode', '32165');
     I.click('Save');
-    I.see('Incorrect address, try again!');
+    I.see('Incorrect Address, Try Again!');
 });
 
 Scenario('check for data persistence with a real address', (I) => {
@@ -57,7 +57,7 @@ Scenario('check for data persistence with a real address', (I) => {
     I.clearField('Zipcode');
     I.fillField('Zipcode', '85286');
     I.click('Save');
-    I.see('Updated successfully!');
+    I.see('Updated Successfully!');
     I.click('Contact Information');
     I.click('Location');
     I.seeInField('#address', '1291 S Crossbow Pl');

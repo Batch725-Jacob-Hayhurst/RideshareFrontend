@@ -1,0 +1,145 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587069135673' stop='1587069177658'>
+    <name>profile-location:</name>
+    <title>profile-location:</title>
+    <test-cases>
+        <test-case start='1587069135675' status='passed' stop='1587069154152'>
+            <name>check for correct location information</name>
+            <title>check for correct location information</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069153576' status='passed' stop='1587069153759'>
+                    <name>I see in field "#address", "609 Legacy Pride Dr"</name>
+                    <title>I see in field "#address", "609 Legacy Pride Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069153759' status='passed' stop='1587069153877'>
+                    <name>I see in field "#city", "Herndon"</name>
+                    <title>I see in field "#city", "Herndon"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069153877' status='passed' stop='1587069154043'>
+                    <name>I see in field "#state", "Virginia"</name>
+                    <title>I see in field "#state", "Virginia"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069154043' status='passed' stop='1587069154151'>
+                    <name>I see in field "#zipcode", "20170"</name>
+                    <title>I see in field "#zipcode", "20170"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587069157421' status='passed' stop='1587069175597'>
+            <name>check for data persistence with a real address</name>
+            <title>check for data persistence with a real address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069171802' status='passed' stop='1587069172014'>
+                    <name>I clear field "Address"</name>
+                    <title>I clear field "Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069172014' status='passed' stop='1587069172372'>
+                    <name>I fill field "Address", "1291 S Crossbow Pl"</name>
+                    <title>I fill field "Address", "1291 S Crossbow Pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069172372' status='passed' stop='1587069172539'>
+                    <name>I clear field "City"</name>
+                    <title>I clear field "City"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069172539' status='passed' stop='1587069172783'>
+                    <name>I fill field "City", "Chandler"</name>
+                    <title>I fill field "City", "Chandler"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069172783' status='passed' stop='1587069172990'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069172990' status='passed' stop='1587069173353'>
+                    <name>I append field "#state", "Arizona"</name>
+                    <title>I append field "#state", "Arizona"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069173353' status='passed' stop='1587069173648'>
+                    <name>I clear field "Zipcode"</name>
+                    <title>I clear field "Zipcode"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069173648' status='passed' stop='1587069173979'>
+                    <name>I fill field "Zipcode", "85286"</name>
+                    <title>I fill field "Zipcode", "85286"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069173979' status='passed' stop='1587069174278'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069174278' status='passed' stop='1587069174847'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069174848' status='passed' stop='1587069175021'>
+                    <name>I click "Contact Information"</name>
+                    <title>I click "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069175021' status='passed' stop='1587069175204'>
+                    <name>I click "Location"</name>
+                    <title>I click "Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069175204' status='passed' stop='1587069175345'>
+                    <name>I see in field "#address", "1291 S Crossbow Pl"</name>
+                    <title>I see in field "#address", "1291 S Crossbow Pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069175346' status='passed' stop='1587069175417'>
+                    <name>I see in field "#city", "Chandler"</name>
+                    <title>I see in field "#city", "Chandler"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069175417' status='passed' stop='1587069175520'>
+                    <name>I see in field "#state", "Arizona"</name>
+                    <title>I see in field "#state", "Arizona"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069175520' status='passed' stop='1587069175597'>
+                    <name>I see in field "#zipcode", "85286"</name>
+                    <title>I see in field "#zipcode", "85286"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
