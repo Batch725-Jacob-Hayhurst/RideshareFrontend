@@ -2,9 +2,9 @@
     <nav class="navbar navbar-expand-lg navbar-light mainnav">
         <!-- <div class="content"> -->
           <a class="navbar-brand logoRev">
-                <img *ngIf="currentUser != ''; else loggedOut" class="imageLogo" src="../assets/revature-logo-600x219.png" routerLink="/drivers" >
+                <img *ngIf="currentUser != ''; else loggedOut" id="logo" class="imageLogo" src="../assets/revature-logo-600x219.png" routerLink="/drivers" >
             <ng-template #loggedOut>
-              <img class="imageLogo" src="../assets/revature-logo-600x219.png" routerLink="" >
+              <img class="imageLogo" id="logo" src="../assets/revature-logo-600x219.png" routerLink="" >
             </ng-template>
             </a>
             
