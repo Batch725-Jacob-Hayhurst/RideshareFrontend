@@ -24,7 +24,9 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = 'Morgantown, WV';
+  location: string = '';
+  //location: string = 'Morgantown, WV 26506';
+  //location: string = '11730 Plaza America Dr Reston, VA 20190';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
@@ -36,6 +38,9 @@ export class DriverListComponent implements OnInit {
 
   @ViewChild('map', null) mapElement: any;
   map: google.maps.Map;
+
+  startMarker: google.maps.Marker[] = [];
+  endMarker: google.maps.Marker[] = [];
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -52,19 +57,20 @@ export class DriverListComponent implements OnInit {
   ngOnInit() {
 
     this.drivers = [];
-
+    this.location = sessionStorage.getItem("batchLoc");
+    console.log(this.location);
     this.carService.getAllCars().subscribe(
       res => {
         //console.log(res);
         res.forEach(element => {
-          console.log(element.user.acceptingRides);
-          console.log(element.user.active);
-          console.log(element.user.driver);
+          // console.log(element.user.hAddress);
+          // console.log(element.user.hAddress2);
+          // console.log(element.user.wAddress);
           if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
             this.drivers.push({
               'id': element.user.userId,
               'name': element.user.firstName + " " + element.user.lastName,
-              'origin': element.user.hCity + "," + element.user.hState,
+              'origin': element.user.hAddress + "," + element.user.hCity + "," + element.user.hState,
               'email': element.user.email,
               'phone': element.user.phoneNumber,
               'spots': element.availableSeats,
@@ -80,21 +86,11 @@ export class DriverListComponent implements OnInit {
         this.dataSource.data = this.drivers;
       });
 
-
-
-
-
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
 
     console.log(this.drivers);
 
-    /*this.drivers.push({'id': '1','name': 'Ed Ogeron','origin':'Reston, VA', 'email': 'ed@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '2','name': 'Nick Saban','origin':'Oklahoma, OK', 'email': 'nick@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '3','name': 'Bobbie sfsBowden','origin':'Texas, TX', 'email': 'bobbie@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '4','name': 'Les Miles','origin':'New York, NY', 'email': 'les@gmail.com', 'phone':'555-555-5555'});
-    this.drivers.push({'id': '5','name': 'Bear Bryant','origin':'Arkansas, AR', 'email': 'bear@gmail.com', 'phone':'555-555-5555'});*/
-    //console.log(this.drivers);
     this.getGoogleApi();
 
     this.sleep(2000).then(() => {
@@ -104,6 +100,7 @@ export class DriverListComponent implements OnInit {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
+
       //get all routes 
       this.displayDriversList(this.location, this.drivers);
       //show drivers on map
@@ -120,7 +117,7 @@ export class DriverListComponent implements OnInit {
     this.http.get(`${environment.loginUri}getGoogleApi`)
       .subscribe(
         (response) => {
-          //console.log(response);
+          console.log(response["googleMapAPIKey"][0]);
           if (response["googleMapAPIKey"] != undefined) {
             new Promise((resolve) => {
               let script: HTMLScriptElement = document.createElement('script');
@@ -134,10 +131,18 @@ export class DriverListComponent implements OnInit {
   }
 
   showDriversOnMap(origin, drivers) {
+    //var markerSize = new google.maps.Size(75, 48, 'px','px');
+    //var anchorPoint = new google.maps.Point(0,-5);
     drivers.forEach(element => {
       var directionsService = new google.maps.DirectionsService;
       var directionsRenderer = new google.maps.DirectionsRenderer({
-        draggable: true,
+        suppressMarkers: false,
+        // draggable: true,
+        //markerOptions: { icon: {url: 'https://img.itch.zone/aW1hZ2UvNTYwODIvMjUxMjgzLnBuZw==/original/51hNjy.png'},
+        // markerOptions: { icon: {url: 'assets/spr_bluecar_0resize.png'},
+        //markerOptions: { icon: {url: 'https://img.itch.zone/aW1hZ2UvNTYwODIvMjUxMjgzLnBuZw==/original/51hNjy.png', size: markerSize, anchor: anchorPoint },
+        //label: element.name},
+        // },
         map: this.map
       });
       this.displayRoute(origin, element.origin, directionsService, directionsRenderer);
@@ -154,12 +159,43 @@ export class DriverListComponent implements OnInit {
     }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
+        console.log(response);
+        //this.showSteps(response);
+
+        var leg = response.routes[0].legs[0];
+        this.startMarker.push( new google.maps.Marker({ position: leg.start_location, map: this.map, icon: 'assets/spr_bluecar_0resize.png' }));
+        this.endMarker.push( new google.maps.Marker({ position: leg.end_location, map: this.map, icon: 'assets/logo.png' }));
+        // this.makeMarker( leg.start_location, 'assets/spr_bluecar_0resize.png' );
+        // this.makeMarker( leg.end_location, 'assets/logp.png');
       } else {
         alert('Could not display directions due to: ' + status);
       }
-    });
+    }
+    );
+    // this.marker = new google.maps.Marker({
+    //   position: new google.maps.LatLng(Number(sessionStorage.getItem("lat")), Number(sessionStorage.getItem("lng"))),
+    //   map: this.map,
+    //   icon: 'assets/logo.png'
+    // } );
   }
 
+  showSteps(directionsResult) {
+    var myRoute = directionsResult.routes[0].legs[0];
+    for (var i = 0; i < myRoute.steps.length; i++) {
+
+    };
+    var marker = new google.maps.Marker({
+      position: myRoute.steps[i - 1].end_point,
+      map: this.map,
+      icon: 'assets/spr_bluecar_0resize.png'
+    });
+  }
+  // makeMarker(posish, img){
+  //   let marker = new google.maps.Marker;
+  //   marker.setMap(this.map);
+  //   marker.setPosition(posish);
+  //   marker.setIcon(img);
+  // }
 
   displayDriversList(origin, drivers) {
     let origins = [];

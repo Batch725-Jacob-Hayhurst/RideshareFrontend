@@ -126,6 +126,7 @@ margin: 0 auto;
 
 .card{
   box-shadow: 2px 2px 5px black;
+  height: 800px;
 }
 
 .card-body{

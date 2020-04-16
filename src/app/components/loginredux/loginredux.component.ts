@@ -72,7 +72,7 @@ export class LoginreduxComponent implements OnInit {
     this.http.get(`${environment.loginUri}?userName=${this.user.userName}&passWord=${this.user.password}`)
       .subscribe(
         (response) => {
-          //console.log(response);
+          console.log(response);
           if (response["userName"] != undefined) {
             this.usernameError = response["userName"][0];
           }
@@ -82,6 +82,7 @@ export class LoginreduxComponent implements OnInit {
           if ((response["name"] != undefined) && (response["userid"] != undefined)) {
             sessionStorage.setItem("name", response["name"]);
             sessionStorage.setItem("userid", response["userid"]);
+            sessionStorage.setItem("batchLoc", response["batchLoc"]);
 
             //call landing page
             //this.router.navigate(['landingPage']);
