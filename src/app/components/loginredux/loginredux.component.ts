@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule, TemplateRef } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { User } from 'src/app/models/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
