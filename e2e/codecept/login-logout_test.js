@@ -1,4 +1,4 @@
-Feature('login')
+Feature('login-logout')
 
 Scenario('testing login feature', (I) => {
     I.amOnPage('/');
