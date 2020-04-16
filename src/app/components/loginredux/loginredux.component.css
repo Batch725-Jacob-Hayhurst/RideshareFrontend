@@ -1,27 +1,60 @@
-
 /* Container holding the image and the text */
 .centerMe {
-    position: relative;
-    text-align: center;
-    color: white;
-  } 
+  position: relative;
+  text-align: center;
+  color: white;
+} 
 
 #signupid {
-  cursor: pointer;
+cursor: pointer;
+}
+
+h1.orangeText {
+  color: rgb(252, 123, 4);
+}
+
+mat-button-raised {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 10px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.mat-success {
+  color: white;
+  background-color: rgb(37, 87, 179);
+  border-color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  
+  width: 150px;
+  height: 50px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0;
+
 }
 
 mat-card{
-  size: 100vw, 60vh;
- 
+size: 100vw, 60vh;
+
 }
 
 mat-form-grid {
-  size: 80vw, 60vh;
+size: 80vw, 60vh;
 
 }
-  
+
 /* i{
-  padding-top:5px;
+padding-top:5px;
 } */
 
 mat-form-field {
@@ -81,96 +114,104 @@ mat-grid-tile {
     font-family: "Overpass",sans-serif;
   }
 /* 
-  .orangeText {
-      color: black;
-  } */
+.orangeText {
+    color: black;
+} */
 
 .blackFade{
-    background-color: rgba(0, 0, 0, 1);
-    border:1px outset black;
+  background-color: rgba(0, 0, 0, 1);
+  border:1px outset black;
 }
 
 #loginbutton{
-  margin-top:10px;
-  background-color: #F26925;
-  color:white;
-  width:300px;
-  font-family:"Overpass";
-  font-weight:bold;
-  font-size:22px;
-  border-radius:27px;
-  letter-spacing:1px;
-  height:45px;
-  display:inline-block;
+margin-top:10px;
+background-color: #F26925;
+color:white;
+width:300px;
+font-family:"Overpass";
+font-weight:bold;
+font-size:22px;
+border-radius:27px;
+letter-spacing:1px;
+height:45px;
+display:inline-block;
 }
 
 #loginbutton:hover{
-  background-color:white;
-  color:#F26925;
-  border: 2px solid #F26925;
-  border-radius: 22px ;
-  font-family:"Overpass";
-  font-size:23px;
+background-color:white;
+color:#F26925;
+border: 2px solid #F26925;
+border-radius: 22px ;
+font-family:"Overpass";
+font-size:23px;
 }
 
 .center1{
 margin: 0 auto;
+margin-bottom: 0px;
+margin-top: 15px;
+
 }
 .cBorder{
-  margin-top: 15px;
+margin-top: 15px;
 }
 
 .mBot{
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .card{
-  box-shadow: 2px 2px 5px black;
-  height: 800px;
+box-shadow: 2px 2px 5px black;
 }
 
 .card-body{
-  font-family: "Overpass",sans-serif;
+font-family: "Overpass",sans-serif;
 }
 
 @media(max-width:767px){
-  .card{
-    max-height:200px;
-  }
-  .card-title{
-    font-size:17px;
-  }
-  .card-text{
-    font-size:15px;
-  }
+.card{
+  max-height:200px;
+}
+.card-title{
+  font-size:17px;
+}
+.card-text{
+  font-size:15px;
+}
 }
 
 @media(max-width:574px){
-  .card-title{
-    font-size:20px;
-  }
-  .card-text{
-    font-size:17px;
-  }
+.card-title{
+  font-size:20px;
+}
+.card-text{
+  font-size:17px;
+}
 }
 
 @media(max-width:232px){
 
-  .card{height:210px;}
+.card{height:210px;}
 }
 
 @media(max-width:370px){
 
-  .btn-outline-light{
-    font-size:17px;
-  }
+.btn-outline-light{
+  font-size:17px;
+}
 
-  p.orangeText{
-    font-size:14px;
-  }
+p.orangeText{
+  font-size:14px;
+  /* color: orange; */
+}
 
-  h1.orangeText{
-    font-size:36px;
-  }
+h1.orangeText{
+  font-size:36px;
+  /* color: orange; */
+}
+
+.orangeText {
+  color: orange;
+}
 
 }

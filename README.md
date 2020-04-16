@@ -21,6 +21,20 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Installing Selenium Webdriver
+
+-ensure you are in the project folder
+-run the command `npm install -g webdriver-manager`
+-run the command `webdriver-manager update`
+
+## Running tests e2e with Selenium Webdriver
+
+-run the command `webdriver-manager start`
+    -if issues encountered, run the command `webdriver-manager clean` then try to start again
+    -default port for selenium is `4444`
+-`ng serve` the application, then run the command `ng e2e -s false`
+
+
 ## Generate Documentation for Angular using Compodoc
 
 Run `npm run compodoc`. The build artifacts will be stored in the `documentation/` directory. Use the `-s --port [port]` to serve the documentation locally.

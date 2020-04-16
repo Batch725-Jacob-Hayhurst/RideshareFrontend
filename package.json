@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sonar": "sonarcloud/scan",
+    "codeceptjs": "codeceptjs run --plugins allure",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.app.json --theme vagrant"
   },
   "private": true,
@@ -34,6 +35,7 @@
     "@types/mocha": "^5.2.7",
     "angular2-text-mask": "^9.0.0",
     "bootstrap": "^4.4.1",
+    "codeceptjs": "^2.6.1",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "install": "^0.13.0",

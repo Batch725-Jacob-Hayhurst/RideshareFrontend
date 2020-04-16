@@ -7,14 +7,14 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./profile-membership.component.css']
 })
 export class ProfileMembershipComponent implements OnInit {
-  profileObject : User = new User;
+  profileObject: User = new User();
   currentUser: any = '';
   isDriver: boolean;
   active: boolean;
   success: string;
   constructor(private userService: UserService) { }
   ngOnInit() {
-    this.userService.getUserById2(sessionStorage.getItem("userid")).subscribe((response)=>{
+    this.userService.getUserById2(sessionStorage.getItem('userid')).subscribe((response) => {
       console.log(response);
       this.profileObject = response;
       console.log(this.profileObject);
@@ -24,10 +24,14 @@ export class ProfileMembershipComponent implements OnInit {
       console.log(this.active);
     });
   }
-  updatesMembershipInfo(){
-    this.profileObject.driver = this.isDriver;
-    this.profileObject.active = this.active;
-    this.userService.updateUserInfo(this.profileObject);
-    this.success = "Updated Successfully!";
+  updatesMembershipInfo() {
+    if (this.profileObject.driver !== this.isDriver || this.profileObject.active !== this.active) {
+      this.profileObject.driver = this.isDriver;
+      this.profileObject.active = this.active;
+      this.userService.updateUserInfo(this.profileObject);
+      this.success = 'Updated Successfully!';
+    } else {
+      this.success = 'No Values Changed';
+    }
   }
 }

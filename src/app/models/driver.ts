@@ -5,7 +5,8 @@ export interface Driver {
     'origin': string;
     'email': string;
     'phone': string;
-    'spots': number;
+    'seats': number;
+    'totalseats': number;
     'distance': string;
     'duration': string;
     'active': boolean;

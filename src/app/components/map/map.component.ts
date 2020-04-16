@@ -55,7 +55,7 @@ sleep(ms) {
                        new Promise((resolve) => {
                          let script: HTMLScriptElement = document.createElement('script');
                          script.addEventListener('load', r => resolve());
-                         script.src = `http://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
+                         script.src = `https://maps.googleapis.com/maps/api/js?key=${response["googleMapAPIKey"][0]}`;
                          document.head.appendChild(script);      
                    });
              }

@@ -2,12 +2,12 @@
     <img src="https://i.imgur.com/B8F2L7B.jpg" alt="Car" class="blackFade" style="width:100%; height: 85vh;">
     <div class="centered" [hidden]="!isLogin || !isSignUp">
 
-        <h1 class="orangeText">RideForce</h1>
-        <p class="orangeText"><strong>Introducing Revature employees to their forever rides.</strong></p>
+        <font face="impact"><i><u><h1 class="orangeText">RideForce</h1></u></i></font>
+        <p><strong>Introducing Revature employees to their forever rides.</strong></p>
 
         <div>
 
-            <button mat-raised-button (click)="toggleLogin()">Login</button>
+            <button mat-stroked-button color="success" (click)="toggleLogin()"> <font face="impact"><i>Login</i></font></button>
             <p id="signupid" (click)="toggleSignUp()">Create an Account</p>
 
         </div>
@@ -27,7 +27,7 @@
                         <button type="button" class="close pull-right" (click)="toggleLogin()">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title">Login</h4>
+                        <h4 class="modal-title"><font face="impact"><i><u>Login</u></i></font></h4>
                     </div>
                     <div class="content">
                         <div class="form-group">
@@ -48,7 +48,7 @@
 
                         <p class="alert alert-danger" *ngIf="failed"><strong>Login Failed!</strong></p>
                         <p class="alert alert-danger" *ngIf="banned"><strong>You are banned</strong></p>
-                        <button type="submit" class="btn btn-primary" id="sign-in-btn" (click)="login()">Login</button>
+                        <button mat-stroked-button color="success" type="submit" id="sign-in-btn" (click)="login()">Login</button>
                         <br><br>
                     </div>
                 </div>
@@ -71,7 +71,8 @@
                         <button type="button" class="close pull-right" (click)="toggleSignUp()">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h3><u>Sign Up</u></h3>
+                        <h3><font face="impact"><i><u>Sign Up</u></i></font></h3>
+                        <hr>
                     </div>
 
                     <mat-grid-list cols="3" rowHeight="20vh">
@@ -122,7 +123,8 @@
                                                [(ngModel)]="user.phoneNumber" 
                                                name="phoneNumber"
                                                [textMask]="{mask: phonemask, guide: false}"
-                                               
+                                               minlength="12"
+                                               required
                                                #phoneNumber="ngModel"
                                                >
                                         <mat-error *ngIf="phoneNumber.invalid && phoneNumber.dirty">*10 Digit Phone-numbers only
@@ -140,7 +142,7 @@
                                 <div class="row">
                                     <mat-form-field class="addressInput">
                                         <mat-label>Home Address</mat-label>
-                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress">
+                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress" (blur)='checkAddressStatus()'>
                                     </mat-form-field>
                                 </div>
 
@@ -154,14 +156,23 @@
                                 <div class="row">
                                     <mat-form-field class="cityInput">
                                         <mat-label>City</mat-label>
-                                        <input matInput [(ngModel)]="user.hCity" name="hCity">
+                                        <input matInput 
+                                               [(ngModel)]="user.hCity"
+                                               name="hCity"
+                                               required
+                                               minlength="3"
+                                               #hCity="ngModel"
+                                               [textMask]="{mask: citymask, guide: false}"
+                                               (blur)='checkAddressStatus()'>
+                                               <mat-error *ngIf="hCity.invalid && hCity.dirty">*Required. City Not Valid.
+                                            </mat-error>
                                     </mat-form-field>
                                 </div>
 
                                 <div class="row">
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
-                                        <mat-select [(ngModel)]="user.hState" name="hState">
+                                        <mat-select [(ngModel)]="user.hState" name="hState" (blur)='checkAddressStatus()'>
                                             <mat-option *ngFor="let state of states" [value]="state">{{state}}
                                             </mat-option>
                                         </mat-select>
@@ -170,18 +181,25 @@
                                 <div class="row">
                                     <mat-form-field class="zipInput">
                                         <mat-label>Zip Code</mat-label>
-                                        <input matInput [(ngModel)]="user.hZip" name="hZip">
+                                        <input matInput
+                                               [(ngModel)]="user.hZip"
+                                               name="hZip"
+                                               required
+                                               #hZip="ngModel"
+                                               [textMask]="{mask: zipmask, guide: false}"
+                                               (blur)='checkAddressStatus()'>
+                                               <mat-error *ngIf="hZip.invalid && hZip.dirty">*Required. Zip Code Not Valid.
+                                            </mat-error>
                                     </mat-form-field>
+                                    <mat-error *ngIf='addressValid === false' style="font-size: x-small; color: red;">That address does not exist!</mat-error>
                                 </div>
-
-
+                              
                             </div>
                         </mat-grid-tile>
 
                         <mat-grid-tile colspan="1" rowspan="2">
 
-                            <div class="rightForm">
-
+                            <div class="rightForm"> 
 
                                 <div class="row">
                                     <mat-form-field>
@@ -190,22 +208,36 @@
                                         <mat-error *ngIf=""></mat-error>
                                     </mat-form-field>
                                 </div>
-
+                            
+                            <form appFieldsMatch #passwordForm="ngForm">
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Password</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
+                                        <input matInput 
+                                               type="password" 
+                                               [(ngModel)]="user.password" 
+                                               name="password" 
+                                               #password="ngModel"
+                                               required 
+                                               minlength="6">
+                                        <mat-error *ngIf="password.invalid && password.dirty">*Required length of at least 6</mat-error>
                                     </mat-form-field>
                                 </div>
 
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Confirm Password</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
+                                        <input matInput
+                                               type="password" 
+                                               [(ngModel)]="confirmPWord" 
+                                               name="confirmPW" 
+                                               #confirmPW="ngModel" 
+                                               [errorStateMatcher]="errorMatcher" 
+                                               required>
+                                        <mat-error *ngIf="passwordForm.hasError('notSame') && confirmPW.dirty">Must match password field.</mat-error>
                                     </mat-form-field>
                                 </div>
+                            </form>
 
                                 <div class="row">
                                     <mat-form-field class="workInput">
@@ -220,11 +252,13 @@
                         </mat-grid-tile>
 
                         <!-- SUBMIT? -->
-
+                        
                     </mat-grid-list>
                     <mat-grid-list cols="4" rowHeight="7vh">
+                        <hr>
+
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit">Register</button>
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true">Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
 
@@ -272,7 +306,7 @@
     <div class="row cBorder">
         <div class="col-sm-4 mBot">
             <div class="card">
-                <i class="fa fa-blind  fa-3x center1" aria-hidden="true"></i>
+                <i class="fa fa-car fa-3x center1" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">Find Drivers</h5>
                     <p class="card-text">Find drivers in your area.</p>
@@ -281,7 +315,7 @@
         </div>
         <div class="col-sm-4 mBot">
             <div class="card">
-                <i class="fa fa-group  fa-3x center1" aria-hidden="true"></i>
+                <i class="fa fa-group fa-3x center1" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">Gain Relationships</h5>
                     <p class="card-text">Meet fellow Revature employees.</p>
@@ -291,7 +325,7 @@
         </div>
         <div class="col-sm-4 mBot">
             <div class="card">
-                <i class="fa fa-cc-mastercard    fa-3x center1" aria-hidden="true"></i>
+                <i class="fa fa-usd fa-3x center1" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">Save Money</h5>
                     <p class="card-text">Carpooling is the new green!</p>
