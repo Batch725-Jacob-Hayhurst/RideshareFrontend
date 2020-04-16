@@ -1,9 +1,10 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable, Output, EventEmitter, Directive } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { Router } from '@angular/router';
 import { Admin } from 'src/app/models/admin';
 
 
+@Directive()
 @Injectable({
   	providedIn: 'root'
 })

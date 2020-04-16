@@ -1,4 +1,4 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable, Output, EventEmitter, Directive } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from 'src/app/models/user';
 import { Router } from '@angular/router';
@@ -9,6 +9,7 @@ import { environment } from '../../../environments/environment';
 
 
 
+@Directive()
 @Injectable({
   	providedIn: 'root'
 })
