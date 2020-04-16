@@ -176,7 +176,7 @@ export class LoginreduxComponent implements OnInit {
 
     console.log('checking username');
     // check for username availability
-    this.http.post('http://localhost:9001/users/username/validate', this.user.userName, httpOptions)
+    this.http.post(`${environment.userUri}username/validate`, this.user.userName, httpOptions)
     .subscribe(response => {
         // this is that logic that assignes a boolean on whether the username is in use or not so it can
         // can the registration button can be blocked and stop user creation.

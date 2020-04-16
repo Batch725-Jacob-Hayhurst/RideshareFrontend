@@ -191,8 +191,8 @@
                                                <mat-error *ngIf="hZip.invalid && hZip.dirty">*Required. Zip Code Not Valid.
                                             </mat-error>
                                     </mat-form-field>
-                                    <mat-error *ngIf='addressValid === false' style="font-size: x-small; color: red;">That address does not exist!</mat-error>
                                 </div>
+                                <mat-error *ngIf='addressValid === false' style="font-size: x-small; color: red;">That address does not exist!</mat-error>
                               
                             </div>
                         </mat-grid-tile>
@@ -209,11 +209,11 @@
                                                [(ngModel)]="user.userName"
                                                name="userName"
                                                (blur)="checkUserName()">
-                                        </mat-form-field>
-                                        <div>
-                                            <mat-error *ngIf="userAvailable === false" style="font-size: x-small; color: red;">Username unavailable!</mat-error>
+                                            </mat-form-field>
                                         </div>
-                                </div>
+                                                       <div>
+                                                           <mat-error *ngIf="userAvailable === false" style="font-size: x-small; color: red; top:0em">Username unavailable!</mat-error>
+                                                       </div>
                             
                             <form appFieldsMatch #passwordForm="ngForm">
                                 <div class="row">
