@@ -1,0 +1,103 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587046652377' stop='1587046741820'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587046652378' status='passed' stop='1587046699684'>
+            <name>test that map shows up</name>
+            <title>test that map shows up</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587046675812' status='passed' stop='1587046699684'>
+                    <name>I see element "#gmap"</name>
+                    <title>I see element "#gmap"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587046700404' status='failed' stop='1587046740133'>
+            <name>check for component information display</name>
+            <title>check for component information display</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587046733548' status='passed' stop='1587046733714'>
+                    <name>I see "Driver's List"</name>
+                    <title>I see "Driver's List"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046733714' status='passed' stop='1587046733840'>
+                    <name>I see "Directions:"</name>
+                    <title>I see "Directions:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046733840' status='passed' stop='1587046733973'>
+                    <name>I see "Filter ALL"</name>
+                    <title>I see "Filter ALL"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046733973' status='passed' stop='1587046734083'>
+                    <name>I see "Filter DISTANCE"</name>
+                    <title>I see "Filter DISTANCE"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734083' status='passed' stop='1587046734244'>
+                    <name>I see "Name"</name>
+                    <title>I see "Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734244' status='passed' stop='1587046734366'>
+                    <name>I see "Distance"</name>
+                    <title>I see "Distance"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734366' status='passed' stop='1587046734478'>
+                    <name>I see "Time"</name>
+                    <title>I see "Time"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734478' status='passed' stop='1587046734601'>
+                    <name>I see "Available Seats"</name>
+                    <title>I see "Available Seats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734601' status='passed' stop='1587046734717'>
+                    <name>I see "View Info"</name>
+                    <title>I see "View Info"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734718' status='passed' stop='1587046734817'>
+                    <name>I see "View"</name>
+                    <title>I see "View"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046734817' status='failed' stop='1587046740132'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='b8cf3bbc-8610-4281-a102-f9292fb964cd-attachment.png' type='image/png' size='52826'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

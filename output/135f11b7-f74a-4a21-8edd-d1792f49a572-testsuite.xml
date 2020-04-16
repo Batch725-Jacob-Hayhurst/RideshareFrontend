@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587063846193' stop='1587063866924'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587063846199' status='failed' stop='1587063865938'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587063850224' status='passed' stop='1587063856775'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063856775' status='passed' stop='1587063857099'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063857099' status='passed' stop='1587063857892'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063857892' status='passed' stop='1587063858198'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063858198' status='passed' stop='1587063858492'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063858492' status='passed' stop='1587063859143'>
+                    <name>I append field "State", "SC"</name>
+                    <title>I append field "State", "SC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063859143' status='passed' stop='1587063859662'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063859663' status='passed' stop='1587063859920'>
+                    <name>I append field "Zip Code *", "2964"</name>
+                    <title>I append field "Zip Code *", "2964"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063859921' status='passed' stop='1587063860163'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063860163' status='failed' stop='1587063865935'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='cb40e202-f36f-4c63-9257-f9b3ab9375d9-attachment.png' type='image/png' size='428637'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

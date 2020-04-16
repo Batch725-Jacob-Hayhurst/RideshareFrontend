@@ -29,10 +29,10 @@
        <tbody id="output"></tbody>
       </table> -->
       <mat-form-field>
-        <mat-label>Filter ALL</mat-label>
+        <mat-label id="textSelector">Filter ALL</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
       </mat-form-field>
-      <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
+      <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;" id="distanceSelector">
         <mat-label>Filter {{filter.name}}</mat-label>
         <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
            (change)="filterChange($event.target.value)">
@@ -71,10 +71,10 @@
             <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
           </ng-container>
 
-          <!-- <ng-container matColumnDef="spots">
+          <ng-container matColumnDef="totalseats">
             <th mat-header-cell *matHeaderCellDef> Total Seats </th>
             <td mat-cell *matCellDef="let element"> {{element.totalseats}} </td>
-          </ng-container> -->
+          </ng-container>
 
           <!-- View Column -->
           <ng-container matColumnDef="view">
@@ -117,7 +117,7 @@
         </mat-card>
       </div>
 
-      <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[1, 3, 5, 10, 25, 50]">
+      <mat-paginator id="paginator" [length]="100" [pageSize]="5" [pageSizeOptions]="[1, 3, 5, 10, 25, 50]">
       </mat-paginator>
     </div>
     <div class="col-lg-5">

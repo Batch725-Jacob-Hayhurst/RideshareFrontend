@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587057488253' stop='1587057541817'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587057488264' status='failed' stop='1587057540728'>
+            <name>testing Name filter</name>
+            <title>testing Name filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587057505685' status='passed' stop='1587057532517'>
+                    <name>I click "Name"</name>
+                    <title>I click "Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057532517' status='passed' stop='1587057532883'>
+                    <name>I see "Darren O Sullivan"</name>
+                    <title>I see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057532883' status='passed' stop='1587057533210'>
+                    <name>I see "Fabien Braunroth"</name>
+                    <title>I see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057533210' status='passed' stop='1587057533518'>
+                    <name>I see "Faythe Lancashire"</name>
+                    <title>I see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057533519' status='passed' stop='1587057533796'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057533796' status='passed' stop='1587057534164'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587057534164' status='failed' stop='1587057540727'>
+                    <name>I dont see "Salvidor Migheli"</name>
+                    <title>I dont see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='37584749-5008-4129-9942-670aa0733737-attachment.png' type='image/png' size='296070'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

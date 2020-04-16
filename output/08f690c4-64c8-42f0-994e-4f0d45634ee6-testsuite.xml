@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587050130493' stop='1587050181595'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587050130496' status='failed' stop='1587050181159'>
+            <name>testing distance filter</name>
+            <title>testing distance filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587050151951' status='failed' stop='1587050181158'>
+                    <name>I click "#distanceSelector"</name>
+                    <title>I click "#distanceSelector"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='a0d023f4-4f6c-43a2-9566-2ca33ac658bc-attachment.png' type='image/png' size='192672'/>
+            </attachments>
+            <failure>
+                <message>Element "#distanceSelector" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Element "#distanceSelector" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.findClickable (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1700:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at async Protractor.click (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:451:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

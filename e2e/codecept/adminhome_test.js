@@ -8,6 +8,20 @@ Before((I) => {
     I.click('Login As Admin');
 });
 
+Scenario('test revature routing button in admin home', (I) => {
+    I.seeElement('#allusers');
+    I.click('All Users');
+    I.seeElement('#logo');
+    I.click('#logo');
+    I.amOnPage('/');
+});
+
+Scenario('test revature routing button in admin login', (I) => {
+    I.amOnPage('/');
+    I.click('#logo');
+    I.amOnPage('/');
+});
+
 Scenario('test for table headers', (I) => {
     I.seeElement('#allusers');
     I.click('All Users');

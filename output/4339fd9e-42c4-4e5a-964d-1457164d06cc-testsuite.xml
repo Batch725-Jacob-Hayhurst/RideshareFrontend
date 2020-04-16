@@ -1,0 +1,69 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587063256277' stop='1587063274692'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587063256280' status='failed' stop='1587063273655'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587063260137' status='passed' stop='1587063265624'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063265625' status='passed' stop='1587063266012'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063266012' status='passed' stop='1587063266977'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063266977' status='passed' stop='1587063267367'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063267367' status='passed' stop='1587063267812'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063267813' status='passed' stop='1587063268513'>
+                    <name>I append field "State", "SC"</name>
+                    <title>I append field "State", "SC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063268513' status='failed' stop='1587063273653'>
+                    <name>I click "#state mat-option[value="SC"]"</name>
+                    <title>I click "#state mat-option[value="SC"]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='2e4b1de6-c832-43db-8d61-80c2e8259e08-attachment.png' type='image/png' size='427875'/>
+            </attachments>
+            <failure>
+                <message>Element "#state mat-option[value="SC"]" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Element "#state mat-option[value="SC"]" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1726:11)
+                    at Protractor.findClickable (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1700:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at async Protractor.click (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:451:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
