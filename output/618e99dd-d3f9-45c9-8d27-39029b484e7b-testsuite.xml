@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587061165697' stop='1587061176719'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587061165712' status='passed' stop='1587061176437'>
+            <name>testing first name length</name>
+            <title>testing first name length</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587061169810' status='passed' stop='1587061174453'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061174453' status='passed' stop='1587061174716'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061174716' status='passed' stop='1587061175140'>
+                    <name>I fill field "First Name *", "T"</name>
+                    <title>I fill field "First Name *", "T"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061175141' status='passed' stop='1587061175311'>
+                    <name>I fill field "Last Name *", ""</name>
+                    <title>I fill field "Last Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061175311' status='passed' stop='1587061175621'>
+                    <name>I see "*Required Field"</name>
+                    <title>I see "*Required Field"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061175621' status='passed' stop='1587061175755'>
+                    <name>I clear field "First Name *"</name>
+                    <title>I clear field "First Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061175755' status='passed' stop='1587061176072'>
+                    <name>I fill field "First Name *", "Timothy"</name>
+                    <title>I fill field "First Name *", "Timothy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061176072' status='passed' stop='1587061176216'>
+                    <name>I fill field "Last Name *", ""</name>
+                    <title>I fill field "Last Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587061176216' status='passed' stop='1587061176437'>
+                    <name>I dont see "*Required Field"</name>
+                    <title>I dont see "*Required Field"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

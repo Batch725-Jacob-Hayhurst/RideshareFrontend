@@ -1,0 +1,136 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587061991891' stop='1587062009816'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587061991904' status='passed' stop='1587062009455'>
+            <name>testing valid email</name>
+            <title>testing valid email</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587061996077' status='passed' stop='1587062002108'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062002109' status='passed' stop='1587062002436'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062002436' status='passed' stop='1587062003160'>
+                    <name>I append field "Email *", "dslkfjsdf"</name>
+                    <title>I append field "Email *", "dslkfjsdf"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062003160' status='passed' stop='1587062003786'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062003786' status='passed' stop='1587062004417'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062004418' status='passed' stop='1587062004563'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062004563' status='passed' stop='1587062005436'>
+                    <name>I append field "Email *", "mitchelltim29@gmail"</name>
+                    <title>I append field "Email *", "mitchelltim29@gmail"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062005436' status='passed' stop='1587062005611'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062005611' status='passed' stop='1587062005931'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062005931' status='passed' stop='1587062006246'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062006247' status='passed' stop='1587062006393'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062006393' status='passed' stop='1587062007037'>
+                    <name>I append field "Email *", "mitchelltim29.gmail"</name>
+                    <title>I append field "Email *", "mitchelltim29.gmail"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062007037' status='passed' stop='1587062007175'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062007175' status='passed' stop='1587062007514'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062007514' status='passed' stop='1587062007857'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062007857' status='passed' stop='1587062008013'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062008013' status='passed' stop='1587062008561'>
+                    <name>I append field "Email *", "mitchelltim29@gmail.com"</name>
+                    <title>I append field "Email *", "mitchelltim29@gmail.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062008561' status='passed' stop='1587062008858'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062008858' status='passed' stop='1587062009161'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062009161' status='passed' stop='1587062009454'>
+                    <name>I dont see "*Required. Email Not Valid."</name>
+                    <title>I dont see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
