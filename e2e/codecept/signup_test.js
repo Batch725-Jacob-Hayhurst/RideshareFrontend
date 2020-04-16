@@ -132,19 +132,19 @@ Feature('sign-up');
 //     I.click('#signupid');
 // });
 
-Scenario('testing valid and matching passwords', (I) => {
-    I.amOnPage('/');
-    I.click('#signupid');
-    I.appendField('Password *', 'hello');
-    I.appendField('Last Name *', 'Mitchell');
-    I.see('*Required length of at least 6');
-    I.appendField('Password *', 'world');
-    I.dontSee('*Required length of at least 6');
-    I.appendField('Confirm Password *', 'hello');
-    I.see('Must match password field.');
-    I.appendField('Confirm Password *', 'world');
-    I.dontSee('Must match password field.');
-});
+// Scenario('testing valid and matching passwords', (I) => {
+//     I.amOnPage('/');
+//     I.click('#signupid');
+//     I.appendField('Password *', 'hello');
+//     I.appendField('Last Name *', 'Mitchell');
+//     I.see('*Required length of at least 6');
+//     I.appendField('Password *', 'world');
+//     I.dontSee('*Required length of at least 6');
+//     I.appendField('Confirm Password *', 'hello');
+//     I.see('Must match password field.');
+//     I.appendField('Confirm Password *', 'world');
+//     I.dontSee('Must match password field.');
+// });
 
 // not done
 // Scenario('testing choose work location', (I) => {
