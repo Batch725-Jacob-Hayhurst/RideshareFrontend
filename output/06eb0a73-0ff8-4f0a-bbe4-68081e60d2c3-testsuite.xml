@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058781676' stop='1587058800986'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058781678' status='failed' stop='1587058800739'>
+            <name>testing name filter</name>
+            <title>testing name filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058794873' status='passed' stop='1587058795166'>
+                    <name>I append field "Filter ALL", "Edmunds"</name>
+                    <title>I append field "Filter ALL", "Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058795166' status='failed' stop='1587058800738'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='706cd894-f7d5-477b-9a06-53671b68ec35-attachment.png' type='image/png' size='42289'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
