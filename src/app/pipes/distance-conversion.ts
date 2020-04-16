@@ -11,8 +11,8 @@ export class DistanceConversion implements PipeTransform {
         let tempFeet;
         // console.log(value.typeof);
         if (arg1 === 'M-MI') {
-                let valueFeet = value / 0.3048;
-                let rem = valueFeet % 5280;
+                const valueFeet = value / 0.3048;
+                const rem = valueFeet % 5280;
                 temp = value / 1609.344;
                 decimalLimit = arg2;
                 // console.log(value);

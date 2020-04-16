@@ -1,0 +1,568 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587038700861' stop='1587038743691'>
+    <name>admin-home:</name>
+    <title>admin-home:</title>
+    <test-cases>
+        <test-case start='1587038700862' status='passed' stop='1587038708714'>
+            <name>test for table headers</name>
+            <title>test for table headers</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587038707119' status='passed' stop='1587038707363'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707363' status='passed' stop='1587038707521'>
+                    <name>I click "All Users"</name>
+                    <title>I click "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707521' status='passed' stop='1587038707662'>
+                    <name>I see "Admin Portal"</name>
+                    <title>I see "Admin Portal"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707662' status='passed' stop='1587038707754'>
+                    <name>I see "All Users"</name>
+                    <title>I see "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707754' status='passed' stop='1587038707845'>
+                    <name>I see "Log Out"</name>
+                    <title>I see "Log Out"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707845' status='passed' stop='1587038707938'>
+                    <name>I see "ID"</name>
+                    <title>I see "ID"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038707938' status='passed' stop='1587038708043'>
+                    <name>I see "UserName"</name>
+                    <title>I see "UserName"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708043' status='passed' stop='1587038708137'>
+                    <name>I see "First Name"</name>
+                    <title>I see "First Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708137' status='passed' stop='1587038708244'>
+                    <name>I see "Last Name"</name>
+                    <title>I see "Last Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708244' status='passed' stop='1587038708333'>
+                    <name>I see "Email"</name>
+                    <title>I see "Email"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708333' status='passed' stop='1587038708434'>
+                    <name>I see "Phone Number"</name>
+                    <title>I see "Phone Number"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708434' status='passed' stop='1587038708532'>
+                    <name>I see "Batch Number"</name>
+                    <title>I see "Batch Number"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708532' status='passed' stop='1587038708626'>
+                    <name>I see "is Active"</name>
+                    <title>I see "is Active"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038708626' status='passed' stop='1587038708714'>
+                    <name>I see "Ban"</name>
+                    <title>I see "Ban"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587038708860' status='passed' stop='1587038716592'>
+            <name>test for banning and unbanning users</name>
+            <title>test for banning and unbanning users</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587038715053' status='passed' stop='1587038715296'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038715296' status='passed' stop='1587038715705'>
+                    <name>I click "All Users"</name>
+                    <title>I click "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038715705' status='passed' stop='1587038715885'>
+                    <name>I append field "#search-username", "smigheli1"</name>
+                    <title>I append field "#search-username", "smigheli1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038715885' status='passed' stop='1587038715964'>
+                    <name>I click "search"</name>
+                    <title>I click "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038715964' status='passed' stop='1587038716029'>
+                    <name>I see "1"</name>
+                    <title>I see "1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716029' status='passed' stop='1587038716073'>
+                    <name>I see "Salvidor"</name>
+                    <title>I see "Salvidor"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716073' status='passed' stop='1587038716115'>
+                    <name>I see "Migheli"</name>
+                    <title>I see "Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716115' status='passed' stop='1587038716157'>
+                    <name>I see "smigheli1@indiatimes.com"</name>
+                    <title>I see "smigheli1@indiatimes.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716157' status='passed' stop='1587038716197'>
+                    <name>I see "614-513-2776"</name>
+                    <title>I see "614-513-2776"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716197' status='passed' stop='1587038716268'>
+                    <name>I click "Ban"</name>
+                    <title>I click "Ban"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716268' status='passed' stop='1587038716485'>
+                    <name>I see "false"</name>
+                    <title>I see "false"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716485' status='passed' stop='1587038716547'>
+                    <name>I click "UnBan"</name>
+                    <title>I click "UnBan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038716547' status='passed' stop='1587038716592'>
+                    <name>I see "true"</name>
+                    <title>I see "true"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587038716702' status='passed' stop='1587038724020'>
+            <name>test for searching valid and invalid users</name>
+            <title>test for searching valid and invalid users</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587038722757' status='passed' stop='1587038723006'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723006' status='passed' stop='1587038723495'>
+                    <name>I click "All Users"</name>
+                    <title>I click "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723495' status='passed' stop='1587038723640'>
+                    <name>I append field "#search-username", "sm"</name>
+                    <title>I append field "#search-username", "sm"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723640' status='passed' stop='1587038723726'>
+                    <name>I click "search"</name>
+                    <title>I click "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723726' status='passed' stop='1587038723801'>
+                    <name>I see "Salvidor"</name>
+                    <title>I see "Salvidor"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723801' status='passed' stop='1587038723859'>
+                    <name>I clear field "#search-username"</name>
+                    <title>I clear field "#search-username"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723859' status='passed' stop='1587038723922'>
+                    <name>I append field "#search-username", "sma"</name>
+                    <title>I append field "#search-username", "sma"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723922' status='passed' stop='1587038723975'>
+                    <name>I click "search"</name>
+                    <title>I click "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038723975' status='passed' stop='1587038724020'>
+                    <name>I see ""</name>
+                    <title>I see ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587038724146' status='passed' stop='1587038734545'>
+            <name>test for all users showing up</name>
+            <title>test for all users showing up</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587038730078' status='passed' stop='1587038730332'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038730332' status='passed' stop='1587038730796'>
+                    <name>I click "All Users"</name>
+                    <title>I click "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038730796' status='passed' stop='1587038730938'>
+                    <name>I see "Grady"</name>
+                    <title>I see "Grady"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038730938' status='passed' stop='1587038731025'>
+                    <name>I see "Salvidor"</name>
+                    <title>I see "Salvidor"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731025' status='passed' stop='1587038731110'>
+                    <name>I see "Fabien"</name>
+                    <title>I see "Fabien"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731110' status='passed' stop='1587038731197'>
+                    <name>I see "Aldon"</name>
+                    <title>I see "Aldon"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731197' status='passed' stop='1587038731279'>
+                    <name>I see "Hilda"</name>
+                    <title>I see "Hilda"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731279' status='passed' stop='1587038731364'>
+                    <name>I see "Simonne"</name>
+                    <title>I see "Simonne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731364' status='passed' stop='1587038731452'>
+                    <name>I see "Darren"</name>
+                    <title>I see "Darren"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731452' status='passed' stop='1587038731537'>
+                    <name>I see "Donnell"</name>
+                    <title>I see "Donnell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731537' status='passed' stop='1587038731618'>
+                    <name>I see "Brynne"</name>
+                    <title>I see "Brynne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731618' status='passed' stop='1587038731702'>
+                    <name>I see "Tobe"</name>
+                    <title>I see "Tobe"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731702' status='passed' stop='1587038731792'>
+                    <name>I see "Marilyn"</name>
+                    <title>I see "Marilyn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731792' status='passed' stop='1587038731877'>
+                    <name>I see "Wynne"</name>
+                    <title>I see "Wynne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731877' status='passed' stop='1587038731960'>
+                    <name>I see "Jozef"</name>
+                    <title>I see "Jozef"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038731960' status='passed' stop='1587038732046'>
+                    <name>I see "Faythe"</name>
+                    <title>I see "Faythe"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732046' status='passed' stop='1587038732129'>
+                    <name>I see "Lorita"</name>
+                    <title>I see "Lorita"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732129' status='passed' stop='1587038732214'>
+                    <name>I see "Marcellina"</name>
+                    <title>I see "Marcellina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732214' status='passed' stop='1587038732322'>
+                    <name>I see "Jaine"</name>
+                    <title>I see "Jaine"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732322' status='passed' stop='1587038732413'>
+                    <name>I see "Wain"</name>
+                    <title>I see "Wain"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732413' status='passed' stop='1587038732496'>
+                    <name>I see "Geneva"</name>
+                    <title>I see "Geneva"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732496' status='passed' stop='1587038732595'>
+                    <name>I see "Cissy"</name>
+                    <title>I see "Cissy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732595' status='passed' stop='1587038732677'>
+                    <name>I see "Lynn"</name>
+                    <title>I see "Lynn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732678' status='passed' stop='1587038732741'>
+                    <name>I click "search"</name>
+                    <title>I click "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732741' status='passed' stop='1587038732826'>
+                    <name>I see "Grady"</name>
+                    <title>I see "Grady"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732826' status='passed' stop='1587038732911'>
+                    <name>I see "Salvidor"</name>
+                    <title>I see "Salvidor"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732911' status='passed' stop='1587038732997'>
+                    <name>I see "Fabien"</name>
+                    <title>I see "Fabien"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038732997' status='passed' stop='1587038733081'>
+                    <name>I see "Aldon"</name>
+                    <title>I see "Aldon"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733081' status='passed' stop='1587038733169'>
+                    <name>I see "Hilda"</name>
+                    <title>I see "Hilda"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733169' status='passed' stop='1587038733252'>
+                    <name>I see "Simonne"</name>
+                    <title>I see "Simonne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733252' status='passed' stop='1587038733340'>
+                    <name>I see "Darren"</name>
+                    <title>I see "Darren"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733340' status='passed' stop='1587038733423'>
+                    <name>I see "Donnell"</name>
+                    <title>I see "Donnell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733423' status='passed' stop='1587038733505'>
+                    <name>I see "Brynne"</name>
+                    <title>I see "Brynne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733505' status='passed' stop='1587038733588'>
+                    <name>I see "Tobe"</name>
+                    <title>I see "Tobe"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733588' status='passed' stop='1587038733673'>
+                    <name>I see "Marilyn"</name>
+                    <title>I see "Marilyn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733673' status='passed' stop='1587038733754'>
+                    <name>I see "Wynne"</name>
+                    <title>I see "Wynne"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733755' status='passed' stop='1587038733841'>
+                    <name>I see "Jozef"</name>
+                    <title>I see "Jozef"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733841' status='passed' stop='1587038733932'>
+                    <name>I see "Faythe"</name>
+                    <title>I see "Faythe"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038733932' status='passed' stop='1587038734022'>
+                    <name>I see "Lorita"</name>
+                    <title>I see "Lorita"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734022' status='passed' stop='1587038734106'>
+                    <name>I see "Marcellina"</name>
+                    <title>I see "Marcellina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734106' status='passed' stop='1587038734195'>
+                    <name>I see "Jaine"</name>
+                    <title>I see "Jaine"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734195' status='passed' stop='1587038734281'>
+                    <name>I see "Wain"</name>
+                    <title>I see "Wain"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734281' status='passed' stop='1587038734367'>
+                    <name>I see "Geneva"</name>
+                    <title>I see "Geneva"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734368' status='passed' stop='1587038734455'>
+                    <name>I see "Cissy"</name>
+                    <title>I see "Cissy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038734455' status='passed' stop='1587038734545'>
+                    <name>I see "Lynn"</name>
+                    <title>I see "Lynn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587038734706' status='passed' stop='1587038743584'>
+            <name>test for logging out of admin</name>
+            <title>test for logging out of admin</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587038740601' status='passed' stop='1587038740878'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038740879' status='passed' stop='1587038741415'>
+                    <name>I click "All Users"</name>
+                    <title>I click "All Users"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038741415' status='passed' stop='1587038741493'>
+                    <name>I see element "#logout"</name>
+                    <title>I see element "#logout"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038741494' status='passed' stop='1587038741648'>
+                    <name>I click "Log Out"</name>
+                    <title>I click "Log Out"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587038741648' status='passed' stop='1587038743584'>
+                    <name>I am on page ""</name>
+                    <title>I am on page ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

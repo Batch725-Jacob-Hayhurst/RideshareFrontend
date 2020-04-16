@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Feature('profilecar');
 
 // Before((I) => {
@@ -9,6 +10,19 @@
 //     I.click('Profile');
 //     I.click('Car Information');
 // });
+=======
+Feature('profile-car');
+
+Before((I) => {
+    I.amOnPage('/');
+    I.click('Login');
+    I.fillField('Username', 'hgledhill4');
+    I.click('#sign-in-btn');
+    I.click('#usernav');
+    I.click('Profile');
+    I.click('Car Information');
+});
+>>>>>>> Front-Tim
 
 // Scenario('test for trying to update a form without changes', (I) => {
 //     I.click('Save');

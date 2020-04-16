@@ -1,0 +1,322 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587040131517' stop='1587040289278'>
+    <name>profile-contact:</name>
+    <title>profile-contact:</title>
+    <test-cases>
+        <test-case start='1587040131517' status='passed' stop='1587040166367'>
+            <name>test for trying to update a form without changes</name>
+            <title>test for trying to update a form without changes</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587040166185' status='passed' stop='1587040166285'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040166286' status='passed' stop='1587040166367'>
+                    <name>I see "No Values Changed"</name>
+                    <title>I see "No Values Changed"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587040167928' status='passed' stop='1587040203053'>
+            <name>check for component information display</name>
+            <title>check for component information display</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587040202620' status='passed' stop='1587040202694'>
+                    <name>I see "Contact Information"</name>
+                    <title>I see "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202694' status='passed' stop='1587040202746'>
+                    <name>I see "Location"</name>
+                    <title>I see "Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202746' status='passed' stop='1587040202789'>
+                    <name>I see "Membership"</name>
+                    <title>I see "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202789' status='passed' stop='1587040202832'>
+                    <name>I see "Car Information"</name>
+                    <title>I see "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202832' status='passed' stop='1587040202874'>
+                    <name>I see "Contact Information:"</name>
+                    <title>I see "Contact Information:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202875' status='passed' stop='1587040202923'>
+                    <name>I see "First Name:"</name>
+                    <title>I see "First Name:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202923' status='passed' stop='1587040202967'>
+                    <name>I see "Last Name:"</name>
+                    <title>I see "Last Name:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040202968' status='passed' stop='1587040203011'>
+                    <name>I see "Email:"</name>
+                    <title>I see "Email:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040203011' status='passed' stop='1587040203053'>
+                    <name>I see "Phone:"</name>
+                    <title>I see "Phone:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587040204328' status='passed' stop='1587040238668'>
+            <name>test for filling initial form data</name>
+            <title>test for filling initial form data</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587040238463' status='passed' stop='1587040238527'>
+                    <name>I see in field "#f_name", "Grady"</name>
+                    <title>I see in field "#f_name", "Grady"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040238527' status='passed' stop='1587040238574'>
+                    <name>I see in field "#l_name", "Pichmann"</name>
+                    <title>I see in field "#l_name", "Pichmann"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040238574' status='passed' stop='1587040238621'>
+                    <name>I see in field "#user_email", "gpichmann0@artisteer.com"</name>
+                    <title>I see in field "#user_email", "gpichmann0@artisteer.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040238621' status='passed' stop='1587040238668'>
+                    <name>I see in field "#phone", "212-374-3466"</name>
+                    <title>I see in field "#phone", "212-374-3466"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587040239962' status='passed' stop='1587040275963'>
+            <name>checks for form submission</name>
+            <title>checks for form submission</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587040274556' status='passed' stop='1587040274664'>
+                    <name>I clear field "First Name"</name>
+                    <title>I clear field "First Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040274664' status='passed' stop='1587040274790'>
+                    <name>I fill field "First Name", "Man"</name>
+                    <title>I fill field "First Name", "Man"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040274790' status='passed' stop='1587040274896'>
+                    <name>I clear field "Last Name"</name>
+                    <title>I clear field "Last Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040274897' status='passed' stop='1587040275032'>
+                    <name>I fill field "Last Name", "Police"</name>
+                    <title>I fill field "Last Name", "Police"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275032' status='passed' stop='1587040275135'>
+                    <name>I clear field "Email"</name>
+                    <title>I clear field "Email"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275135' status='passed' stop='1587040275332'>
+                    <name>I fill field "Email", "PoliceMan@ManPolice.net"</name>
+                    <title>I fill field "Email", "PoliceMan@ManPolice.net"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275332' status='passed' stop='1587040275429'>
+                    <name>I clear field "Phone"</name>
+                    <title>I clear field "Phone"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275429' status='passed' stop='1587040275588'>
+                    <name>I fill field "Phone", "666-666-6666"</name>
+                    <title>I fill field "Phone", "666-666-6666"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275588' status='passed' stop='1587040275715'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275715' status='passed' stop='1587040275796'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275796' status='passed' stop='1587040275841'>
+                    <name>I see in field "#f_name", "Man"</name>
+                    <title>I see in field "#f_name", "Man"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275842' status='passed' stop='1587040275884'>
+                    <name>I see in field "#l_name", "Police"</name>
+                    <title>I see in field "#l_name", "Police"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275884' status='passed' stop='1587040275923'>
+                    <name>I see in field "#user_email", "PoliceMan@ManPolice.net"</name>
+                    <title>I see in field "#user_email", "PoliceMan@ManPolice.net"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040275923' status='passed' stop='1587040275963'>
+                    <name>I see in field "#phone", "666-666-6666"</name>
+                    <title>I see in field "#phone", "666-666-6666"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587040277051' status='passed' stop='1587040288064'>
+            <name>check data persistence</name>
+            <title>check data persistence</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587040286568' status='passed' stop='1587040286672'>
+                    <name>I clear field "First Name"</name>
+                    <title>I clear field "First Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040286672' status='passed' stop='1587040286786'>
+                    <name>I fill field "First Name", "Man"</name>
+                    <title>I fill field "First Name", "Man"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040286786' status='passed' stop='1587040286887'>
+                    <name>I clear field "Last Name"</name>
+                    <title>I clear field "Last Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040286887' status='passed' stop='1587040287024'>
+                    <name>I fill field "Last Name", "Police"</name>
+                    <title>I fill field "Last Name", "Police"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287024' status='passed' stop='1587040287123'>
+                    <name>I clear field "Email"</name>
+                    <title>I clear field "Email"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287123' status='passed' stop='1587040287316'>
+                    <name>I fill field "Email", "PoliceMan@ManPolice.net"</name>
+                    <title>I fill field "Email", "PoliceMan@ManPolice.net"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287316' status='passed' stop='1587040287414'>
+                    <name>I clear field "Phone"</name>
+                    <title>I clear field "Phone"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287414' status='passed' stop='1587040287566'>
+                    <name>I fill field "Phone", "666-666-6666"</name>
+                    <title>I fill field "Phone", "666-666-6666"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287566' status='passed' stop='1587040287645'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287645' status='passed' stop='1587040287715'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287716' status='passed' stop='1587040287797'>
+                    <name>I click "Membership"</name>
+                    <title>I click "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287797' status='passed' stop='1587040287887'>
+                    <name>I click "Contact Information"</name>
+                    <title>I click "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287887' status='passed' stop='1587040287938'>
+                    <name>I see in field "#f_name", "Man"</name>
+                    <title>I see in field "#f_name", "Man"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287938' status='passed' stop='1587040287981'>
+                    <name>I see in field "#l_name", "Police"</name>
+                    <title>I see in field "#l_name", "Police"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040287981' status='passed' stop='1587040288025'>
+                    <name>I see in field "#user_email", "PoliceMan@ManPolice.net"</name>
+                    <title>I see in field "#user_email", "PoliceMan@ManPolice.net"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587040288025' status='passed' stop='1587040288064'>
+                    <name>I see in field "#phone", "666-666-6666"</name>
+                    <title>I see in field "#phone", "666-666-6666"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
