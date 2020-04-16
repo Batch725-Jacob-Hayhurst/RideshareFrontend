@@ -192,7 +192,7 @@
                                             </mat-error>
                                     </mat-form-field>
                                 </div>
-                                <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position:absolute; bottom:0em">That address does not exist!</mat-error>
+                                <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
                               
                             </div>
                         </mat-grid-tile>
@@ -213,7 +213,7 @@
                                                <mat-error *ngIf="userAvailable">Username is unavailable!</mat-error>
                                     </mat-form-field>
                                 </div>
-                                <mat-error *ngIf="userAvailable === false" style="font-size: small; color: red; top:-0.5em;">Username Unavailable!</mat-error>
+                                <mat-error *ngIf="userAvailable === false" style="font-size: small; color: red; margin-top: -1em; margin-bottom: -1em;">Username Unavailable!</mat-error>
                             
                             <form appFieldsMatch #passwordForm="ngForm">
                                 <div class="row">

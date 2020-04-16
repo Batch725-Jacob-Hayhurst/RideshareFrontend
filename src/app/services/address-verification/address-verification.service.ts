@@ -86,27 +86,34 @@ export class AddressVerificationService {
       return await this.http.get(this.url).toPromise()
                           .then(
                             (response2) => {
-                              // this looks through the response JSON for the returned formatted address
-                              const formatedResponse = (response2['results'][0].formatted_address).toLowerCase();
+                              // sometimes the geocodeing api doesn't comeback with a formated_address so the
+                              // whole thing is inside of a try catch block.
+                                try {
+                                // this looks through the response JSON for the returned formatted address
+                                const formatedResponse = (response2['results'][0].formatted_address).toLowerCase();
 
-                              // this will show the compairason of the inputted address versus the
-                              // returned address from google api in the console.
-                              console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
+                                // this will show the compairason of the inputted address versus the
+                                // returned address from google api in the console.
+                                console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
 
-                              // this is the compairison to see if the address that was inputted has an exact
-                              // response from the google maps geocoding api.
-                              if (formatedResponse === this.formatedInput) {
-                                this.valid = true;
-                              } else {
-                                this.valid = false;
-                                // this will throw the returned address into session storage for possible later manipulation.
-                                // possibly need to split up the formatedResponse with formatedResponse.split(',')
-                                sessionStorage.setItem('returnedAddress', formatedResponse);
-                              }
+                                // this is the compairison to see if the address that was inputted has an exact
+                                // response from the google maps geocoding api.
+                                if (formatedResponse === this.formatedInput) {
+                                  this.valid = true;
+                                } else {
+                                  this.valid = false;
+                                  // this will throw the returned address into session storage for possible later manipulation.
+                                  // possibly need to split up the formatedResponse with formatedResponse.split(',')
+                                  sessionStorage.setItem('returnedAddress', formatedResponse);
+                                }
 
-                              // this will return the boolean on whether it is a valid address or not.
-                              return this.valid;
+                                // this will return the boolean on whether it is a valid address or not.
+                                return this.valid;
+                            } catch (err) {
+                              console.log(`error, address can't even get approximated`);
+                              return false;
                             }
+                          }
                         );
     }
 }
