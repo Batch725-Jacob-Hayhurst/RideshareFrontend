@@ -160,3 +160,7 @@ table {
     font-size: 14px;
     width: 30%;
   }
+
+.modal-body {
+  color: black;
+}

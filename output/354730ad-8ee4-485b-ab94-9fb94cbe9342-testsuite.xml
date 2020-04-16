@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587050764062' stop='1587050808000'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587050764065' status='passed' stop='1587050807876'>
+            <name>testing view button</name>
+            <title>testing view button</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587050780225' status='passed' stop='1587050806154'>
+                    <name>I click "View"</name>
+                    <title>I click "View"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587050806154' status='passed' stop='1587050806799'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587050806799' status='passed' stop='1587050807375'>
+                    <name>I see "Email: medmundsa@tiny.cc"</name>
+                    <title>I see "Email: medmundsa@tiny.cc"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587050807376' status='passed' stop='1587050807875'>
+                    <name>I see "Phone: 213-600-8430"</name>
+                    <title>I see "Phone: 213-600-8430"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

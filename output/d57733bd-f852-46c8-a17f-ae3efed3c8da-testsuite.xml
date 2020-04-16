@@ -1,0 +1,128 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587046353963' stop='1587046412151'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587046353965' status='passed' stop='1587046370950'>
+            <name>testing login feature</name>
+            <title>testing login feature</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587046355559' status='passed' stop='1587046359413'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046359413' status='passed' stop='1587046359719'>
+                    <name>I click "Login"</name>
+                    <title>I click "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046359719' status='passed' stop='1587046360080'>
+                    <name>I fill field "Username", "gpichmann0"</name>
+                    <title>I fill field "Username", "gpichmann0"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046360081' status='passed' stop='1587046360212'>
+                    <name>I click "#sign-in-btn"</name>
+                    <title>I click "#sign-in-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046360212' status='passed' stop='1587046366795'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046366796' status='passed' stop='1587046366957'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046366957' status='passed' stop='1587046367132'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046367132' status='passed' stop='1587046370639'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046370639' status='passed' stop='1587046370950'>
+                    <name>I see "Grady Pichmann"</name>
+                    <title>I see "Grady Pichmann"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587046371029' status='failed' stop='1587046411860'>
+            <name>testing logout feature</name>
+            <title>testing logout feature</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587046371971' status='passed' stop='1587046375548'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046375548' status='passed' stop='1587046375844'>
+                    <name>I click "Login"</name>
+                    <title>I click "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046375845' status='passed' stop='1587046376209'>
+                    <name>I fill field "Username", "gpichmann0"</name>
+                    <title>I fill field "Username", "gpichmann0"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046376211' status='passed' stop='1587046380448'>
+                    <name>I click "#sign-in-btn"</name>
+                    <title>I click "#sign-in-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046380448' status='passed' stop='1587046405137'>
+                    <name>I click "Grady Pichmann"</name>
+                    <title>I click "Grady Pichmann"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587046405137' status='failed' stop='1587046411859'>
+                    <name>I click "Logout"</name>
+                    <title>I click "Logout"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='6821de4b-923f-49b9-b3bb-cce34a55b235-attachment.png' type='image/png' size='172627'/>
+            </attachments>
+            <failure>
+                <message>No element found using locator: By(css selector, Logout)</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(css selector, Logout)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/protractor/built/element.js:814:27
+                    at ManagedPromise.invokeCallback_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+                    at TaskQueue.execute_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:2927:27
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
