@@ -204,9 +204,15 @@
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
-                                        <input matInput>
-                                        <mat-error *ngIf=""></mat-error>
-                                    </mat-form-field>
+                                        <input matInput
+                                               type="text"
+                                               [(ngModel)]="user.userName"
+                                               name="userName"
+                                               (blur)="checkUserName()">
+                                        </mat-form-field>
+                                        <div>
+                                            <mat-error *ngIf="userAvailable === false" style="font-size: x-small; color: red;">Username unavailable!</mat-error>
+                                        </div>
                                 </div>
                             
                             <form appFieldsMatch #passwordForm="ngForm">
@@ -258,7 +264,7 @@
                         <hr>
 
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true">Register</button>
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || userAvailable !== true">Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
 
