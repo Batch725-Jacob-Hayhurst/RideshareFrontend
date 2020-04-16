@@ -192,7 +192,6 @@
                                             </mat-error>
                                     </mat-form-field>
                                 </div>
-                                <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
                               
                             </div>
                         </mat-grid-tile>
@@ -205,15 +204,16 @@
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
                                         <input matInput
+                                               #userName="ngModel"
                                                type="text"
                                                [(ngModel)]="user.userName"
                                                name="userName"
-
+                                               [errorStateMatcher]="errorMatcher"
                                                (blur)="checkUserName()">
-                                               <mat-error *ngIf="userAvailable">Username is unavailable!</mat-error>
+                                               <mat-error *ngIf="userAvailable === false && userName.dirty && userName.invalid">Username is unavailable!</mat-error>
                                     </mat-form-field>
                                 </div>
-                                <mat-error *ngIf="userAvailable === false" style="font-size: small; color: red; margin-top: -1em; margin-bottom: -1em;">Username Unavailable!</mat-error>
+                                
                             
                             <form appFieldsMatch #passwordForm="ngForm">
                                 <div class="row">
@@ -262,11 +262,15 @@
                     </mat-grid-list>
                     <mat-grid-list cols="4" rowHeight="7vh">
                         <hr>
-
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || userAvailable !== true || passwordForm.hasError('notSame')">Register</button>
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || userAvailable !== true || passwordForm.hasError('notSame')"
+                            >Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
+                            <div>
+    
+                                <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
+                            </div>
 
 
 
