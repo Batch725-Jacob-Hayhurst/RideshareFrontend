@@ -82,7 +82,7 @@ export class DriverListComponent implements OnInit {
           // console.log(element.user.hAddress);
           // console.log(element.user.hAddress2);
           // console.log(element.user.wAddress);
-          if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
+         
             this.drivers.push({
               'id': element.user.userId,
               'name': element.user.firstName + " " + element.user.lastName,
@@ -97,10 +97,10 @@ export class DriverListComponent implements OnInit {
               'driver': element.user.driver,
               'acceptingRides': element.user.acceptingRides,
             });
-          }
+          
         
-        console.log(this.drivers);
-        this.dataSource.data = this.drivers;
+        // console.log(this.drivers);
+        // this.dataSource.data = this.drivers;
       });
 
         this.mapProperties = {
