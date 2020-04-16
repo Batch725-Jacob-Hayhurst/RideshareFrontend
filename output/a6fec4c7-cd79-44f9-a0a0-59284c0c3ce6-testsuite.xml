@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058836152' stop='1587058873709'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058836173' status='failed' stop='1587058872877'>
+            <name>testing Available Seats filter</name>
+            <title>testing Available Seats filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058858120' status='passed' stop='1587058867604'>
+                    <name>I click "Available Seats"</name>
+                    <title>I click "Available Seats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058867604' status='failed' stop='1587058872876'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='ee265198-4360-48e3-a6b7-8cdf7cde5d9b-attachment.png' type='image/png' size='55397'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
