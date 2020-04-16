@@ -1,0 +1,304 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058573607' stop='1587058730617'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058573613' status='passed' stop='1587058628490'>
+            <name>testing Name filter</name>
+            <title>testing Name filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058601112' status='passed' stop='1587058624166'>
+                    <name>I click "Name"</name>
+                    <title>I click "Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058624166' status='passed' stop='1587058624554'>
+                    <name>I see "Darren O Sullivan"</name>
+                    <title>I see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058624554' status='passed' stop='1587058624931'>
+                    <name>I see "Fabien Braunroth"</name>
+                    <title>I see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058624931' status='passed' stop='1587058625196'>
+                    <name>I see "Faythe Lancashire"</name>
+                    <title>I see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058625196' status='passed' stop='1587058625482'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058625482' status='passed' stop='1587058625776'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058625776' status='passed' stop='1587058626068'>
+                    <name>I dont see "Salvidor Migheli"</name>
+                    <title>I dont see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058626069' status='passed' stop='1587058626324'>
+                    <name>I dont see "Tobe Curd"</name>
+                    <title>I dont see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058626324' status='passed' stop='1587058626444'>
+                    <name>I click "Name"</name>
+                    <title>I click "Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058626444' status='passed' stop='1587058626816'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058626816' status='passed' stop='1587058627100'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058627100' status='passed' stop='1587058627376'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058627376' status='passed' stop='1587058627639'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058627639' status='passed' stop='1587058627928'>
+                    <name>I see "Faythe Lancashire"</name>
+                    <title>I see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058627928' status='passed' stop='1587058628221'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058628222' status='passed' stop='1587058628490'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587058628843' status='passed' stop='1587058679593'>
+            <name>testing Distance filter</name>
+            <title>testing Distance filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058648050' status='passed' stop='1587058672041'>
+                    <name>I click "Distance"</name>
+                    <title>I click "Distance"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058672041' status='passed' stop='1587058672409'>
+                    <name>I see "Darren O Sullivan"</name>
+                    <title>I see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058672409' status='passed' stop='1587058672760'>
+                    <name>I see "Fabien Braunroth"</name>
+                    <title>I see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058672760' status='passed' stop='1587058673079'>
+                    <name>I see "Faythe Lancashire"</name>
+                    <title>I see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058673079' status='passed' stop='1587058673360'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058673360' status='passed' stop='1587058673687'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058673687' status='passed' stop='1587058674065'>
+                    <name>I dont see "Hilda Gledhill"</name>
+                    <title>I dont see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058674066' status='passed' stop='1587058674365'>
+                    <name>I dont see "Marilyn Edmunds"</name>
+                    <title>I dont see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058674365' status='passed' stop='1587058674719'>
+                    <name>I see "1477mi 3051ft"</name>
+                    <title>I see "1477mi 3051ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058674720' status='passed' stop='1587058675015'>
+                    <name>I see "980mi 4032ft"</name>
+                    <title>I see "980mi 4032ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058675015' status='passed' stop='1587058675257'>
+                    <name>I see "383mi 1523ft"</name>
+                    <title>I see "383mi 1523ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058675257' status='passed' stop='1587058675507'>
+                    <name>I see "204mi 4330ft"</name>
+                    <title>I see "204mi 4330ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058675507' status='passed' stop='1587058675832'>
+                    <name>I dont see "1 ft"</name>
+                    <title>I dont see "1 ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058675832' status='passed' stop='1587058676063'>
+                    <name>I click "Distance"</name>
+                    <title>I click "Distance"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058676063' status='passed' stop='1587058676394'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058676395' status='passed' stop='1587058676692'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058676692' status='passed' stop='1587058677028'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058677029' status='passed' stop='1587058677323'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058677323' status='passed' stop='1587058677588'>
+                    <name>I see "Darren O Sullivan"</name>
+                    <title>I see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058677588' status='passed' stop='1587058677831'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058677831' status='passed' stop='1587058678176'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058678177' status='passed' stop='1587058678438'>
+                    <name>I see "383mi 1523ft"</name>
+                    <title>I see "383mi 1523ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058678438' status='passed' stop='1587058678673'>
+                    <name>I see "204mi 4330ft"</name>
+                    <title>I see "204mi 4330ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058678674' status='passed' stop='1587058679006'>
+                    <name>I see "1 ft"</name>
+                    <title>I see "1 ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058679007' status='passed' stop='1587058679317'>
+                    <name>I dont see "1477mi 3051ft"</name>
+                    <title>I dont see "1477mi 3051ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058679317' status='passed' stop='1587058679593'>
+                    <name>I dont see "980mi 4032ft"</name>
+                    <title>I dont see "980mi 4032ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587058679927' status='failed' stop='1587058728096'>
+            <name>testing Available Seats filter</name>
+            <title>testing Available Seats filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058717159' status='passed' stop='1587058722327'>
+                    <name>I click "Available Seats"</name>
+                    <title>I click "Available Seats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058722327' status='failed' stop='1587058728094'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='a8b5cfca-e1a1-4e3e-8aa5-0b9554fcbccc-attachment.png' type='image/png' size='54355'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587059516729' stop='1587059563638'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587059516742' status='passed' stop='1587059563354'>
+            <name>testing distance filter</name>
+            <title>testing distance filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059538217' status='passed' stop='1587059561684'>
+                    <name>I append field "Filter DISTANCE", "35mi 0ft"</name>
+                    <title>I append field "Filter DISTANCE", "35mi 0ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059561684' status='passed' stop='1587059562002'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059562003' status='passed' stop='1587059562324'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059562324' status='passed' stop='1587059562536'>
+                    <name>I dont see "Salvidor Migheli"</name>
+                    <title>I dont see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059562536' status='passed' stop='1587059562748'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059562748' status='passed' stop='1587059562957'>
+                    <name>I dont see "Tobe Curd"</name>
+                    <title>I dont see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059562957' status='passed' stop='1587059563143'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059563144' status='passed' stop='1587059563353'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

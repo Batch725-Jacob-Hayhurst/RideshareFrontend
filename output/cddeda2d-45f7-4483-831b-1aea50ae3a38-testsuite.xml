@@ -1,0 +1,178 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587059239985' stop='1587059378714'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587059239989' status='passed' stop='1587059286442'>
+            <name>testing name text filter</name>
+            <title>testing name text filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059260175' status='passed' stop='1587059284643'>
+                    <name>I append field "Filter ALL", "Edmunds"</name>
+                    <title>I append field "Filter ALL", "Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059284643' status='passed' stop='1587059285082'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059285082' status='passed' stop='1587059285369'>
+                    <name>I dont see "Hilda Gledhill"</name>
+                    <title>I dont see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059285369' status='passed' stop='1587059285562'>
+                    <name>I dont see "Salvidor Migheli"</name>
+                    <title>I dont see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059285562' status='passed' stop='1587059285769'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059285770' status='passed' stop='1587059285972'>
+                    <name>I dont see "Tobe Curd"</name>
+                    <title>I dont see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059285972' status='passed' stop='1587059286222'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059286222' status='passed' stop='1587059286442'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587059286746' status='passed' stop='1587059332247'>
+            <name>testing multiple names text filter</name>
+            <title>testing multiple names text filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059306718' status='passed' stop='1587059330243'>
+                    <name>I append field "Filter ALL", "m"</name>
+                    <title>I append field "Filter ALL", "m"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059330243' status='passed' stop='1587059330548'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059330548' status='passed' stop='1587059331012'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059331012' status='passed' stop='1587059331301'>
+                    <name>I dont see "Hilda Gledhill"</name>
+                    <title>I dont see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059331301' status='passed' stop='1587059331572'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059331572' status='passed' stop='1587059331826'>
+                    <name>I dont see "Tobe Curd"</name>
+                    <title>I dont see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059331826' status='passed' stop='1587059332046'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059332046' status='passed' stop='1587059332247'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587059332576' status='passed' stop='1587059378385'>
+            <name>testing phone text filter</name>
+            <title>testing phone text filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059352537' status='passed' stop='1587059376724'>
+                    <name>I append field "Filter ALL", "646-919-8954"</name>
+                    <title>I append field "Filter ALL", "646-919-8954"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059376724' status='passed' stop='1587059377002'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059377002' status='passed' stop='1587059377274'>
+                    <name>I dont see "Marilyn Edmunds"</name>
+                    <title>I dont see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059377275' status='passed' stop='1587059377505'>
+                    <name>I dont see "Hilda Gledhill"</name>
+                    <title>I dont see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059377505' status='passed' stop='1587059377719'>
+                    <name>I dont see "Salvidor Migheli"</name>
+                    <title>I dont see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059377719' status='passed' stop='1587059377964'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059377965' status='passed' stop='1587059378189'>
+                    <name>I dont see "Fabien Braunroth"</name>
+                    <title>I dont see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059378189' status='passed' stop='1587059378385'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
