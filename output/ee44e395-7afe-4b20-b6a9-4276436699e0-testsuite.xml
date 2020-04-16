@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058750876' stop='1587058803149'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058750879' status='failed' stop='1587058802160'>
+            <name>testing Available Seats filter</name>
+            <title>testing Available Seats filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058768541' status='passed' stop='1587058792811'>
+                    <name>I click "Available Seats"</name>
+                    <title>I click "Available Seats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058792811' status='passed' stop='1587058793322'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058793322' status='passed' stop='1587058793779'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058793779' status='passed' stop='1587058794147'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058794147' status='passed' stop='1587058794426'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058794426' status='passed' stop='1587058794774'>
+                    <name>I see "Fabien Braunroth"</name>
+                    <title>I see "Fabien Braunroth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058794774' status='passed' stop='1587058795065'>
+                    <name>I dont see "Darren O Sullivan"</name>
+                    <title>I dont see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058795065' status='passed' stop='1587058795424'>
+                    <name>I dont see "Faythe Lancashire"</name>
+                    <title>I dont see "Faythe Lancashire"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058795424' status='passed' stop='1587058795789'>
+                    <name>I see "2"</name>
+                    <title>I see "2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587058795789' status='failed' stop='1587058802159'>
+                    <name>I dont see "4"</name>
+                    <title>I dont see "4"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='ba75f848-70ff-4893-aa9b-4e9e4cc721a2-attachment.png' type='image/png' size='293693'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
