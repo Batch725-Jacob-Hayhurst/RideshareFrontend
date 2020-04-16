@@ -29,10 +29,10 @@
        <tbody id="output"></tbody>
       </table> -->
       <mat-form-field>
-        <mat-label>Filter ALL</mat-label>
+        <mat-label id="textSelector">Filter ALL</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Name/Number">
       </mat-form-field>
-      <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
+      <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;" id="distanceSelector">
         <mat-label>Filter {{filter.name}}</mat-label>
         <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
            (change)="filterChange($event.target.value)">
