@@ -20,6 +20,7 @@ import { DistanceConversion } from '../../pipes/distance-conversion';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { stringify } from 'querystring';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-driver-list',
@@ -51,8 +52,8 @@ export class DriverListComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private http: HttpClient, private carService: CarService, overlayContainer: OverlayContainer) {
-     // Object to create Filter for distance dropdown
-     this.filterSelectObj = [
+    // Object to create Filter for distance dropdown
+    this.filterSelectObj = [
       {
         name: 'DISTANCE',
         columnProp: 'distance',
@@ -66,7 +67,7 @@ export class DriverListComponent implements OnInit {
       }
     ];
     // add in angular materials custom theme
-     overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
   }
 
   ngOnInit() {
@@ -77,31 +78,23 @@ export class DriverListComponent implements OnInit {
 
     this.carService.getCarsForLocation(this.location).subscribe(
       res => {
-        // console.log(res);
         res.forEach(element => {
-          // console.log(element.user.hAddress);
-          // console.log(element.user.hAddress2);
-          // console.log(element.user.wAddress);
-         
-            this.drivers.push({
-              'id': element.user.userId,
-              'name': element.user.firstName + " " + element.user.lastName,
-              'origin': element.user.hAddress + "," + element.user.hCity + "," + element.user.hState,
-              'email': element.user.email,
-              'phone': element.user.phoneNumber,
-              'seats': element.availableSeats,
-              'totalseats': element.totalseats,
-              'distance': '',
-              'duration': '',
-              'active': element.user.active,
-              'driver': element.user.driver,
-              'acceptingRides': element.user.acceptingRides,
-            });
-          
-        
-        // console.log(this.drivers);
-        // this.dataSource.data = this.drivers;
-      });
+
+          this.drivers.push({
+            'id': element.user.userId,
+            'name': element.user.firstName + " " + element.user.lastName,
+            'origin': element.user.hAddress + "," + element.user.hCity + "," + element.user.hState,
+            'email': element.user.email,
+            'phone': element.user.phoneNumber,
+            'seats': element.availableSeats,
+            'totalseats': element.totalseats,
+            'distance': '',
+            'duration': '',
+            'active': element.user.active,
+            'driver': element.user.driver,
+            'acceptingRides': element.user.acceptingRides,
+          });
+        });
 
         this.mapProperties = {
           center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
@@ -154,7 +147,7 @@ export class DriverListComponent implements OnInit {
         // },
         map: this.map
       });
-      this.displayRoute(origin, element.origin, directionsService, directionsRenderer);
+      this.displayRoute(element.origin, origin, directionsService, directionsRenderer);
     });
   }
 
@@ -164,30 +157,24 @@ export class DriverListComponent implements OnInit {
       destination,
       travelMode: 'DRIVING',
       // avoidTolls: true
-    }, function(response, status) {
+    }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
         console.log(response);
-        //this.showSteps(response);
-
+        
+        
         var leg = response.routes[0].legs[0];
-        this.startMarker.push( new google.maps.Marker({ position: leg.start_location, map: this.map, icon: 'assets/spr_bluecar_0resize.png' }));
-        this.endMarker.push( new google.maps.Marker({ position: leg.end_location, map: this.map, icon: 'assets/logo.png' }));
-        // this.makeMarker( leg.start_location, 'assets/spr_bluecar_0resize.png' );
-        // this.makeMarker( leg.end_location, 'assets/logp.png');
+        makeMarker( leg.start_location, 'assets/spr_bluecar_0resize.png',this.map );
+        makeMarker( leg.end_location, 'assets/logp.png', this.map);
+
       } else {
         alert('Could not display directions due to: ' + status);
       }
     }
     );
-    // this.marker = new google.maps.Marker({
-    //   position: new google.maps.LatLng(Number(sessionStorage.getItem("lat")), Number(sessionStorage.getItem("lng"))),
-    //   map: this.map,
-    //   icon: 'assets/logo.png'
-    // } );
   }
 
-  displayDriversList(origin, drivers)  {
+  displayDriversList(origin, drivers) {
     const origins = [];
     // set origin
     origins.push(origin);
@@ -201,7 +188,7 @@ export class DriverListComponent implements OnInit {
         unitSystem: google.maps.UnitSystem.IMPERIAL,
         avoidHighways: false,
         avoidTolls: false
-      }, function(response, status) {
+      }, function (response, status) {
         if (status !== 'OK') {
           alert('Error was: ' + status);
         } else {
@@ -225,13 +212,13 @@ export class DriverListComponent implements OnInit {
         if (this.filterOn) {
           // inside applyFilter event
           return data.name.toLowerCase().includes(filter) || data.phone.includes(filter)
-          || data.phone.replace('-', '').replace('-', '').includes(filter);
+            || data.phone.replace('-', '').replace('-', '').includes(filter);
         } else {
           // inside filterChange event
           return data.distance <= filter; // returns data to table where distance is less than filtered distance
         }
       };
-    } , 2000);
+    }, 2000);
   }
 
   // distance filter event handler
@@ -247,3 +234,11 @@ export class DriverListComponent implements OnInit {
   }
 
 }
+
+function makeMarker( position, icon, map) {
+  new google.maps.Marker({
+   position: position,
+   map: map,
+   icon: icon,
+  });
+ }
