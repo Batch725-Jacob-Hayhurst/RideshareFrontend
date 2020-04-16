@@ -36,7 +36,7 @@ export class DriverListComponent implements OnInit {
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', 'seats'/* , 'totalseats' */, 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
   dataSource = new MatTableDataSource<Driver>();
   filterSelectObj = [];
   filterOn = false;
@@ -74,7 +74,7 @@ export class DriverListComponent implements OnInit {
 
     this.drivers = [];
     this.location = sessionStorage.getItem("batchLoc");
-    console.log(this.location);
+    // console.log(this.location);
 
     this.carService.getCarsForLocation(this.location).subscribe(
       res => {
@@ -87,13 +87,14 @@ export class DriverListComponent implements OnInit {
             'email': element.user.email,
             'phone': element.user.phoneNumber,
             'seats': element.availableSeats,
-            'totalseats': element.totalseats,
+            'totalseats': element.seats,
             'distance': '',
             'duration': '',
             'active': element.user.active,
             'driver': element.user.driver,
             'acceptingRides': element.user.acceptingRides,
           });
+          console.log(element);
         });
 
         this.mapProperties = {
@@ -119,7 +120,6 @@ export class DriverListComponent implements OnInit {
     this.http.get(`${environment.loginUri}getGoogleApi`)
       .subscribe(
         (response) => {
-          console.log(response["googleMapAPIKey"][0]);
           if (response["googleMapAPIKey"] != undefined) {
             new Promise((resolve) => {
               const script: HTMLScriptElement = document.createElement('script');
@@ -160,7 +160,7 @@ export class DriverListComponent implements OnInit {
     }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
-        console.log(response);
+        // console.log(response);
         
         
         var leg = response.routes[0].legs[0];
