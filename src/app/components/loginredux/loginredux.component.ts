@@ -149,7 +149,13 @@ export class LoginreduxComponent implements OnInit {
           this.user.batch = new Batch(6, 'Orlando');
           break;
     }
+    this.user.acceptingRides = false;
+    this.user.active = false;
+    this.user.driver = false;
     console.log(this.user);
+    this.userService.addUser(this.user).subscribe( res => {
+      console.log(res);
+    });
   }
 
   // this function will check for filled out fields in the address form and if it is a valid address

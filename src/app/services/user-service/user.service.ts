@@ -107,7 +107,7 @@ export class UserService {
 
 	// add user method
 	addUser(user: User): Observable<User> {
-		return this.http.post<User>(this.url, user, { headers: this.headers });
+		return this.http.post<User>(this.url, user, {headers: this.headers});
 	}
 
 	/**
