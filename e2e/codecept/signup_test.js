@@ -133,12 +133,12 @@ Feature('sign-up');
 //     I.click('Username');
 //     I.appendField('Username', 'gpichmann0');
 //     I.appendField('Last Name *', 'Mitchell');
-//     I.see(''); //invalid username prompt
+//     I.see('Username is unavailable!');
 //     I.clearField('Username');
 //     I.appendField('Username', 'mitchelltim29');
 //     I.clearField('Last Name *');
 //     I.appendField('Last Name *', 'Mitchell');
-//     I.dontSee(''); //invalid username prompt
+//     I.dontSee('Username is unavailable!');
 // });
 
 // Scenario('testing valid and matching passwords', (I) => {
@@ -155,8 +155,31 @@ Feature('sign-up');
 //     I.dontSee('Must match password field.');
 // });
 
-// not done, need sign up to work first
-// Scenario('testing correct sign up', (I) => {
-//     I.amOnPage('/');
-//     I.click('#signupid');
-// });
+// should work but need register form to work first
+Scenario('testing correct sign up', (I) => {
+    I.amOnPage('/');
+    I.click('#signupid');
+    I.appendField('First Name *', 'Timothy');
+    I.appendField('Last Name *', 'Mitchell');
+    I.appendField('Email *', 'mitchelltim29@gmail.com');
+    I.appendField('Phone Number *', '7025952564');
+    I.appendField('Home Address', '509 Shadow Oaks Dr');
+    I.appendField('City *', 'Easley');
+    // figure out how to do state
+    I.appendField('Zip Code *', '29642');
+    I.appendField('#username', 'mitchelltim29');
+    I.appendField('Password *', 'password');
+    I.appendField('Confirm Password *', 'password');
+    I.click('Work Location');
+    I.click('#city');
+    I.click('Register');
+    I.click('#signup-btn');
+    I.click('Login');
+    I.fillField('Username', 'mitchelltim29');
+    I.fillField('Password', 'password');
+    I.click('#sign-in-btn');
+    I.dontSee('Login');
+    I.dontSee('User not found!');
+    I.dontSee('Username');
+    I.dontSee('Password');
+});
