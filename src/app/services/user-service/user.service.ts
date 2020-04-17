@@ -41,7 +41,11 @@ export class UserService {
 	 */
 
 	constructor(private http: HttpClient, private router: Router, private log: LogService, private authService: AuthService) { }
-  
+	
+	login(username: string) : Observable<User> {
+		return this.http.post<User>(this.url, username);
+	}
+
 	/**
 	 * A GET method for all users
 	 */

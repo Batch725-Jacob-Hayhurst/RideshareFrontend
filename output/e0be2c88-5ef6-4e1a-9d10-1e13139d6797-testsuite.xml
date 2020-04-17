@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586983733352' stop='1586983756369'>
+    <name>adminlogin:</name>
+    <title>adminlogin:</title>
+    <test-cases>
+        <test-case start='1586983733353' status='failed' stop='1586983754995'>
+            <name>test for admins proper number</name>
+            <title>test for admins proper number</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983739461' status='passed' stop='1586983745035'>
+                    <name>I am on page "/login/admin"</name>
+                    <title>I am on page "/login/admin"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586983745035' status='passed' stop='1586983749089'>
+                    <name>I see element "#admins"</name>
+                    <title>I see element "#admins"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586983749089' status='passed' stop='1586983749241'>
+                    <name>I select option "Admin Account", "1"</name>
+                    <title>I select option "Admin Account", "1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586983749241' status='passed' stop='1586983749665'>
+                    <name>I append field "#userName", "jimmy"</name>
+                    <title>I append field "#userName", "jimmy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586983749665' status='passed' stop='1586983749828'>
+                    <name>I click "Login As Admin"</name>
+                    <title>I click "Login As Admin"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586983749828' status='failed' stop='1586983754994'>
+                    <name>I see "Login Failed!"</name>
+                    <title>I see "Login Failed!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='15cac1e2-f158-4dda-8974-191dd23513fa-attachment.png' type='image/png' size='24727'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
