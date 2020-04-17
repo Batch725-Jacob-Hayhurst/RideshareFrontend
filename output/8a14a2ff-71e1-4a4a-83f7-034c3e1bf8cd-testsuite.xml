@@ -1,0 +1,175 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587134461409' stop='1587134539843'>
+    <name>profile-membership:</name>
+    <title>profile-membership:</title>
+    <test-cases>
+        <test-case start='1587134461412' status='passed' stop='1587134498916'>
+            <name>test for trying to update a form without changes</name>
+            <title>test for trying to update a form without changes</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134498589' status='passed' stop='1587134498785'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134498785' status='passed' stop='1587134498916'>
+                    <name>I see "No Values Changed"</name>
+                    <title>I see "No Values Changed"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134500195' status='passed' stop='1587134512280'>
+            <name>check for component information display</name>
+            <title>check for component information display</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134511504' status='passed' stop='1587134511898'>
+                    <name>I see "Contact Information"</name>
+                    <title>I see "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134511898' status='passed' stop='1587134511964'>
+                    <name>I see "Location"</name>
+                    <title>I see "Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134511964' status='passed' stop='1587134512014'>
+                    <name>I see "Membership"</name>
+                    <title>I see "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134512014' status='passed' stop='1587134512077'>
+                    <name>I see "Car Information"</name>
+                    <title>I see "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134512077' status='passed' stop='1587134512129'>
+                    <name>I see "Membership:"</name>
+                    <title>I see "Membership:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134512129' status='passed' stop='1587134512180'>
+                    <name>I see "Batch:"</name>
+                    <title>I see "Batch:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134512180' status='passed' stop='1587134512229'>
+                    <name>I see "1 - Morgantown"</name>
+                    <title>I see "1 - Morgantown"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134512229' status='passed' stop='1587134512280'>
+                    <name>I see "Status:"</name>
+                    <title>I see "Status:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134513082' status='passed' stop='1587134525190'>
+            <name>test for filling initial form data</name>
+            <title>test for filling initial form data</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134524919' status='passed' stop='1587134525089'>
+                    <name>I see in field "#rider", "Rider"</name>
+                    <title>I see in field "#rider", "Rider"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134525089' status='passed' stop='1587134525190'>
+                    <name>I see in field "#active", "Disabled"</name>
+                    <title>I see in field "#active", "Disabled"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134526089' status='passed' stop='1587134538892'>
+            <name>check for form submission</name>
+            <title>check for form submission</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134537613' status='passed' stop='1587134537782'>
+                    <name>I click "#rider"</name>
+                    <title>I click "#rider"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134537784' status='passed' stop='1587134537900'>
+                    <name>I append field "#rider", "Driver"</name>
+                    <title>I append field "#rider", "Driver"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134537900' status='passed' stop='1587134538038'>
+                    <name>I click "#active"</name>
+                    <title>I click "#active"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538039' status='passed' stop='1587134538167'>
+                    <name>I append field "#active", "Active"</name>
+                    <title>I append field "#active", "Active"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538167' status='passed' stop='1587134538285'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538285' status='passed' stop='1587134538389'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538389' status='passed' stop='1587134538510'>
+                    <name>I click "Car Information"</name>
+                    <title>I click "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538510' status='passed' stop='1587134538670'>
+                    <name>I click "Membership"</name>
+                    <title>I click "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538670' status='passed' stop='1587134538791'>
+                    <name>I see in field "#rider", "Driver"</name>
+                    <title>I see in field "#rider", "Driver"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134538791' status='passed' stop='1587134538892'>
+                    <name>I see in field "#active", "Active"</name>
+                    <title>I see in field "#active", "Active"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

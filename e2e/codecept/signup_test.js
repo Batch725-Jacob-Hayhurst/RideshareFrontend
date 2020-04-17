@@ -12,7 +12,7 @@ Feature('sign-up');
 //     I.dontSee('*Required Field');
 // });
 
-// doesn't work yet
+// DOESN'T WORK YET
 // Scenario('testing valid last name', (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');
@@ -66,7 +66,7 @@ Feature('sign-up');
 //     I.dontSee('*10 Digit Phone-numbers only');
 // });
 
-// doesn't work yet
+// DOESN'T WORK YET
 // Scenario('testing valid address', (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');
@@ -126,6 +126,7 @@ Feature('sign-up');
 //     I.dontSee('That address does not exist!');
 // });
 
+// DOESN'T WORK YET
 // should work but need username validation to work first
 // Scenario('testing valid username', (I) => {
 //     I.amOnPage('/');
@@ -155,31 +156,32 @@ Feature('sign-up');
 //     I.dontSee('Must match password field.');
 // });
 
+// DOESN'T WORK YET
 // should work but need register form to work first
-Scenario('testing correct sign up', (I) => {
-    I.amOnPage('/');
-    I.click('#signupid');
-    I.appendField('First Name *', 'Timothy');
-    I.appendField('Last Name *', 'Mitchell');
-    I.appendField('Email *', 'mitchelltim29@gmail.com');
-    I.appendField('Phone Number *', '7025952564');
-    I.appendField('Home Address', '509 Shadow Oaks Dr');
-    I.appendField('City *', 'Easley');
-    // figure out how to do state
-    I.appendField('Zip Code *', '29642');
-    I.appendField('#username', 'mitchelltim29');
-    I.appendField('Password *', 'password');
-    I.appendField('Confirm Password *', 'password');
-    I.click('Work Location');
-    I.click('#city');
-    I.click('Register');
-    I.click('#signup-btn');
-    I.click('Login');
-    I.fillField('Username', 'mitchelltim29');
-    I.fillField('Password', 'password');
-    I.click('#sign-in-btn');
-    I.dontSee('Login');
-    I.dontSee('User not found!');
-    I.dontSee('Username');
-    I.dontSee('Password');
-});
+// Scenario('testing correct sign up', (I) => {
+//     I.amOnPage('/');
+//     I.click('#signupid');
+//     I.appendField('First Name *', 'Timothy');
+//     I.appendField('Last Name *', 'Mitchell');
+//     I.appendField('Email *', 'mitchelltim29@gmail.com');
+//     I.appendField('Phone Number *', '7025952564');
+//     I.appendField('Home Address', '509 Shadow Oaks Dr');
+//     I.appendField('City *', 'Easley');
+//     // figure out how to do state
+//     I.appendField('Zip Code *', '29642');
+//     I.appendField('#username', 'mitchelltim29');
+//     I.appendField('Password *', 'password');
+//     I.appendField('Confirm Password *', 'password');
+//     I.click('Work Location');
+//     I.click('#city');
+//     I.click('Register');
+//     I.click('#signup-btn');
+//     I.click('Login');
+//     I.fillField('Username', 'mitchelltim29');
+//     I.fillField('Password', 'password');
+//     I.click('#sign-in-btn');
+//     I.dontSee('Login');
+//     I.dontSee('User not found!');
+//     I.dontSee('Username');
+//     I.dontSee('Password');
+// });
