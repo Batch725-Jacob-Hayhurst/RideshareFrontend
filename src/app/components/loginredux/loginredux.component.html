@@ -199,7 +199,8 @@
                         <mat-grid-tile colspan="1" rowspan="2">
 
                             <div class="rightForm"> 
-
+                            
+                                <form appUsernameCheck #userNameForm="ngForm">
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
@@ -208,12 +209,15 @@
                                                type="text"
                                                [(ngModel)]="user.userName"
                                                name="userName"
+                                               minlength="3"
+                                               maxlength="12"
                                                [errorStateMatcher]="errorMatcher"
-                                               (blur)="checkUserName()"
                                                id="username">
-                                               <mat-error *ngIf="userAvailable === false && userName.dirty && userName.invalid">Username is unavailable!</mat-error>
+                                               <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
+                                               <mat-error *ngIf="userNameForm.hasError('unavailable') && userName.dirty">That username is already taken!</mat-error>
                                     </mat-form-field>
                                 </div>
+                                </form>
                                 
                             
                             <form appFieldsMatch #passwordForm="ngForm">
@@ -268,10 +272,9 @@
                             >Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
-                            <div>
-    
-                                <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
-                            </div>
+                    <div>
+                        <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
+                    </div>
 
 
 
