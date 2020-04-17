@@ -1,0 +1,133 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587132012017' stop='1587132042043'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587132012020' status='failed' stop='1587132030880'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132013784' status='passed' stop='1587132022072'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132022072' status='passed' stop='1587132022420'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132022421' status='passed' stop='1587132022817'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132022817' status='passed' stop='1587132023084'>
+                    <name>I append field "Last Name *", "MitchMan"</name>
+                    <title>I append field "Last Name *", "MitchMan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132023084' status='passed' stop='1587132023211'>
+                    <name>I clear field "First Name *"</name>
+                    <title>I clear field "First Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132023211' status='passed' stop='1587132023679'>
+                    <name>I fill field "First Name *", ""</name>
+                    <title>I fill field "First Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132023679' status='passed' stop='1587132023906'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132023906' status='passed' stop='1587132024200'>
+                    <name>I fill field "Last Name *", ""</name>
+                    <title>I fill field "Last Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132024200' status='passed' stop='1587132024404'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132024404' status='failed' stop='1587132030879'>
+                    <name>I see "*Required Field"</name>
+                    <title>I see "*Required Field"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='f01adf52-a945-4002-b0d2-0439a650e3af-attachment.png' type='image/png' size='281718'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1587132031258' status='failed' stop='1587132041676'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132032235' status='passed' stop='1587132036125'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132036125' status='passed' stop='1587132036466'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132036466' status='failed' stop='1587132041672'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='285d12e1-682c-4460-be16-c14b6664cf37-attachment.png' type='image/png' size='281361'/>
+            </attachments>
+            <failure>
+                <message>element not interactable
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>WebDriverError: element not interactable
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebElement.sendKeys()
+                    at thenableWebDriverProxy.schedule (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at WebElement.schedule_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)
+                    at WebElement.sendKeys (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2174:19)
+                    at Protractor.appendField (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:631:19)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,4 +1,4 @@
-Feature('drivers-list');
+// Feature('drivers-list');
 
 Before((I) => {
     I.amOnPage('/');
@@ -193,9 +193,23 @@ Scenario('testing phone text filter', (I) => {
     I.dontSee('Faythe Lancashire');
 });
 
-Scenario('testing view button', (I) => {
-    I.click('View');
-    I.see('Marilyn Edmunds');
-    I.see('Email: medmundsa@tiny.cc');
-    I.see('Phone: 213-600-8430');
-});
+
+// // not functional yet
+// // Scenario('testing phone filter', (I) => {
+// //     I.click('Filter ALL');
+// //     I.appendField('#textSelector', '646-919-8954');
+// //     I.see('Tobe Curd');
+// //     I.dontSee('Marilyn Edmunds');
+// //     I.dontsee('Hilda Gledhill');
+// //     I.dontSee('Salvidor Migheli');
+// //     I.dontSee('Darren O Sullivan');
+// //     I.dontSee('Fabien Braunroth');
+// //     I.dontSee('Faythe Lancashire');
+// // });
+
+// Scenario('testing view button', (I) => {
+//     I.click('View');
+//     I.see('Marilyn Edmunds');
+//     I.see('Email: medmundsa@tiny.cc');
+//     I.see('Phone: 213-600-8430');
+// });

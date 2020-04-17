@@ -94,7 +94,7 @@ export class DriverListComponent implements OnInit {
             'driver': element.user.driver,
             'acceptingRides': element.user.acceptingRides,
           });
-          console.log(element);
+          // console.log(element);
         });
 
         this.mapProperties = {

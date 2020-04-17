@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587059334027' stop='1587059377769'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587059334029' status='failed' stop='1587059377408'>
+            <name>testing multiple names filter</name>
+            <title>testing multiple names filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059349636' status='passed' stop='1587059376455'>
+                    <name>I append field "Filter ALL", "m"</name>
+                    <title>I append field "Filter ALL", "m"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059376455' status='passed' stop='1587059376988'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059376988' status='passed' stop='1587059377407'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='1ab1b3c6-2cfd-4692-8a77-93407a9427f1-attachment.png' type='image/png' size='169072'/>
+            </attachments>
+            <failure>
+                <message>I.dontsee is not a function</message>
+                <stack-trace>TypeError: I.dontsee is not a function
+                    at Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/driver_test.js:71:7)
+                    at Context.test.fn (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/scenario.js:78:14)
+                    at callFnAsync (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:415:21)
+                    at Test.Runnable.run (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:357:7)
+                    at Runner.runTest (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:535:10)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:653:12
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:447:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:457:7
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:362:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

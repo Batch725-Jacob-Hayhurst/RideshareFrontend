@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587132234825' stop='1587132266047'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587132234828' status='failed' stop='1587132265539'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132235734' status='passed' stop='1587132239777'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132239777' status='passed' stop='1587132240035'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132240035' status='passed' stop='1587132260055'>
+                    <name>I wait 20</name>
+                    <title>I wait 20</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132260055' status='passed' stop='1587132260444'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132260444' status='passed' stop='1587132260672'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132260672' status='failed' stop='1587132265536'>
+                    <name>I select option "#state", "New York"</name>
+                    <title>I select option "#state", "New York"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='7d022c2e-f458-4a9f-8b7c-0d276779519c-attachment.png' type='image/png' size='474167'/>
+            </attachments>
+            <failure>
+                <message>Selectable field "#state" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Selectable field "#state" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.selectOption (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:544:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

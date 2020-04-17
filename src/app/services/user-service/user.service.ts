@@ -58,10 +58,10 @@ export class UserService {
 	 * A GET method for one user
 	 * @param idParam 
 	 */
-	getUserById(idParam: number) {
-
-		console.log(this.url)
-		return this.http.get<User>(this.url + idParam).toPromise();
+	getUserById(idParam: number){
+		
+		// console.log(this.url)
+		return this.http.get<User>(this.url+idParam).toPromise();
 
 
 	}
@@ -85,7 +85,7 @@ export class UserService {
 		user.active = true;
 		user.driver = false;
 		user.acceptingRides = false;
-		console.log(user);
+		// console.log(user);
 
 		this.http.post(this.url, user, { observe: 'response' }).subscribe(
 			(response) => {

@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587133579870' stop='1587133591536'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587133579872' status='failed' stop='1587133590925'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587133580944' status='passed' stop='1587133584639'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133584639' status='passed' stop='1587133584903'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133584904' status='passed' stop='1587133590458'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133590458' status='passed' stop='1587133590639'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133590639' status='passed' stop='1587133590924'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='2b4ed38c-1f41-4df1-a8f3-40925f91e767-attachment.png' type='image/png' size='477358'/>
+            </attachments>
+            <failure>
+                <message>states is not defined</message>
+                <stack-trace>ReferenceError: states is not defined
+                    at Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/signup_test.js:110:29)
+                    at Context.test.fn (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/scenario.js:78:14)
+                    at callFnAsync (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:415:21)
+                    at Test.Runnable.run (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:357:7)
+                    at Runner.runTest (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:535:10)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:653:12
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:447:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:457:7
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:362:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

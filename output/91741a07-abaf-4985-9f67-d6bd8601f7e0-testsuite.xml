@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058663730' stop='1587058708473'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058663733' status='failed' stop='1587058708232'>
+            <name>testing name filter</name>
+            <title>testing name filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587058673701' status='failed' stop='1587058708231'>
+                    <name>I click "Filter ALL"</name>
+                    <title>I click "Filter ALL"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='ca305565-1cc3-4029-a2d7-ca97edb2a2ab-attachment.png' type='image/png' size='181040'/>
+            </attachments>
+            <failure>
+                <message>element click intercepted: Element &lt;label class="mat-form-field-label ng-tns-c3-0 mat-empty mat-form-field-empty ng-star-inserted" ng-reflect-ng-switch="true" ng-reflect-disabled="true" id="mat-form-field-label-1" for="mat-input-0" aria-owns="mat-input-0">...&lt;/label> is not clickable at point (128, 147). Other element would receive the click: &lt;input _ngcontent-gyt-c2="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Ex. Name/Number" ng-reflect-placeholder="Ex. Name/Number" id="mat-input-0" aria-invalid="false" aria-required="false">
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>WebDriverError: element click intercepted: Element &lt;label class="mat-form-field-label ng-tns-c3-0 mat-empty mat-form-field-empty ng-star-inserted" ng-reflect-ng-switch="true" ng-reflect-disabled="true" id="mat-form-field-label-1" for="mat-input-0" aria-owns="mat-input-0">...&lt;/label> is not clickable at point (128, 147). Other element would receive the click: &lt;input _ngcontent-gyt-c2="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Ex. Name/Number" ng-reflect-placeholder="Ex. Name/Number" id="mat-input-0" aria-invalid="false" aria-required="false">
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebElement.click()
+                    at thenableWebDriverProxy.schedule (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at WebElement.schedule_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)
+                    at WebElement.click (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2092:17)
+                    at Protractor.click (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:452:15)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

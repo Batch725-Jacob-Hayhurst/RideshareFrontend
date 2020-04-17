@@ -1,31 +1,31 @@
-Feature('profile-location');
+// Feature('profile-location');
 
-Before((I) => {
-    I.amOnPage('/');
-    I.click('Login');
-    I.fillField('Username', 'gpichmann0');
-    I.click('#sign-in-btn');
-    I.click('#usernav');
-    I.click('Profile');
-    I.click('Location');
-});
+// Before((I) => {
+//     I.amOnPage('/');
+//     I.click('Login');
+//     I.fillField('Username', 'gpichmann0');
+//     I.click('#sign-in-btn');
+//     I.click('#usernav');
+//     I.click('Profile');
+//     I.click('Location');
+// });
 
-Scenario('test for trying to update a form without changes', (I) => {
-    I.click('Save');
-    I.see('No Values Changed');
-});
+// Scenario('test for trying to update a form without changes', (I) => {
+//     I.click('Save');
+//     I.see('No Values Changed');
+// });
 
-Scenario('check for component information display', (I) => {
-    I.see('Contact Information');
-    I.see('Location');
-    I.see('Membership');
-    I.see('Car Information');
-    I.see('Location:');
-    I.see('Address:');
-    I.see('City:');
-    I.see('State:');
-    I.see('Zipcode:')
-});
+// Scenario('check for component information display', (I) => {
+//     I.see('Contact Information');
+//     I.see('Location');
+//     I.see('Membership');
+//     I.see('Car Information');
+//     I.see('Location:');
+//     I.see('Address:');
+//     I.see('City:');
+//     I.see('State:');
+//     I.see('Zipcode:')
+// });
 
 Scenario('check for correct location information', (I) => {
     I.seeInField('#address', '609 Legacy Pride Dr');

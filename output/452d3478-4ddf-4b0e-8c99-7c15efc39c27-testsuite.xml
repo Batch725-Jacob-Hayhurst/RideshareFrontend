@@ -1,0 +1,94 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587137230824' stop='1587137242624'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587137230825' status='failed' stop='1587137242094'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587137231864' status='passed' stop='1587137236237'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137236238' status='passed' stop='1587137236486'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137236487' status='passed' stop='1587137236788'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137236788' status='passed' stop='1587137237032'>
+                    <name>I append field "Last Name *", "MitchMan"</name>
+                    <title>I append field "Last Name *", "MitchMan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137237032' status='passed' stop='1587137237133'>
+                    <name>I clear field "First Name *"</name>
+                    <title>I clear field "First Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137237134' status='passed' stop='1587137237280'>
+                    <name>I fill field "First Name *", ""</name>
+                    <title>I fill field "First Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137237280' status='passed' stop='1587137237387'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137237387' status='failed' stop='1587137242093'>
+                    <name>I press key "Space"</name>
+                    <title>I press key "Space"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='c24901bd-495c-4bc4-9037-1ffd386b99fa-attachment.png' type='image/png' size='470869'/>
+            </attachments>
+            <failure>
+                <message>sendKeysToActiveElement
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>UnsupportedOperationError: sendKeysToActiveElement
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: sendKeys
+                    at thenableWebDriverProxy.schedule (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/actions.js:124:23
+                    at Array.map (&lt;anonymous>)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/actions.js:123:29
+                    at TaskQueue.execute_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:2974:25
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:668:7
+                From: Task: ActionSequence.perform
+                    at ActionSequence.perform (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/actions.js:122:33)
+                    at Protractor.pressKey (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:591:19)
+                    at Step.run (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/step.js:70:47)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/actor.js:92:23</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
