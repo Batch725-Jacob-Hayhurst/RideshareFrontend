@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586983756408' stop='1586983849377'>
+    <name>adminhome:</name>
+    <title>adminhome:</title>
+    <test-cases>
+        <test-case start='1586983756409' status='failed' stop='1586983774828'>
+            <name>test for table headers</name>
+            <title>test for table headers</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983769821' status='failed' stop='1586983774827'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='0f95a1d4-9aa0-44b3-8cda-636ce6d70e08-attachment.png' type='image/png' size='24854'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1586983775567' status='failed' stop='1586983793168'>
+            <name>test for banning and unbanning users</name>
+            <title>test for banning and unbanning users</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983788258' status='failed' stop='1586983793168'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='f33048aa-3546-4273-8dd7-51423034edc7-attachment.png' type='image/png' size='24836'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1586983794408' status='failed' stop='1586983812293'>
+            <name>test for searching valid and invalid users</name>
+            <title>test for searching valid and invalid users</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983807305' status='failed' stop='1586983812293'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='f65c9575-1024-4260-b542-c4724f826a9c-attachment.png' type='image/png' size='24854'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1586983813247' status='failed' stop='1586983830234'>
+            <name>test for all users showing up</name>
+            <title>test for all users showing up</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983825326' status='failed' stop='1586983830233'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='b6eb8f0e-99e3-47b4-b988-9de96515eba8-attachment.png' type='image/png' size='24836'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1586983831258' status='failed' stop='1586983848375'>
+            <name>test for logging out of admin</name>
+            <title>test for logging out of admin</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1586983843498' status='failed' stop='1586983848375'>
+                    <name>I see element "#allusers"</name>
+                    <title>I see element "#allusers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='64cc8169-dd04-4f3c-8de4-475f4c22fdee-attachment.png' type='image/png' size='24836'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

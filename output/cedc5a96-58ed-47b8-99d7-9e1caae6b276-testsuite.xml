@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587039925311' stop='1587039936198'>
+    <name>admin-login:</name>
+    <title>admin-login:</title>
+    <test-cases>
+        <test-case start='1587039925313' status='passed' stop='1587039935797'>
+            <name>test for admins proper number</name>
+            <title>test for admins proper number</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587039929200' status='passed' stop='1587039932092'>
+                    <name>I am on page "/login/admin"</name>
+                    <title>I am on page "/login/admin"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932092' status='passed' stop='1587039932153'>
+                    <name>I see element "#admins"</name>
+                    <title>I see element "#admins"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932153' status='passed' stop='1587039932266'>
+                    <name>I select option "Admin Account", "1"</name>
+                    <title>I select option "Admin Account", "1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932266' status='passed' stop='1587039932394'>
+                    <name>I append field "#userName", "jimmy"</name>
+                    <title>I append field "#userName", "jimmy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932394' status='passed' stop='1587039932487'>
+                    <name>I click "Login As Admin"</name>
+                    <title>I click "Login As Admin"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932487' status='passed' stop='1587039932555'>
+                    <name>I see "Login Failed!"</name>
+                    <title>I see "Login Failed!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932555' status='passed' stop='1587039932634'>
+                    <name>I append field "#userName", "admin1"</name>
+                    <title>I append field "#userName", "admin1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932634' status='passed' stop='1587039932696'>
+                    <name>I click "Login As Admin"</name>
+                    <title>I click "Login As Admin"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587039932696' status='passed' stop='1587039935797'>
+                    <name>I am on page ""</name>
+                    <title>I am on page ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
