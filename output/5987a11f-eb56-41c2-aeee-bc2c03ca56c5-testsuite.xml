@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587070025011' stop='1587070051807'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587070025014' status='failed' stop='1587070051182'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587070026385' status='passed' stop='1587070030355'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587070030355' status='passed' stop='1587070030609'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587070030609' status='passed' stop='1587070050630'>
+                    <name>I wait 20</name>
+                    <title>I wait 20</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587070050631' status='passed' stop='1587070050876'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587070050876' status='passed' stop='1587070051077'>
+                    <name>I append field "Last Name *", "MitchMan"</name>
+                    <title>I append field "Last Name *", "MitchMan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587070051077' status='passed' stop='1587070051181'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='dd65b3f6-85ce-45e2-ad49-45c220efe86d-attachment.png' type='image/png' size='471728'/>
+            </attachments>
+            <failure>
+                <message>i is not defined</message>
+                <stack-trace>ReferenceError: i is not defined
+                    at Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/signup_test.js:24:5)
+                    at Context.test.fn (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/scenario.js:78:14)
+                    at callFnAsync (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:415:21)
+                    at Test.Runnable.run (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:357:7)
+                    at Runner.runTest (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:535:10)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:653:12
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:447:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:457:7
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:362:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -87,7 +87,7 @@
                                         <input matInput [(ngModel)]="user.firstName" name="fName" required minlength="2"
                                             maxlength="50" #fName="ngModel">
 
-                                        <mat-error *ngIf="fName.invalid && fName.dirty">*Required Field</mat-error>
+                                        <mat-error *ngIf="fName.invalid">*Required Field</mat-error>
                                     </mat-form-field>
                                 </div>
 
@@ -95,7 +95,7 @@
                                     <mat-form-field class="lastNameInput">
                                         <mat-label>Last Name</mat-label>
 
-                                        <input matInput [(ngModel)]="user.lastName" name="lName" required minlength="1"
+                                        <input matInput [(ngModel)]="user.lastName" name="lName" required minlength="2"
                                             maxlength="50" #lName="ngModel">
                                         <mat-error *ngIf="lName.invalid && lName.dirty">*Required Field</mat-error>
                                     </mat-form-field>

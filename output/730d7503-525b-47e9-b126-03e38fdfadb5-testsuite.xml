@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587071035971' stop='1587071041093'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587071035972' status='failed' stop='1587071040709'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587071036673' status='passed' stop='1587071039720'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587071039720' status='passed' stop='1587071039979'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587071039979' status='passed' stop='1587071040230'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587071040230' status='passed' stop='1587071040468'>
+                    <name>I append field "Last Name *", "MitchMan"</name>
+                    <title>I append field "Last Name *", "MitchMan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587071040468' status='passed' stop='1587071040565'>
+                    <name>I clear field "First Name *"</name>
+                    <title>I clear field "First Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587071040565' status='passed' stop='1587071040708'>
+                    <name>I fill field "First Name *", ""</name>
+                    <title>I fill field "First Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='612db24a-cd3f-4977-a9f4-884afb2ff651-attachment.png' type='image/png' size='281449'/>
+            </attachments>
+            <failure>
+                <message>I.update is not a function</message>
+                <stack-trace>TypeError: I.update is not a function
+                    at Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/signup_test.js:24:7)
+                    at Context.test.fn (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/scenario.js:78:14)
+                    at callFnAsync (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:415:21)
+                    at Test.Runnable.run (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:357:7)
+                    at Runner.runTest (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:535:10)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:653:12
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:447:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:457:7
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:362:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

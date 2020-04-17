@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587069832711' stop='1587069864125'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587069832713' status='failed' stop='1587069863629'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069833604' status='passed' stop='1587069837381'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069837382' status='passed' stop='1587069837646'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069837646' status='passed' stop='1587069857667'>
+                    <name>I wait 20</name>
+                    <title>I wait 20</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069857668' status='failed' stop='1587069863628'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='07fbc72a-6543-4bd3-bca4-7e226162226e-attachment.png' type='image/png' size='470954'/>
+            </attachments>
+            <failure>
+                <message>Field "First Name *" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "First Name *" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.appendField (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:630:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
