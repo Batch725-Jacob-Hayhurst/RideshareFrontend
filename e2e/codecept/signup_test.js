@@ -169,15 +169,14 @@ Scenario('testing valid username', (I) => {
 //     I.click('State');
 //     I.click('#state');
 //     I.appendField('Zip Code *', '36130');
-//     I.appendField('#username', 'mitchelltim2');
+//     I.appendField('#username', 'mitchelltim3');
 //     I.appendField('Password *', 'password');
 //     I.appendField('Confirm Password *', 'password');
 //     I.click('Work Location');
 //     I.click('#city');
 //     I.click('Register');
-//     I.click('#signup-btn');
 //     I.click('Login');
-//     I.fillField('Username', 'mitchelltim2');
+//     I.fillField('Username', 'mitchelltim3');
 //     I.fillField('Password', 'password');
 //     I.click('#sign-in-btn');
 //     I.dontSee('User not found!');
