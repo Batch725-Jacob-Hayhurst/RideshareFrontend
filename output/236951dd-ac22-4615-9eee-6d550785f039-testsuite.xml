@@ -1,0 +1,211 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587143931746' stop='1587143972706'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587143931748' status='failed' stop='1587143949081'>
+            <name>testing valid username</name>
+            <title>testing valid username</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587143936060' status='passed' stop='1587143941552'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143941553' status='passed' stop='1587143941845'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143941845' status='passed' stop='1587143942441'>
+                    <name>I append field "#username", "gpichmann0"</name>
+                    <title>I append field "#username", "gpichmann0"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143942442' status='passed' stop='1587143942766'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143942766' status='passed' stop='1587143942925'>
+                    <name>I clear field "#username"</name>
+                    <title>I clear field "#username"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143942925' status='failed' stop='1587143949079'>
+                    <name>I see "Username is unavailable!"</name>
+                    <title>I see "Username is unavailable!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='99ef4816-507e-4272-b9e9-f5982b969ab9-attachment.png' type='image/png' size='432869'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1587143950218' status='failed' stop='1587143971323'>
+            <name>testing correct sign up</name>
+            <title>testing correct sign up</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587143954196' status='passed' stop='1587143958854'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143958854' status='passed' stop='1587143959214'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143959214' status='passed' stop='1587143959773'>
+                    <name>I append field "First Name *", "Timothy"</name>
+                    <title>I append field "First Name *", "Timothy"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143959773' status='passed' stop='1587143960059'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143960059' status='passed' stop='1587143960570'>
+                    <name>I append field "Email *", "mitchelltim29@gmail.com"</name>
+                    <title>I append field "Email *", "mitchelltim29@gmail.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143960570' status='passed' stop='1587143960891'>
+                    <name>I append field "Phone Number *", "7025952564"</name>
+                    <title>I append field "Phone Number *", "7025952564"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143960891' status='passed' stop='1587143961403'>
+                    <name>I append field "Home Address", "600 Dexter Ave"</name>
+                    <title>I append field "Home Address", "600 Dexter Ave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143961403' status='passed' stop='1587143961827'>
+                    <name>I append field "City *", "Montgomery"</name>
+                    <title>I append field "City *", "Montgomery"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143961828' status='passed' stop='1587143962208'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143962210' status='passed' stop='1587143962696'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143962696' status='passed' stop='1587143962987'>
+                    <name>I append field "Zip Code *", "36130"</name>
+                    <title>I append field "Zip Code *", "36130"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143962987' status='passed' stop='1587143963377'>
+                    <name>I append field "#username", "mitchelltim29"</name>
+                    <title>I append field "#username", "mitchelltim29"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143963377' status='passed' stop='1587143963692'>
+                    <name>I append field "Password *", "password"</name>
+                    <title>I append field "Password *", "password"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143963692' status='passed' stop='1587143963949'>
+                    <name>I append field "Confirm Password *", "password"</name>
+                    <title>I append field "Confirm Password *", "password"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143963949' status='passed' stop='1587143964408'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143964408' status='passed' stop='1587143964635'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143964635' status='passed' stop='1587143964838'>
+                    <name>I click "Register"</name>
+                    <title>I click "Register"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143964839' status='passed' stop='1587143965036'>
+                    <name>I click "#signup-btn"</name>
+                    <title>I click "#signup-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143965036' status='passed' stop='1587143965174'>
+                    <name>I click "Login"</name>
+                    <title>I click "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143965174' status='passed' stop='1587143965537'>
+                    <name>I fill field "Username", "mitchelltim29"</name>
+                    <title>I fill field "Username", "mitchelltim29"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143965537' status='passed' stop='1587143965781'>
+                    <name>I fill field "Password", "password"</name>
+                    <title>I fill field "Password", "password"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143965781' status='passed' stop='1587143965954'>
+                    <name>I click "#sign-in-btn"</name>
+                    <title>I click "#sign-in-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587143965954' status='failed' stop='1587143971323'>
+                    <name>I dont see "Login"</name>
+                    <title>I dont see "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='e70f92f8-ca0c-42e2-9201-ec1f1304ea06-attachment.png' type='image/png' size='736763'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

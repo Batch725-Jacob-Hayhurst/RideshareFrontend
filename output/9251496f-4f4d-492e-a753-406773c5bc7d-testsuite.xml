@@ -1,0 +1,143 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587135382314' stop='1587135402543'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587135382316' status='failed' stop='1587135401509'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587135385754' status='passed' stop='1587135390071'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135390071' status='passed' stop='1587135390265'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135390265' status='passed' stop='1587135390810'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135390811' status='passed' stop='1587135391007'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135391007' status='passed' stop='1587135391308'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135391308' status='passed' stop='1587135391592'>
+                    <name>I click "#state"</name>
+                    <title>I click "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135391592' status='passed' stop='1587135391815'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135391815' status='passed' stop='1587135392060'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135392060' status='passed' stop='1587135392478'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135392478' status='passed' stop='1587135392601'>
+                    <name>I click "Register"</name>
+                    <title>I click "Register"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135392601' status='passed' stop='1587135392840'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135392840' status='passed' stop='1587135392980'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135392981' status='passed' stop='1587135393358'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135393358' status='passed' stop='1587135393724'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135393724' status='passed' stop='1587135394232'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dri"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dri"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135394232' status='passed' stop='1587135394391'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135394391' status='passed' stop='1587135394572'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135394572' status='passed' stop='1587135395183'>
+                    <name>I append field "State", "SC"</name>
+                    <title>I append field "State", "SC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135395183' status='failed' stop='1587135401507'>
+                    <name>I click "SC"</name>
+                    <title>I click "SC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='878aff58-5899-46d8-bc8c-fc43e556fe96-attachment.png' type='image/png' size='407642'/>
+            </attachments>
+            <failure>
+                <message>No element found using locator: By(css selector, SC)</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(css selector, SC)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\protractor\built\element.js:814:27
+                    at ManagedPromise.invokeCallback_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:2927:27
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

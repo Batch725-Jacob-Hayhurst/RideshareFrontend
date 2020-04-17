@@ -76,4 +76,6 @@ After ((I) => {
     I.clearField('Zipcode');
     I.fillField('Zipcode', '20170');
     I.click('Save');
+    I.click('Contact Information');
+    I.click('Location');
 });

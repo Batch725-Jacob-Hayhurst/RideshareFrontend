@@ -1,0 +1,88 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587137682206' stop='1587137699097'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587137682213' status='failed' stop='1587137697703'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587137686534' status='passed' stop='1587137691707'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137691707' status='passed' stop='1587137692088'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137692088' status='passed' stop='1587137692560'>
+                    <name>I append field "First Name *", "Timot"</name>
+                    <title>I append field "First Name *", "Timot"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137692560' status='passed' stop='1587137692672'>
+                    <name>I see element "#last_name"</name>
+                    <title>I see element "#last_name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137692672' status='passed' stop='1587137692829'>
+                    <name>I click "#last_name"</name>
+                    <title>I click "#last_name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137692829' status='passed' stop='1587137692990'>
+                    <name>I append field "Last Name *", "M"</name>
+                    <title>I append field "Last Name *", "M"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587137692990' status='failed' stop='1587137697702'>
+                    <name>I press key "Backspace"</name>
+                    <title>I press key "Backspace"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='4cafc9c1-bab1-40e4-b076-0d9da82cf990-attachment.png' type='image/png' size='432619'/>
+            </attachments>
+            <failure>
+                <message>sendKeysToActiveElement
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>UnsupportedOperationError: sendKeysToActiveElement
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\error.js:546:15)
+                    at parseHttpResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:509:13)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: sendKeys
+                    at thenableWebDriverProxy.schedule (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\actions.js:124:23
+                    at Array.map (&lt;anonymous>)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\actions.js:123:29
+                    at TaskQueue.execute_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:2974:25
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:668:7
+                From: Task: ActionSequence.perform
+                    at ActionSequence.perform (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\actions.js:122:33)
+                    at Protractor.pressKey (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:591:19)
+                    at Step.run (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\step.js:70:47)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\actor.js:92:23</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

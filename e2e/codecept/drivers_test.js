@@ -24,7 +24,7 @@ Scenario('check for component information display', (I) => {
     I.see('View Info');
     I.see('View');
     I.see('Marilyn Edmunds');
-    I.see('0mi 4222ft');
+    I.see('0mi 4321ft');
     I.see('5 mins');
     I.see('Hilda Gledhill');
     I.see('2mi 2084ft');
@@ -35,7 +35,7 @@ Scenario('check for component information display', (I) => {
     I.see('Tobe Curd');
     I.see('2mi 5113ft');
     I.see('Faythe Lancashire');
-    I.see('3mi 512ft');
+    I.see('3mi 794ft');
     I.see('13 mins');
     I.dontSee('Salvidor Migheli');
     I.dontSee('200mi 1100ft');
@@ -76,11 +76,11 @@ Scenario('testing Distance filter', (I) => {
     I.see('Fabien Braunroth');
     I.see('201mi 4078ft');
     I.see('200mi 1100ft');
-    I.see('3mi 512ft');
+    I.see('3mi 794ft');
     I.see('2mi 5113ft');
     I.see('2mi 3374ft');
     I.dontSee('2mi 2084ft');
-    I.dontSee('0mi 4222ft');
+    I.dontSee('0mi 4321ft');
     I.click('Distance');
     I.see('Tobe Curd');
     I.see('Marilyn Edmunds');
@@ -91,11 +91,11 @@ Scenario('testing Distance filter', (I) => {
     I.dontSee('Salvidor Migheli');
     I.dontSee('201mi 4078ft');
     I.dontSee('200mi 1100ft');
-    I.see('3mi 512ft');
+    I.see('3mi 794ft');
     I.see('2mi 5113ft');
     I.see('2mi 3374ft');
     I.see('2mi 2084ft');
-    I.see('0mi 4222ft');
+    I.see('0mi 4321ft');
 });
 
 Scenario('testing Available Seats filter', (I) => {
@@ -150,15 +150,14 @@ Scenario('testing distance dropdown filter', (I) => {
     I.see('Faythe Lancashire');
     I.dontSee('Fabien Braunroth');
     I.dontSee('Salvidor Migheli');
-    // should work once 35mi+ works
-    // I.appendField('Filter DISTANCE', '35mi 0ft');
-    // I.dontSee('Marilyn Edmunds');
-    // I.dontSee('Hilda Gledhill');
-    // I.dontSee('Darren O Sullivan');
-    // I.dontSee('Tobe Curd');
-    // I.dontSee('Faythe Lancashire');
-    // I.see('Fabien Braunroth');
-    // I.see('Salvidor Migheli');
+    I.appendField('Filter DISTANCE', '35mi 0ft');
+    I.see('Marilyn Edmunds');
+    I.see('Hilda Gledhill');
+    I.see('Darren O Sullivan');
+    I.see('Tobe Curd');
+    I.see('Faythe Lancashire');
+    I.dontSee('Fabien Braunroth');
+    I.dontSee('Salvidor Migheli');
 });
 
 Scenario('testing name text filter', (I) => {

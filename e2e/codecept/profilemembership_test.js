@@ -15,16 +15,16 @@
 //     I.see('No Values Changed');
 // });
 
-// Scenario('check for component information display', (I) => {
-//     I.see('Contact Information');
-//     I.see('Location');
-//     I.see('Membership');
-//     I.see('Car Information');
-//     I.see('Membership:');
-//     I.see('Batch:');
-//     I.see('1 - Morgantown');
-//     I.see('Status:');
-// });
+Scenario('check for component information display', (I) => {
+    I.see('Contact Information');
+    I.see('Location');
+    I.see('Membership');
+    I.see('Car Information');
+    I.see('Membership:');
+    I.see('Batch:');
+    I.see('1 - Morgantown, WV 26506');
+    I.see('Status:');
+});
 
 // Scenario('test for filling initial form data', (I) => {
 //     I.seeInField('#rider','Rider');

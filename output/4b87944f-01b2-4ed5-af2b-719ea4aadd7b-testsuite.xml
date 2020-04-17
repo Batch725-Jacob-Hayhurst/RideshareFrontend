@@ -1,0 +1,229 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587134045674' stop='1587134132077'>
+    <name>profile-car:</name>
+    <title>profile-car:</title>
+    <test-cases>
+        <test-case start='1587134045699' status='passed' stop='1587134085171'>
+            <name>test for trying to update a form without changes</name>
+            <title>test for trying to update a form without changes</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134084895' status='passed' stop='1587134085041'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134085041' status='passed' stop='1587134085171'>
+                    <name>I see "No Values Changed"</name>
+                    <title>I see "No Values Changed"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134086896' status='passed' stop='1587134100396'>
+            <name>check for component information display</name>
+            <title>check for component information display</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134099783' status='passed' stop='1587134099905'>
+                    <name>I see "Contact Information"</name>
+                    <title>I see "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134099905' status='passed' stop='1587134099969'>
+                    <name>I see "Location"</name>
+                    <title>I see "Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134099969' status='passed' stop='1587134100056'>
+                    <name>I see "Membership"</name>
+                    <title>I see "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100056' status='passed' stop='1587134100115'>
+                    <name>I see "Car Information"</name>
+                    <title>I see "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100115' status='passed' stop='1587134100171'>
+                    <name>I see "Car Information:"</name>
+                    <title>I see "Car Information:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100171' status='passed' stop='1587134100230'>
+                    <name>I see "Make:"</name>
+                    <title>I see "Make:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100230' status='passed' stop='1587134100285'>
+                    <name>I see "Model:"</name>
+                    <title>I see "Model:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100285' status='passed' stop='1587134100342'>
+                    <name>I see "Number of seats:"</name>
+                    <title>I see "Number of seats:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134100342' status='passed' stop='1587134100396'>
+                    <name>I see "Available seats:"</name>
+                    <title>I see "Available seats:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134101781' status='passed' stop='1587134114266'>
+            <name>test for filling initial form data</name>
+            <title>test for filling initial form data</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134113853' status='passed' stop='1587134113964'>
+                    <name>I see in field "#make", "GMC"</name>
+                    <title>I see in field "#make", "GMC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134113964' status='passed' stop='1587134114055'>
+                    <name>I see in field "#model", "Sierra 2500"</name>
+                    <title>I see in field "#model", "Sierra 2500"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134114055' status='passed' stop='1587134114161'>
+                    <name>I see in field "#Nseats", "2"</name>
+                    <title>I see in field "#Nseats", "2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134114161' status='passed' stop='1587134114265'>
+                    <name>I see in field "#Avseats", "2"</name>
+                    <title>I see in field "#Avseats", "2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134115961' status='passed' stop='1587134130399'>
+            <name>test for updating car information</name>
+            <title>test for updating car information</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134127828' status='passed' stop='1587134128011'>
+                    <name>I clear field "Make"</name>
+                    <title>I clear field "Make"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128011' status='passed' stop='1587134128236'>
+                    <name>I append field "Make", "Toyota"</name>
+                    <title>I append field "Make", "Toyota"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128236' status='passed' stop='1587134128385'>
+                    <name>I clear field "Model"</name>
+                    <title>I clear field "Model"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128386' status='passed' stop='1587134128543'>
+                    <name>I append field "Model", "Camry"</name>
+                    <title>I append field "Model", "Camry"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128543' status='passed' stop='1587134128696'>
+                    <name>I click "#Nseats"</name>
+                    <title>I click "#Nseats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128697' status='passed' stop='1587134128837'>
+                    <name>I append field "#Nseats", "5"</name>
+                    <title>I append field "#Nseats", "5"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128837' status='passed' stop='1587134128964'>
+                    <name>I click "#Avseats"</name>
+                    <title>I click "#Avseats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134128964' status='passed' stop='1587134129087'>
+                    <name>I append field "#Avseats", "3"</name>
+                    <title>I append field "#Avseats", "3"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134129087' status='passed' stop='1587134129228'>
+                    <name>I click "Save"</name>
+                    <title>I click "Save"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134129228' status='passed' stop='1587134129689'>
+                    <name>I see "Updated Successfully!"</name>
+                    <title>I see "Updated Successfully!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134129690' status='passed' stop='1587134129790'>
+                    <name>I click "Membership"</name>
+                    <title>I click "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134129790' status='passed' stop='1587134129909'>
+                    <name>I click "Car Information"</name>
+                    <title>I click "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134129909' status='passed' stop='1587134130019'>
+                    <name>I see in field "Make", "Toyota"</name>
+                    <title>I see in field "Make", "Toyota"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134130019' status='passed' stop='1587134130106'>
+                    <name>I see in field "Model", "Camry"</name>
+                    <title>I see in field "Model", "Camry"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134130106' status='passed' stop='1587134130236'>
+                    <name>I see in field "Number of seats", "5"</name>
+                    <title>I see in field "Number of seats", "5"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134130236' status='passed' stop='1587134130399'>
+                    <name>I see in field "Available seats", "3"</name>
+                    <title>I see in field "Available seats", "3"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
