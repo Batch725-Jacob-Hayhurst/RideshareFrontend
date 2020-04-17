@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587047102401' stop='1587047132930'>
+    <name>login:</name>
+    <title>login:</title>
+    <test-cases>
+        <test-case start='1587047102402' status='passed' stop='1587047119685'>
+            <name>testing login feature</name>
+            <title>testing login feature</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587047103312' status='passed' stop='1587047106903'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047106903' status='passed' stop='1587047107181'>
+                    <name>I click "Login"</name>
+                    <title>I click "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047107181' status='passed' stop='1587047107522'>
+                    <name>I fill field "Username", "gpichmann0"</name>
+                    <title>I fill field "Username", "gpichmann0"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047107522' status='passed' stop='1587047107642'>
+                    <name>I click "#sign-in-btn"</name>
+                    <title>I click "#sign-in-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047107643' status='passed' stop='1587047115225'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047115225' status='passed' stop='1587047115370'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047115370' status='passed' stop='1587047115530'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047115530' status='passed' stop='1587047119021'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047119021' status='passed' stop='1587047119206'>
+                    <name>I click "Grady Pichmann"</name>
+                    <title>I click "Grady Pichmann"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047119207' status='passed' stop='1587047119685'>
+                    <name>I click "Log Out"</name>
+                    <title>I click "Log Out"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587047119756' status='passed' stop='1587047132866'>
+            <name>testing logout feature</name>
+            <title>testing logout feature</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587047120737' status='passed' stop='1587047124384'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047124385' status='passed' stop='1587047124675'>
+                    <name>I click "Login"</name>
+                    <title>I click "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047124675' status='passed' stop='1587047125008'>
+                    <name>I fill field "Username", "gpichmann0"</name>
+                    <title>I fill field "Username", "gpichmann0"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047125008' status='passed' stop='1587047128534'>
+                    <name>I click "#sign-in-btn"</name>
+                    <title>I click "#sign-in-btn"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047128534' status='passed' stop='1587047128666'>
+                    <name>I click "Grady Pichmann"</name>
+                    <title>I click "Grady Pichmann"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047128666' status='passed' stop='1587047128997'>
+                    <name>I click "Log Out"</name>
+                    <title>I click "Log Out"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047128997' status='passed' stop='1587047129221'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047129221' status='passed' stop='1587047129332'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047129332' status='passed' stop='1587047132865'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

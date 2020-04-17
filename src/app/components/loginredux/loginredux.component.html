@@ -68,7 +68,7 @@
                 <form class="text-center" id="signUp-form" (submit)="signUp()" #signUpForm="ngForm">
 
                     <div class="modal-title-container">
-                        <button type="button" class="close pull-right" (click)="toggleSignUp()">
+                        <button type="button" class="close pull-right" id="signup-btn" (click)="toggleSignUp()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h3><font face="impact"><i><u>Sign Up</u></i></font></h3>
@@ -173,7 +173,7 @@
                                     <mat-form-field class="stateInput">
                                         <mat-label>State</mat-label>
                                         <mat-select [(ngModel)]="user.hState" name="hState" (blur)='checkAddressStatus()'>
-                                            <mat-option *ngFor="let state of states" [value]="state">{{state}}
+                                            <mat-option *ngFor="let state of states" id="state" [value]="state">{{state}}
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>
@@ -199,7 +199,8 @@
                         <mat-grid-tile colspan="1" rowspan="2">
 
                             <div class="rightForm"> 
-
+                            
+                                <form appUsernameCheck #userNameForm="ngForm">
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
@@ -211,11 +212,12 @@
                                                minlength="3"
                                                maxlength="12"
                                                [errorStateMatcher]="errorMatcher"
-                                               (blur)="checkUserName()">
+                                               >
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
-                                               <mat-error *ngIf="userAvailable === false">Username is unavailable!</mat-error>
+                                               <mat-error *ngIf="userNameForm.hasError('unavailable') && userName.dirty">That username is already taken!</mat-error>
                                     </mat-form-field>
                                 </div>
+                                </form>
                                 
                             
                             <form appFieldsMatch #passwordForm="ngForm">
@@ -252,7 +254,7 @@
                                     <mat-form-field class="workInput">
                                         <mat-label>Work Location</mat-label>
                                         <mat-select [(ngModel)]="user.wCity" name="wCity">
-                                            <mat-option *ngFor="let city of workCities" [value]="city">{{city}}
+                                            <mat-option *ngFor="let city of workCities" id="city" [value]="city">{{city}}
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>

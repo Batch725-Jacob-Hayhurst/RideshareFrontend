@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587050313062' stop='1587050337421'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587050313065' status='failed' stop='1587050337125'>
+            <name>testing text filter</name>
+            <title>testing text filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587050332093' status='failed' stop='1587050337124'>
+                    <name>I click "#textSelector"</name>
+                    <title>I click "#textSelector"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='8efe85ae-94f8-4cdc-820b-464ded8e60c5-attachment.png' type='image/png' size='42600'/>
+            </attachments>
+            <failure>
+                <message>Element "#textSelector" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Element "#textSelector" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.findClickable (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1700:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at async Protractor.click (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:451:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

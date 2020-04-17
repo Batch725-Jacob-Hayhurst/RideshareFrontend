@@ -85,16 +85,17 @@ export class LoginreduxComponent implements OnInit {
     this.http.get(`${environment.loginUri}?userName=${this.user.userName}&passWord=${this.user.password}`)
       .subscribe(
         (response) => {
-          //console.log(response);
-          if (response['userName'] != undefined) {
-            this.usernameError = response['userName'][0];
+          console.log(response);
+          if (response["userName"] != undefined) {
+            this.usernameError = response["userName"][0];
           }
           if (response['passWord'] != undefined) {
             this.pwdError = response['pwdError'][0];
           }
-          if ((response['name'] != undefined) && (response['userid'] != undefined)) {
-            sessionStorage.setItem('name', response['name']);
-            sessionStorage.setItem('userid', response['userid']);
+          if ((response["name"] != undefined) && (response["userid"] != undefined)) {
+            sessionStorage.setItem("name", response["name"]);
+            sessionStorage.setItem("userid", response["userid"]);
+            sessionStorage.setItem("batchLoc", response["batchLoc"]);
 
             //call landing page
             //this.router.navigate(['landingPage']);
@@ -166,28 +167,28 @@ export class LoginreduxComponent implements OnInit {
 
 
   // this sends a request to the backend to see if the inputted username exists or not
-  checkUserName() {
-    // this is the options settings for the http request to the back end
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'text/plain',
-      })
-    };
+  // checkUserName() {
+  //   // this is the options settings for the http request to the back end
+  //   const httpOptions = {
+  //     headers: new HttpHeaders({
+  //       'Content-Type':  'text/plain',
+  //     })
+  //   };
 
-    console.log('checking username');
-    // check for username availability
-    this.http.post(`${environment.userUri}username/validate`, this.user.userName, httpOptions)
-    .subscribe(response => {
-        // this is that logic that assignes a boolean on whether the username is in use or not so it can
-        // can the registration button can be blocked and stop user creation.
-        if (response.toString() === 'true') {
-          console.log('that username does not exist!');
-          this.userAvailable = true;
-        } else {
-          console.log('that username is currentley in use');
-          this.userAvailable = false;
-        }
-      }
-    );
-  }
+  //   console.log('checking username');
+  //   // check for username availability
+  //   this.userService()
+  //   .subscribe(response => {
+  //       // this is that logic that assignes a boolean on whether the username is in use or not so it can
+  //       // can the registration button can be blocked and stop user creation.
+  //       if (response.toString() === 'true') {
+  //         console.log('that username does not exist!');
+  //         this.userAvailable = true;
+  //       } else {
+  //         console.log('that username is currently in use');
+  //         this.userAvailable = false;
+  //       }
+  //     }
+  //   );
+  // }
 }

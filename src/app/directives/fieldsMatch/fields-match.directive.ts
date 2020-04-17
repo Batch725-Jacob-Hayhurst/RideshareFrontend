@@ -16,6 +16,7 @@ export class FieldsMatchDirective implements Validator{
 
   constructor() { }
   validate(control: AbstractControl): ValidationErrors{
+    console.log(passwordMatchValidator(control))
     return passwordMatchValidator(control);
   }
 

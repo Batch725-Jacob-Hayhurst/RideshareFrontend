@@ -1,0 +1,235 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587062296927' stop='1587062323264'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587062296929' status='passed' stop='1587062310822'>
+            <name>testing valid email</name>
+            <title>testing valid email</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587062300644' status='passed' stop='1587062304763'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062304764' status='passed' stop='1587062305254'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062305254' status='passed' stop='1587062306356'>
+                    <name>I append field "Email *", "dslkfjsdf"</name>
+                    <title>I append field "Email *", "dslkfjsdf"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062306356' status='passed' stop='1587062306653'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062306653' status='passed' stop='1587062306985'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062306985' status='passed' stop='1587062307128'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062307129' status='passed' stop='1587062307509'>
+                    <name>I append field "Email *", "mitchelltim29@gmail"</name>
+                    <title>I append field "Email *", "mitchelltim29@gmail"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062307509' status='passed' stop='1587062307625'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062307625' status='passed' stop='1587062307907'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062307907' status='passed' stop='1587062308124'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062308124' status='passed' stop='1587062308289'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062308289' status='passed' stop='1587062309019'>
+                    <name>I append field "Email *", "mitchelltim29.gmail"</name>
+                    <title>I append field "Email *", "mitchelltim29.gmail"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062309020' status='passed' stop='1587062309172'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062309172' status='passed' stop='1587062309566'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062309566' status='passed' stop='1587062309838'>
+                    <name>I see "*Required. Email Not Valid."</name>
+                    <title>I see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062309838' status='passed' stop='1587062309921'>
+                    <name>I clear field "Email *"</name>
+                    <title>I clear field "Email *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062309921' status='passed' stop='1587062310274'>
+                    <name>I append field "Email *", "mitchelltim29@gmail.com"</name>
+                    <title>I append field "Email *", "mitchelltim29@gmail.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062310274' status='passed' stop='1587062310406'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062310406' status='passed' stop='1587062310578'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062310578' status='passed' stop='1587062310820'>
+                    <name>I dont see "*Required. Email Not Valid."</name>
+                    <title>I dont see "*Required. Email Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587062311242' status='passed' stop='1587062322650'>
+            <name>testing valid phone number</name>
+            <title>testing valid phone number</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587062315201' status='passed' stop='1587062319665'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062319665' status='passed' stop='1587062319780'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062319780' status='passed' stop='1587062320205'>
+                    <name>I append field "Phone Number *", "fdsf"</name>
+                    <title>I append field "Phone Number *", "fdsf"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062320205' status='passed' stop='1587062320479'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062320480' status='passed' stop='1587062320748'>
+                    <name>I see "*10 Digit Phone-numbers only"</name>
+                    <title>I see "*10 Digit Phone-numbers only"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062320748' status='passed' stop='1587062320826'>
+                    <name>I clear field "Phone Number *"</name>
+                    <title>I clear field "Phone Number *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062320826' status='passed' stop='1587062321018'>
+                    <name>I append field "Phone Number *", "702595256"</name>
+                    <title>I append field "Phone Number *", "702595256"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321018' status='passed' stop='1587062321120'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321121' status='passed' stop='1587062321323'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321323' status='passed' stop='1587062321505'>
+                    <name>I see "*10 Digit Phone-numbers only"</name>
+                    <title>I see "*10 Digit Phone-numbers only"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321505' status='passed' stop='1587062321612'>
+                    <name>I clear field "Phone Number *"</name>
+                    <title>I clear field "Phone Number *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321612' status='passed' stop='1587062321922'>
+                    <name>I append field "Phone Number *", "7025952564"</name>
+                    <title>I append field "Phone Number *", "7025952564"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062321922' status='passed' stop='1587062322045'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062322045' status='passed' stop='1587062322352'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062322352' status='passed' stop='1587062322650'>
+                    <name>I dont see "*10 Digit Phone-numbers only"</name>
+                    <title>I dont see "*10 Digit Phone-numbers only"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

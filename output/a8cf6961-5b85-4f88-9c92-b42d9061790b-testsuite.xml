@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587063429189' stop='1587063443005'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587063429195' status='failed' stop='1587063441881'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587063432884' status='passed' stop='1587063438657'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063438657' status='passed' stop='1587063439152'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063439153' status='passed' stop='1587063440455'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063440455' status='passed' stop='1587063440757'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063440757' status='passed' stop='1587063441182'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587063441182' status='passed' stop='1587063441880'>
+                    <name>I append field "State", "SC"</name>
+                    <title>I append field "State", "SC"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='52e9ea87-ef73-4d63-80f9-13ce65f58270-attachment.png' type='image/png' size='427875'/>
+            </attachments>
+            <failure>
+                <message>Cannot read property 'Protractor' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'Protractor' of undefined
+                    at Test.&lt;anonymous> (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\e2e\codecept\signup_test.js:77:17)
+                    at Context.test.fn (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\scenario.js:78:14)
+                    at callFnAsync (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runnable.js:415:21)
+                    at Test.Runnable.run (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runnable.js:357:7)
+                    at Runner.runTest (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:535:10)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:653:12
+                    at next (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:447:14)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:457:7
+                    at next (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:362:14)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\mocha\lib\runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
