@@ -22,10 +22,6 @@ Scenario('testing valid last name', (I) => {
     I.clearField('First Name *');
     I.fillField('First Name *', '');
     I.clearField('Last Name *');
-    I.fillField('Last Name *', '');
-    // I.wait(20);
-    // I.click('Last Name *');
-    // I.appendField('Last Name *', '');
     I.click('#logo');
     I.see('*Required Field');
     // I.appendField('First Name *', 'y');
@@ -56,8 +52,6 @@ Scenario('testing valid last name', (I) => {
 //     I.appendField('Last Name *', 'Mitchell');
 //     I.dontSee('*Required. Email Not Valid.');
 // });
-<<<<<<< HEAD
-=======
 
 // Scenario('testing valid email', (I) => {
 //     I.amOnPage('/');
@@ -101,13 +95,21 @@ Scenario('testing valid last name', (I) => {
 // });
 
 // doesn't work yet
-// Scenario('testing valid address', (I) => {
+// Scenario('testing valid address', async (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');
+//     // I.click('Home Address');
+//     // I.wait(10);
 //     I.appendField('Home Address', '698 something pl');
 //     I.appendField('City *', 'city');
 //     I.click('State');
-//     I.click('#state');
+//     const leState = await I.grabTextFrom('#state');
+//     const aState = leState[31];
+//     console.log(leState);
+//     console.log(aState);
+//     // I.selectOption('State', aState);
+//     // I.appendField('State', aState);
+//     I.click(aState);
 //     I.appendField('Zip Code *', '29642');
 //     I.click('Work Location');
 //     I.click('#city');
@@ -119,8 +121,8 @@ Scenario('testing valid last name', (I) => {
 //     I.appendField('Home Address', '509 Shadow Oaks Dri');
 //     I.appendField('City *', 'Easley');
 //     I.click('State');
-//     I.appendField('State', 'SC');
-//     I.click('SC');
+//     // I.appendField('State', 'South Carolina');
+//     I.selectOption('State', 'SC')
 //     I.appendField('Zip Code *', '29642');
 //     I.appendField('Last Name *', 'Mitchell');
 //     I.see('That address does not exist!');
@@ -131,7 +133,7 @@ Scenario('testing valid last name', (I) => {
 //     I.appendField('City *', 'Easle');
 //     I.click('State');
 //     I.appendField('State', 'SC');
-//     I.click('SC');
+//     // I.selectOption('State', 'SC')
 //     I.appendField('Zip Code *', '29642');
 //     I.appendField('Last Name *', 'Mitchell');
 //     I.see('That address does not exist!');
@@ -142,7 +144,8 @@ Scenario('testing valid last name', (I) => {
 //     I.appendField('City *', 'Easley');
 //     I.click('State');
 //     I.appendField('State', 'SC');
-//     I.click('SC');
+//     // I.click('SC');
+//     // I.selectOption('State', 'SC');
 //     I.appendField('Zip Code *', 'fsdf');
 //     I.appendField('Last Name *', 'Mitchell');
 //     I.see('*Required. Zip Code Not Valid.');
@@ -154,7 +157,7 @@ Scenario('testing valid last name', (I) => {
 //     I.appendField('City *', 'Easley');
 //     I.click('State');
 //     I.appendField('State', 'SC');
-//     I.click('SC');
+//     I.selectOption('State', 'SC');
 //     I.appendField('Zip Code *', '29642');
 //     I.appendField('Last Name *', 'Mitchell');
 //     I.dontSee('That address does not exist!');
@@ -194,4 +197,3 @@ Scenario('testing valid last name', (I) => {
 //     I.amOnPage('/');
 //     I.click('#signupid');
 // });
->>>>>>> Front-Tim

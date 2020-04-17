@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587132121531' stop='1587132131676'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587132121533' status='failed' stop='1587132131324'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132122491' status='passed' stop='1587132126075'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132126075' status='passed' stop='1587132126349'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132126349' status='failed' stop='1587132131321'>
+                    <name>I append field "#hAddress", "698 something pl"</name>
+                    <title>I append field "#hAddress", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='9a0a6836-d518-42c4-a564-05d26b8ed74e-attachment.png' type='image/png' size='281361'/>
+            </attachments>
+            <failure>
+                <message>Field "#hAddress" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "#hAddress" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.appendField (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:630:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
