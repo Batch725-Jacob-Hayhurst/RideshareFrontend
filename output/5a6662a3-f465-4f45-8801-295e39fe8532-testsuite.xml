@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587069424402' stop='1587069439155'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587069424413' status='failed' stop='1587069438174'>
+            <name>testing choose work location</name>
+            <title>testing choose work location</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587069428090' status='passed' stop='1587069431899'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069431899' status='passed' stop='1587069432090'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069432091' status='passed' stop='1587069432494'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069432494' status='passed' stop='1587069432851'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069432851' status='passed' stop='1587069433180'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587069433180' status='failed' stop='1587069438174'>
+                    <name>I see in field "#city", "Reston"</name>
+                    <title>I see in field "#city", "Reston"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='1dcb9b14-1bf8-4af6-b88c-e1da370de8d4-attachment.png' type='image/png' size='433876'/>
+            </attachments>
+            <failure>
+                <message>Field "#city" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "#city" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1726:11)
+                    at Protractor.proceedSeeInField (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:1672:3)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

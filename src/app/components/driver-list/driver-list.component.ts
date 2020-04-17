@@ -20,6 +20,7 @@ import { DistanceConversion } from '../../pipes/distance-conversion';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { stringify } from 'querystring';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-driver-list',
@@ -28,12 +29,14 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = 'Morgantown';
+  location: string = '';
+  //location: string = 'Morgantown, WV 26506';
+  //location: string = '11730 Plaza America Dr Reston, VA 20190';
   mapProperties: {};
   availableCars: Array<any> = [];
   drivers: Array<Driver> = [];
   isLoading = true;
-  displayedColumns: string[] = ['name', 'distance', 'time', 'seats'/* , 'totalseats' */, 'view'];
+  displayedColumns: string[] = ['name', 'distance', 'time', 'seats', 'totalseats', 'view'];
   dataSource = new MatTableDataSource<Driver>();
   filterSelectObj = [];
   filterOn = false;
@@ -42,12 +45,15 @@ export class DriverListComponent implements OnInit {
   @ViewChild('map', null) mapElement: any;
   map: google.maps.Map;
 
+  startMarker: google.maps.Marker[] = [];
+  endMarker: google.maps.Marker[] = [];
+
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private http: HttpClient, private carService: CarService, overlayContainer: OverlayContainer) {
-     // Object to create Filter for distance dropdown
-     this.filterSelectObj = [
+    // Object to create Filter for distance dropdown
+    this.filterSelectObj = [
       {
         name: 'DISTANCE',
         columnProp: 'distance',
@@ -61,36 +67,34 @@ export class DriverListComponent implements OnInit {
       }
     ];
     // add in angular materials custom theme
-     overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
   }
 
   ngOnInit() {
 
     this.drivers = [];
+    this.location = sessionStorage.getItem("batchLoc");
+    // console.log(this.location);
 
     this.carService.getCarsForLocation(this.location).subscribe(
       res => {
-        // console.log(res);
         res.forEach(element => {
-          // console.log(element.user.acceptingRides);
-          // console.log(element.user.active);
-          // console.log(element.user.driver);
-          if (element.user.acceptingRides === true && element.user.active === true && element.user.driver === true) {
-            this.drivers.push({
-              id: element.user.userId,
-              name: element.user.firstName + ' ' + element.user.lastName,
-              origin: element.user.hCity + ',' + element.user.hState,
-              email: element.user.email,
-              phone: element.user.phoneNumber,
-              seats: element.availableSeats,
-              totalseats: element.seats,
-              distance: '',
-              duration: '',
-              active: element.user.active,
-              driver: element.user.driver,
-              acceptingRides: element.user.acceptingRides,
-            });
-          }
+
+          this.drivers.push({
+            'id': element.user.userId,
+            'name': element.user.firstName + " " + element.user.lastName,
+            'origin': element.user.hAddress + "," + element.user.hCity + "," + element.user.hState,
+            'email': element.user.email,
+            'phone': element.user.phoneNumber,
+            'seats': element.availableSeats,
+            'totalseats': element.seats,
+            'distance': '',
+            'duration': '',
+            'active': element.user.active,
+            'driver': element.user.driver,
+            'acceptingRides': element.user.acceptingRides,
+          });
+          console.log(element);
         });
 
         this.mapProperties = {
@@ -116,8 +120,7 @@ export class DriverListComponent implements OnInit {
     this.http.get(`${environment.loginUri}getGoogleApi`)
       .subscribe(
         (response) => {
-          // console.log(response);
-          if (response['googleMapAPIKey'] != undefined) {
+          if (response["googleMapAPIKey"] != undefined) {
             new Promise((resolve) => {
               const script: HTMLScriptElement = document.createElement('script');
               script.addEventListener('load', r => resolve());
@@ -130,13 +133,21 @@ export class DriverListComponent implements OnInit {
   }
 
   showDriversOnMap(origin, drivers) {
+    //var markerSize = new google.maps.Size(75, 48, 'px','px');
+    //var anchorPoint = new google.maps.Point(0,-5);
     drivers.forEach(element => {
-      const directionsService = new google.maps.DirectionsService();
-      const directionsRenderer = new google.maps.DirectionsRenderer({
-        draggable: true,
+      var directionsService = new google.maps.DirectionsService;
+      var directionsRenderer = new google.maps.DirectionsRenderer({
+        suppressMarkers: false,
+        // draggable: true,
+        //markerOptions: { icon: {url: 'https://img.itch.zone/aW1hZ2UvNTYwODIvMjUxMjgzLnBuZw==/original/51hNjy.png'},
+        // markerOptions: { icon: {url: 'assets/spr_bluecar_0resize.png'},
+        //markerOptions: { icon: {url: 'https://img.itch.zone/aW1hZ2UvNTYwODIvMjUxMjgzLnBuZw==/original/51hNjy.png', size: markerSize, anchor: anchorPoint },
+        //label: element.name},
+        // },
         map: this.map
       });
-      this.displayRoute(origin, element.origin, directionsService, directionsRenderer);
+      this.displayRoute(element.origin, origin, directionsService, directionsRenderer);
     });
   }
 
@@ -146,16 +157,24 @@ export class DriverListComponent implements OnInit {
       destination,
       travelMode: 'DRIVING',
       // avoidTolls: true
-    }, function(response, status) {
+    }, function (response, status) {
       if (status === 'OK') {
         display.setDirections(response);
+        // console.log(response);
+        
+        
+        var leg = response.routes[0].legs[0];
+        makeMarker( leg.start_location, 'assets/spr_bluecar_0resize.png',this.map );
+        makeMarker( leg.end_location, 'assets/logp.png', this.map);
+
       } else {
         alert('Could not display directions due to: ' + status);
       }
-    });
+    }
+    );
   }
 
-  displayDriversList(origin, drivers)  {
+  displayDriversList(origin, drivers) {
     const origins = [];
     // set origin
     origins.push(origin);
@@ -169,7 +188,7 @@ export class DriverListComponent implements OnInit {
         unitSystem: google.maps.UnitSystem.IMPERIAL,
         avoidHighways: false,
         avoidTolls: false
-      }, function(response, status) {
+      }, function (response, status) {
         if (status !== 'OK') {
           alert('Error was: ' + status);
         } else {
@@ -193,13 +212,13 @@ export class DriverListComponent implements OnInit {
         if (this.filterOn) {
           // inside applyFilter event
           return data.name.toLowerCase().includes(filter) || data.phone.includes(filter)
-          || data.phone.replace('-', '').replace('-', '').includes(filter);
+            || data.phone.replace('-', '').replace('-', '').includes(filter);
         } else {
           // inside filterChange event
           return data.distance <= filter; // returns data to table where distance is less than filtered distance
         }
       };
-    } , 2000);
+    }, 2000);
   }
 
   // distance filter event handler
@@ -215,3 +234,11 @@ export class DriverListComponent implements OnInit {
   }
 
 }
+
+function makeMarker( position, icon, map) {
+  new google.maps.Marker({
+   position: position,
+   map: map,
+   icon: icon,
+  });
+ }

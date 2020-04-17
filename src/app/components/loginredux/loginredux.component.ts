@@ -1,9 +1,9 @@
 import { Component, OnInit, NgModule, TemplateRef } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { User } from 'src/app/models/user';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserService } from 'src/app/services/user-service/user.service';
 import { AuthService } from 'src/app/services/auth-service/auth.service';
 import { Router } from '@angular/router';
@@ -41,6 +41,7 @@ export class LoginreduxComponent implements OnInit {
   isSignUp: boolean;
   errorMatcher = new CrossFieldErrorMatcher();
   addressValid: boolean;
+  userAvailable: boolean;
 
   states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS',
             'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY',
@@ -84,16 +85,17 @@ export class LoginreduxComponent implements OnInit {
     this.http.get(`${environment.loginUri}?userName=${this.user.userName}&passWord=${this.user.password}`)
       .subscribe(
         (response) => {
-          //console.log(response);
-          if (response['userName'] != undefined) {
-            this.usernameError = response['userName'][0];
+          console.log(response);
+          if (response["userName"] != undefined) {
+            this.usernameError = response["userName"][0];
           }
           if (response['passWord'] != undefined) {
             this.pwdError = response['pwdError'][0];
           }
-          if ((response['name'] != undefined) && (response['userid'] != undefined)) {
-            sessionStorage.setItem('name', response['name']);
-            sessionStorage.setItem('userid', response['userid']);
+          if ((response["name"] != undefined) && (response["userid"] != undefined)) {
+            sessionStorage.setItem("name", response["name"]);
+            sessionStorage.setItem("userid", response["userid"]);
+            sessionStorage.setItem("batchLoc", response["batchLoc"]);
 
             //call landing page
             //this.router.navigate(['landingPage']);
@@ -163,4 +165,30 @@ export class LoginreduxComponent implements OnInit {
     }
   }
 
+
+  // this sends a request to the backend to see if the inputted username exists or not
+  checkUserName() {
+    // this is the options settings for the http request to the back end
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'text/plain',
+      })
+    };
+
+    console.log('checking username');
+    // check for username availability
+    this.http.post(`${environment.userUri}username/validate`, this.user.userName, httpOptions)
+    .subscribe(response => {
+        // this is that logic that assignes a boolean on whether the username is in use or not so it can
+        // can the registration button can be blocked and stop user creation.
+        if (response.toString() === 'true') {
+          console.log('that username does not exist!');
+          this.userAvailable = true;
+        } else {
+          console.log('that username is currentley in use');
+          this.userAvailable = false;
+        }
+      }
+    );
+  }
 }

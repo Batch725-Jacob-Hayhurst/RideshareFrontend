@@ -93,15 +93,21 @@ table {
     word-wrap: break-word !important;
     white-space: unset !important;
     flex: 0 0 30% !important;
-    width: 30% !important;
+    width: 25% !important;
   }
 
-  .mat-column-view {
+  .mat-column-distance {
     word-wrap: break-word !important;
     white-space: unset !important;
-    flex: 0 0 15% !important;
-    width: 15% !important;
-    text-align: center;
+    flex: 0 0 20% !important; 
+    width: 20% !important;
+  }
+
+  .mat-column-time {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 35% !important;
+    width: 20% !important;
   }
 
   .mat-column-seats {
@@ -120,18 +126,12 @@ table {
     text-align: center;
   }
 
-  .mat-column-time {
+  .mat-column-view {
     word-wrap: break-word !important;
     white-space: unset !important;
-    flex: 0 0 35% !important;
-    width: 20% !important;
-  }
-
-  .mat-column-distance {
-    word-wrap: break-word !important;
-    white-space: unset !important;
-    flex: 0 0 20% !important; 
-    width: 15% !important;
+    flex: 0 0 15% !important;
+    width: 10% !important;
+    text-align: center;
   }
   
   th, td {
