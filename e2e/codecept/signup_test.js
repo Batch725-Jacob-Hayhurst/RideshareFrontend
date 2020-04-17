@@ -125,12 +125,20 @@ Scenario('testing valid username', (I) => {
     I.click('#signupid');
     I.appendField('#username', 'gpichmann0');
     I.appendField('Last Name *', 'Mitchell');
-    I.see('Username is unavailable!');
+    I.dontSee('*Required length of at least 3');
+    I.see('That username is already taken!');
+    I.clearField('#username');
+    I.appendField('#username', 'mi');
+    I.clearField('Last Name *');
+    I.appendField('Last Name *', 'Mitchell');
+    I.dontSee('That username is already taken!');
+    I.see('*Required length of at least 3');
     I.clearField('#username');
     I.appendField('#username', 'mitchelltim');
     I.clearField('Last Name *');
     I.appendField('Last Name *', 'Mitchell');
-    I.dontSee('Username is unavailable!');
+    I.dontSee('That username is already taken!');
+    I.dontSee('*Required length of at least 3');
 });
 
 // Scenario('testing valid and matching passwords', (I) => {
@@ -147,33 +155,30 @@ Scenario('testing valid username', (I) => {
 //     I.dontSee('Must match password field.');
 // });
 
-// DOESN'T WORK YET
-// needs register form to work first
-Scenario('testing correct sign up', (I) => {
-    I.amOnPage('/');
-    I.click('#signupid');
-    I.appendField('First Name *', 'Timothy');
-    I.appendField('Last Name *', 'Mitchell');
-    I.appendField('Email *', 'mitchelltim29@gmail.com');
-    I.appendField('Phone Number *', '7025952564');
-    I.appendField('Home Address', '600 Dexter Ave');
-    I.appendField('City *', 'Montgomery');
-    I.click('State');
-    I.click('#state');
-    I.appendField('Zip Code *', '36130');
-    I.appendField('#username', 'mitchelltim29');
-    I.appendField('Password *', 'password');
-    I.appendField('Confirm Password *', 'password');
-    I.click('Work Location');
-    I.click('#city');
-    I.click('Register');
-    I.click('#signup-btn');
-    I.click('Login');
-    I.fillField('Username', 'mitchelltim29');
-    I.fillField('Password', 'password');
-    I.click('#sign-in-btn');
-    I.dontSee('Login');
-    I.dontSee('User not found!');
-    I.dontSee('Username');
-    I.dontSee('Password');
-});
+// THIS IS A TAD HARDCODED, YOU WILL NEED TO CHANGE USERNAME 
+// OR REBOOT BACKEND EVERYTIME IN ORDER FOR THIS TEST TO WORK
+// Scenario('testing correct sign up', (I) => {
+//     I.amOnPage('/');
+//     I.click('#signupid');
+//     I.appendField('First Name *', 'Timothy');
+//     I.appendField('Last Name *', 'Mitchell');
+//     I.appendField('Email *', 'mitchelltim29@gmail.com');
+//     I.appendField('Phone Number *', '7025952564');
+//     I.appendField('Home Address', '600 Dexter Ave');
+//     I.appendField('City *', 'Montgomery');
+//     I.click('State');
+//     I.click('#state');
+//     I.appendField('Zip Code *', '36130');
+//     I.appendField('#username', 'mitchelltim2');
+//     I.appendField('Password *', 'password');
+//     I.appendField('Confirm Password *', 'password');
+//     I.click('Work Location');
+//     I.click('#city');
+//     I.click('Register');
+//     I.click('#signup-btn');
+//     I.click('Login');
+//     I.fillField('Username', 'mitchelltim2');
+//     I.fillField('Password', 'password');
+//     I.click('#sign-in-btn');
+//     I.dontSee('User not found!');
+// });
