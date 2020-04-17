@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587136605577' stop='1587136631476'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587136605596' status='failed' stop='1587136630085'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587136610049' status='passed' stop='1587136616015'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136616015' status='passed' stop='1587136616233'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136616233' status='passed' stop='1587136616826'>
+                    <name>I append field "First Name *", "Timot"</name>
+                    <title>I append field "First Name *", "Timot"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136616826' status='failed' stop='1587136630084'>
+                    <name>I click "Last Name *"</name>
+                    <title>I click "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='1fb15557-1d54-45f0-bf17-1113ceca9c23-attachment.png' type='image/png' size='431323'/>
+            </attachments>
+            <failure>
+                <message>element click intercepted: Element &lt;label class="mat-form-field-label ng-tns-c7-1 mat-empty mat-form-field-empty ng-star-inserted" ng-reflect-ng-switch="true" ng-reflect-disabled="true" id="mat-form-field-label-3" for="mat-input-1" aria-owns="mat-input-1">...&lt;/label> is not clickable at point (315, 339). Other element would receive the click: &lt;input _ngcontent-rpn-c2="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-invalid" matinput="" maxlength="50" minlength="1" name="lName" required="" ng-reflect-required="" ng-reflect-minlength="1" ng-reflect-maxlength="50" ng-reflect-name="lName" id="mat-input-1" aria-invalid="false" aria-required="true">
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>WebDriverError: element click intercepted: Element &lt;label class="mat-form-field-label ng-tns-c7-1 mat-empty mat-form-field-empty ng-star-inserted" ng-reflect-ng-switch="true" ng-reflect-disabled="true" id="mat-form-field-label-3" for="mat-input-1" aria-owns="mat-input-1">...&lt;/label> is not clickable at point (315, 339). Other element would receive the click: &lt;input _ngcontent-rpn-c2="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-invalid" matinput="" maxlength="50" minlength="1" name="lName" required="" ng-reflect-required="" ng-reflect-minlength="1" ng-reflect-maxlength="50" ng-reflect-name="lName" id="mat-input-1" aria-invalid="false" aria-required="true">
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\error.js:546:15)
+                    at parseHttpResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:509:13)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebElement.click()
+                    at thenableWebDriverProxy.schedule (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+                    at WebElement.schedule_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:2010:25)
+                    at WebElement.click (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:2092:17)
+                    at Protractor.click (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\codeceptjs\lib\helper\Protractor.js:452:15)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
