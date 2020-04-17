@@ -199,7 +199,8 @@
                         <mat-grid-tile colspan="1" rowspan="2">
 
                             <div class="rightForm"> 
-
+                            
+                                <form appUsernameCheck #userNameForm="ngForm">
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
@@ -211,11 +212,12 @@
                                                minlength="3"
                                                maxlength="12"
                                                [errorStateMatcher]="errorMatcher"
-                                               (blur)="checkUserName()">
+                                               >
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
-                                               <mat-error *ngIf="userAvailable === false">Username is unavailable!</mat-error>
+                                               <mat-error *ngIf="userNameForm.hasError">That username is already taken!</mat-error>
                                     </mat-form-field>
                                 </div>
+                                </form>
                                 
                             
                             <form appFieldsMatch #passwordForm="ngForm">
