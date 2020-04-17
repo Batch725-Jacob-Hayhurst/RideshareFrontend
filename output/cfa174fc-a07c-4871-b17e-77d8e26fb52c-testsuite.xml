@@ -1,0 +1,196 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587047071797' stop='1587047132429'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587047071801' status='failed' stop='1587047131602'>
+            <name>check for component information display</name>
+            <title>check for component information display</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587047093536' status='passed' stop='1587047117821'>
+                    <name>I see "Driver's List"</name>
+                    <title>I see "Driver's List"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047117821' status='passed' stop='1587047118161'>
+                    <name>I see "Directions:"</name>
+                    <title>I see "Directions:"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047118161' status='passed' stop='1587047118433'>
+                    <name>I see "Filter ALL"</name>
+                    <title>I see "Filter ALL"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047118433' status='passed' stop='1587047118760'>
+                    <name>I see "Filter DISTANCE"</name>
+                    <title>I see "Filter DISTANCE"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047118760' status='passed' stop='1587047119101'>
+                    <name>I see "Name"</name>
+                    <title>I see "Name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047119101' status='passed' stop='1587047119410'>
+                    <name>I see "Distance"</name>
+                    <title>I see "Distance"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047119410' status='passed' stop='1587047119685'>
+                    <name>I see "Time"</name>
+                    <title>I see "Time"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047119685' status='passed' stop='1587047120014'>
+                    <name>I see "Available Seats"</name>
+                    <title>I see "Available Seats"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047120014' status='passed' stop='1587047120336'>
+                    <name>I see "View Info"</name>
+                    <title>I see "View Info"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047120337' status='passed' stop='1587047120571'>
+                    <name>I see "View"</name>
+                    <title>I see "View"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047120571' status='passed' stop='1587047120898'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047120898' status='passed' stop='1587047121202'>
+                    <name>I see "1 ft"</name>
+                    <title>I see "1 ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047121202' status='passed' stop='1587047121481'>
+                    <name>I see "1 min"</name>
+                    <title>I see "1 min"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047121481' status='passed' stop='1587047121763'>
+                    <name>I see "2"</name>
+                    <title>I see "2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047121763' status='passed' stop='1587047122151'>
+                    <name>I see "Hilda Gledhill"</name>
+                    <title>I see "Hilda Gledhill"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047122151' status='passed' stop='1587047122419'>
+                    <name>I see "Salvidor Migheli"</name>
+                    <title>I see "Salvidor Migheli"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047122419' status='passed' stop='1587047122748'>
+                    <name>I see "204mi 4330ft"</name>
+                    <title>I see "204mi 4330ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047122748' status='passed' stop='1587047123063'>
+                    <name>I see "3 hours 15 mins"</name>
+                    <title>I see "3 hours 15 mins"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047123063' status='passed' stop='1587047123300'>
+                    <name>I see "Darren O Sullivan"</name>
+                    <title>I see "Darren O Sullivan"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047123300' status='passed' stop='1587047123578'>
+                    <name>I see "5"</name>
+                    <title>I see "5"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047123579' status='passed' stop='1587047123874'>
+                    <name>I see "Tobe Curd"</name>
+                    <title>I see "Tobe Curd"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047123874' status='passed' stop='1587047124133'>
+                    <name>I see "383mi 1523ft"</name>
+                    <title>I see "383mi 1523ft"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047124134' status='passed' stop='1587047124462'>
+                    <name>I see "6 hours 31 mins"</name>
+                    <title>I see "6 hours 31 mins"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047124462' status='passed' stop='1587047124578'>
+                    <name>I see element "#paginator"</name>
+                    <title>I see element "#paginator"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587047124579' status='failed' stop='1587047131601'>
+                    <name>I click ">"</name>
+                    <title>I click ">"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='f39f099f-580f-4f40-ab82-e5f0f978c9e8-attachment.png' type='image/png' size='293461'/>
+            </attachments>
+            <failure>
+                <message>invalid selector: An invalid or illegal selector was specified
+                  (Session info: chrome=81.0.4044.92)
+                For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>InvalidSelectorError: invalid selector: An invalid or illegal selector was specified
+                  (Session info: chrome=81.0.4044.92)
+                For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'TIM', ip: '192.168.0.17', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_231'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\error.js:546:15)
+                    at parseHttpResponse (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:509:13)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebDriver.findElements(By(css selector, >))
+                    at thenableWebDriverProxy.schedule (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+                    at thenableWebDriverProxy.findElements (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\webdriver.js:1048:19)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\protractor\built\element.js:159:44
+                    at ManagedPromise.invokeCallback_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:2927:27
+                    at C:\Users\mitch\OneDrive\Documents\MyGitRepo\Project3\RideshareFrontend\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
