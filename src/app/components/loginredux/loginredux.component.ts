@@ -85,7 +85,7 @@ export class LoginreduxComponent implements OnInit {
     this.http.get(`${environment.loginUri}?userName=${this.user.userName}&passWord=${this.user.password}`)
       .subscribe(
         (response) => {
-          //console.log(response);
+          // console.log(response);
           if (response['userName'] != undefined) {
             this.usernameError = response['userName'][0];
           }
@@ -105,6 +105,7 @@ export class LoginreduxComponent implements OnInit {
           }
         }
       );
+
   }
 
   signUp() {
@@ -155,6 +156,8 @@ export class LoginreduxComponent implements OnInit {
     this.userService.addUser(this.user).subscribe( res => {
       console.log(res);
     });
+
+    location.replace('');
   }
 
   // this function will check for filled out fields in the address form and if it is a valid address
