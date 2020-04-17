@@ -11,20 +11,24 @@ export class UsernameCheckDirective implements Validator{
 
   constructor(private userServ: UserService) { }
   validate(control: AbstractControl) : ValidationErrors{
-    console.log("here")
-    return this.usernameMatchValidator(control);
+    console.log("before")
+    
+    let validation = this.usernameMatchValidator(control)
+    console.log(validation);
+    console.log("after")
+    return validation;
   }
 
   usernameMatchValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
     const username = control.get('userName');
     let result: boolean;
-    console.log(control.get('userName'))
     if(username){
       this.userServ.checkUserNameAvailable(control.get('userName').value).subscribe(res => {
         result = res
-        console.log("matching", result);
-
-        return result ? null : {'unavailable':true};
+        console.log("1. matching", result);
+        console.log("2.", result ? null : {'unavailable':true});
+        console.log("3. inside usernameMatchValidator")
+        return result ? null : {'unavailable':true} ;
         });
       
     } else {
