@@ -10,15 +10,27 @@ import { UserService } from '../../services/user-service/user.service';
 export class UsernameCheckDirective implements Validator{
 
   constructor(private userServ: UserService) { }
-  validate(control: AbstractControl){
+  validate(control: AbstractControl) : ValidationErrors{
+    console.log("here")
     return this.usernameMatchValidator(control);
   }
 
   usernameMatchValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
-    const userValid = control.get('userName');
+    const username = control.get('userName');
     let result: boolean;
-    this.userServ.checkUserNameAvailable(control.get('userName') as unknown as string).toPromise().then(res => {result = res});
-    return result ? null : {'unavailable':true};
+    console.log(control.get('userName'))
+    if(username){
+      this.userServ.checkUserNameAvailable(control.get('userName').value).subscribe(res => {
+        result = res
+        console.log("matching", result);
+
+        return result ? null : {'unavailable':true};
+        });
+      
+    } else {
+      return null;
+    }
+    
   }
 
 }
