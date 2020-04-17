@@ -156,7 +156,6 @@ export class LoginreduxComponent implements OnInit {
     this.userService.addUser(this.user).subscribe( res => {
       console.log(res);
     });
-
     location.replace('');
   }
 
