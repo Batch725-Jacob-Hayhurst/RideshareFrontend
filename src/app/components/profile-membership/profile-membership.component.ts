@@ -15,13 +15,13 @@ export class ProfileMembershipComponent implements OnInit {
   constructor(private userService: UserService) { }
   ngOnInit() {
     this.userService.getUserById2(sessionStorage.getItem('userid')).subscribe((response) => {
-      console.log(response);
+      // console.log(response);
       this.profileObject = response;
-      console.log(this.profileObject);
+      // console.log(this.profileObject);
       this.isDriver = response.driver;
-      console.log(this.isDriver);
+      // console.log(this.isDriver);
       this.active = response.active;
-      console.log(this.active);
+      // console.log(this.active);
     });
   }
   updatesMembershipInfo() {
