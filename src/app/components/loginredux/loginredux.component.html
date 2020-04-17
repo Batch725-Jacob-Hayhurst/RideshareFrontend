@@ -214,7 +214,7 @@
                                                [errorStateMatcher]="errorMatcher"
                                                >
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
-                                               <mat-error *ngIf="userNameForm.hasError">That username is already taken!</mat-error>
+                                               <mat-error *ngIf="userNameForm.hasError('unavailable') && userName.dirty">That username is already taken!</mat-error>
                                     </mat-form-field>
                                 </div>
                                 </form>
