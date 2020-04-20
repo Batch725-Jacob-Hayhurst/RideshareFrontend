@@ -156,8 +156,9 @@ export class LoginreduxComponent implements OnInit {
     console.log(this.user);
     this.userService.addUser(this.user).subscribe( res => {
       console.log(res);
+      this.login()
     });
-    location.replace('');
+   
   }
 
   // this function will check for filled out fields in the address form and if it is a valid address
@@ -175,28 +176,29 @@ export class LoginreduxComponent implements OnInit {
 
 
   // this sends a request to the backend to see if the inputted username exists or not
-  // checkUserName() {
-  //   // this is the options settings for the http request to the back end
-  //   const httpOptions = {
-  //     headers: new HttpHeaders({
-  //       'Content-Type':  'text/plain',
-  //     })
-  //   };
+  checkUserName() {
+    // this is the options settings for the http request to the back end
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'text/plain',
+      })
+    };
 
-  //   console.log('checking username');
-  //   // check for username availability
-  //   this.userService()
-  //   .subscribe(response => {
-  //       // this is that logic that assignes a boolean on whether the username is in use or not so it can
-  //       // can the registration button can be blocked and stop user creation.
-  //       if (response.toString() === 'true') {
-  //         console.log('that username does not exist!');
-  //         this.userAvailable = true;
-  //       } else {
-  //         console.log('that username is currently in use');
-  //         this.userAvailable = false;
-  //       }
-  //     }
-  //   );
-  // }
+    console.log('checking username');
+    // check for username availability
+    this.userService.checkUserNameAvailable(this.user.userName)
+    .subscribe(response => {
+        // this is that logic that assignes a boolean on whether the username is in use or not so it can
+        // can the registration button can be blocked and stop user creation.
+        console.log(response);
+        if (response.toString() === 'true') {
+          console.log('that username does not exist!');
+          this.userAvailable = true;
+        } else {
+          console.log('that username is currently in use');
+          this.userAvailable = false;
+        }
+      }
+    );
+  }
 }

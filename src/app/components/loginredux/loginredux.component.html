@@ -200,7 +200,7 @@
 
                             <div class="rightForm"> 
                             
-                                <form appUsernameCheck #userNameForm="ngForm">
+                                
                                 <div class="row">
                                     <mat-form-field>
                                         <mat-label>Username</mat-label>
@@ -211,13 +211,15 @@
                                                name="userName"
                                                minlength="3"
                                                maxlength="12"
+                                               required
                                                [errorStateMatcher]="errorMatcher"
+                                               (blur)="checkUserName()"
                                                id="username">
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
-                                               <mat-error *ngIf="userNameForm.hasError('unavailable') && userName.dirty">That username is already taken!</mat-error>
+                                               <mat-error *ngIf="userAvailable === false && userName.dirty">That username is already taken!</mat-error>
                                     </mat-form-field>
                                 </div>
-                                </form>
+                            
                                 
                             
                             <form appFieldsMatch #passwordForm="ngForm">
@@ -268,7 +270,7 @@
                     <mat-grid-list cols="4" rowHeight="7vh">
                         <hr>
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || passwordForm.hasError('notSame')"
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || passwordForm.hasError('notSame') || !userAvailable"
                             >Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>
