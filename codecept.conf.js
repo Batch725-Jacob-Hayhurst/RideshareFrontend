@@ -13,7 +13,8 @@ exports.config = {
       driver: 'direct',
       browser: 'chrome',
       rootElement: 'app-root',
-      angular: true
+      angular: true,
+      "smartWait": 10000
     }
   },
   include: {
