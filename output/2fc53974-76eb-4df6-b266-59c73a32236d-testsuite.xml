@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587135313139' stop='1587135331390'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587135313141' status='failed' stop='1587135330871'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587135314202' status='passed' stop='1587135321982'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135321983' status='passed' stop='1587135322232'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135322232' status='passed' stop='1587135322655'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135322655' status='passed' stop='1587135322857'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135322857' status='passed' stop='1587135323127'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135323127' status='passed' stop='1587135324521'>
+                    <name>I grab text from "#state"</name>
+                    <title>I grab text from "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587135324533' status='failed' stop='1587135330868'>
+                    <name>I click "NY"</name>
+                    <title>I click "NY"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='19c2d7b2-e927-493d-a0bf-ad4df1207ebe-attachment.png' type='image/png' size='471409'/>
+            </attachments>
+            <failure>
+                <message>No element found using locator: By(css selector, NY)</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(css selector, NY)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/protractor/built/element.js:814:27
+                    at ManagedPromise.invokeCallback_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+                    at TaskQueue.execute_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:2927:27
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587134988821' stop='1587135000350'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587134988823' status='failed' stop='1587134999805'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134989756' status='passed' stop='1587134994080'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134994080' status='passed' stop='1587134994332'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134994332' status='passed' stop='1587134994734'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134994734' status='passed' stop='1587134994938'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134994938' status='failed' stop='1587134999804'>
+                    <name>I grab text from "#state"</name>
+                    <title>I grab text from "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='6b302379-0684-4df3-ad82-fdc3dc6a63e4-attachment.png' type='image/png' size='474167'/>
+            </attachments>
+            <failure>
+                <message>Element "{null: undefined}" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Element "{null: undefined}" was not found by text|CSS|XPath
+                    at new ElementNotFound (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:1726:11)
+                    at Protractor.grabTextFrom (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:694:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at async Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/signup_test.js:110:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

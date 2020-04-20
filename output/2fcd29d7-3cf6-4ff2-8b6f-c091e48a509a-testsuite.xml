@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587058983680' stop='1587059028611'>
+    <name>drivers-list:</name>
+    <title>drivers-list:</title>
+    <test-cases>
+        <test-case start='1587058983682' status='failed' stop='1587059028217'>
+            <name>testing name filter</name>
+            <title>testing name filter</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587059003960' status='passed' stop='1587059027811'>
+                    <name>I append field "Filter ALL", "Edmunds"</name>
+                    <title>I append field "Filter ALL", "Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587059027811' status='passed' stop='1587059028216'>
+                    <name>I see "Marilyn Edmunds"</name>
+                    <title>I see "Marilyn Edmunds"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='bfb1684b-00d1-4780-8e23-87cc1e9f9f79-attachment.png' type='image/png' size='159274'/>
+            </attachments>
+            <failure>
+                <message>I.dontsee is not a function</message>
+                <stack-trace>TypeError: I.dontsee is not a function
+                    at Test.&lt;anonymous> (/home/anthonym/workspace/RideshareFrontend/e2e/codecept/driver_test.js:57:7)
+                    at Context.test.fn (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/scenario.js:78:14)
+                    at callFnAsync (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:415:21)
+                    at Test.Runnable.run (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runnable.js:357:7)
+                    at Runner.runTest (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:535:10)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:653:12
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:447:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:457:7
+                    at next (/home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:362:14)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/mocha/lib/runner.js:420:7</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -45,7 +45,7 @@ export class ProfileLocationComponent implements OnInit {
         this.currentUser.hState = this.hState;
         let result: boolean;
         await this.addressVery.isAddressValid(this.address, this.city, this.hState, this.zipcode.toString()).then(result2 => result = result2);
-        console.log(result);
+        // console.log(result);
         if (result) {
           this.userService.updateUserInfo(this.currentUser);
           this.success = 'Updated Successfully!';

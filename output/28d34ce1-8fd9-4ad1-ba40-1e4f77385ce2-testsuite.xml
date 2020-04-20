@@ -1,0 +1,220 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587133910154' stop='1587134024860'>
+    <name>logo-routing:</name>
+    <title>logo-routing:</title>
+    <test-cases>
+        <test-case start='1587133910163' status='passed' stop='1587133955692'>
+            <name>test revature routing button in drivers page</name>
+            <title>test revature routing button in drivers page</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587133918399' status='passed' stop='1587133926530'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133926531' status='passed' stop='1587133951143'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133951143' status='passed' stop='1587133951248'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133951248' status='passed' stop='1587133955691'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587133955938' status='passed' stop='1587133972483'>
+            <name>test revature routing button in profile-contact page</name>
+            <title>test revature routing button in profile-contact page</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587133965164' status='passed' stop='1587133968650'>
+                    <name>I click "#usernav"</name>
+                    <title>I click "#usernav"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133968650' status='passed' stop='1587133968879'>
+                    <name>I click "Profile"</name>
+                    <title>I click "Profile"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133968879' status='passed' stop='1587133969012'>
+                    <name>I click "Contact Information"</name>
+                    <title>I click "Contact Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133969012' status='passed' stop='1587133969092'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133969092' status='passed' stop='1587133969273'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133969275' status='passed' stop='1587133972483'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587133972791' status='passed' stop='1587133990359'>
+            <name>test revature routing button in profile-location page</name>
+            <title>test revature routing button in profile-location page</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587133982011' status='passed' stop='1587133985721'>
+                    <name>I click "#usernav"</name>
+                    <title>I click "#usernav"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133985721' status='passed' stop='1587133986006'>
+                    <name>I click "Profile"</name>
+                    <title>I click "Profile"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133986007' status='passed' stop='1587133986209'>
+                    <name>I click "Location"</name>
+                    <title>I click "Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133986209' status='passed' stop='1587133986316'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133986316' status='passed' stop='1587133986516'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587133986516' status='passed' stop='1587133990359'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587133990639' status='passed' stop='1587134007501'>
+            <name>test revature routing button in profile-membership page</name>
+            <title>test revature routing button in profile-membership page</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587133999696' status='passed' stop='1587134003096'>
+                    <name>I click "#usernav"</name>
+                    <title>I click "#usernav"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134003096' status='passed' stop='1587134003305'>
+                    <name>I click "Profile"</name>
+                    <title>I click "Profile"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134003305' status='passed' stop='1587134003479'>
+                    <name>I click "Membership"</name>
+                    <title>I click "Membership"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134003479' status='passed' stop='1587134003567'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134003567' status='passed' stop='1587134003753'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134003753' status='passed' stop='1587134007501'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1587134007644' status='passed' stop='1587134024461'>
+            <name>test revature routing button in profile-car page</name>
+            <title>test revature routing button in profile-car page</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134019384' status='passed' stop='1587134019634'>
+                    <name>I click "#usernav"</name>
+                    <title>I click "#usernav"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134019634' status='passed' stop='1587134019825'>
+                    <name>I click "Profile"</name>
+                    <title>I click "Profile"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134019825' status='passed' stop='1587134019998'>
+                    <name>I click "Car Information"</name>
+                    <title>I click "Car Information"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134019998' status='passed' stop='1587134020355'>
+                    <name>I see element "#logo"</name>
+                    <title>I see element "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134020355' status='passed' stop='1587134020564'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134020564' status='passed' stop='1587134024461'>
+                    <name>I am on page "/drivers"</name>
+                    <title>I am on page "/drivers"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

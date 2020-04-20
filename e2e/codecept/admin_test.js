@@ -11,5 +11,3 @@ Scenario('test for admins proper number', (I) => {
     I.click('Login As Admin');
     I.amOnPage('');
 });
-
-

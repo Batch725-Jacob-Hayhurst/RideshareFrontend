@@ -49,4 +49,3 @@ Scenario('test revature routing button in profile-car page', (I) => {
     I.click('#logo');
     I.amOnPage('/drivers');
 });
-

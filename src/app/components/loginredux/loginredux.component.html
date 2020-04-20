@@ -85,9 +85,9 @@
                                         <mat-label>First Name</mat-label>
 
                                         <input matInput [(ngModel)]="user.firstName" name="fName" required minlength="2"
-                                            maxlength="50" #fName="ngModel">
+                                            maxlength="50" #fName="ngModel" id="first_name">
 
-                                        <mat-error *ngIf="fName.invalid && fName.dirty">*Required Field</mat-error>
+                                        <mat-error *ngIf="fName.invalid">*Required Field</mat-error>
                                     </mat-form-field>
                                 </div>
 
@@ -96,7 +96,7 @@
                                         <mat-label>Last Name</mat-label>
 
                                         <input matInput [(ngModel)]="user.lastName" name="lName" required minlength="1"
-                                            maxlength="50" #lName="ngModel">
+                                            maxlength="50" #lName="ngModel" id="last_name">
                                         <mat-error *ngIf="lName.invalid && lName.dirty">*Required Field</mat-error>
                                     </mat-form-field>
                                 </div>
@@ -212,7 +212,7 @@
                                                minlength="3"
                                                maxlength="12"
                                                [errorStateMatcher]="errorMatcher"
-                                               >
+                                               id="username">
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
                                                <mat-error *ngIf="userNameForm.hasError('unavailable') && userName.dirty">That username is already taken!</mat-error>
                                     </mat-form-field>
@@ -268,7 +268,7 @@
                     <mat-grid-list cols="4" rowHeight="7vh">
                         <hr>
                         <mat-grid-tile colspan="4" rowspan="1">
-                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || userAvailable !== true || passwordForm.hasError('notSame')"
+                            <button mat-raised-button type="submit" [disabled]="signUpForm.invalid || addressValid !== true || passwordForm.hasError('notSame')"
                             >Register</button>
                         </mat-grid-tile>
                     </mat-grid-list>

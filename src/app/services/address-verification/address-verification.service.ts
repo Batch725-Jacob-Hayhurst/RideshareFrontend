@@ -80,7 +80,7 @@ export class AddressVerificationService {
       this.formatedInput = (this.parseRoads(street)) + ', ' + (this.parseRoads(city)) + ', ' + state + ' ' + zip + ', USA';
       this.formatedInput = this.formatedInput.toLocaleLowerCase();
 
-      console.log(this.formatedInput);
+      // console.log(this.formatedInput);
 
       // this will send the request to the google maps geocoding api with the parameters
       return await this.http.get(this.url).toPromise()
@@ -94,7 +94,7 @@ export class AddressVerificationService {
 
                                 // this will show the compairason of the inputted address versus the
                                 // returned address from google api in the console.
-                                console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
+                                // console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
 
                                 // this is the compairison to see if the address that was inputted has an exact
                                 // response from the google maps geocoding api.
@@ -110,7 +110,7 @@ export class AddressVerificationService {
                                 // this will return the boolean on whether it is a valid address or not.
                                 return this.valid;
                             } catch (err) {
-                              console.log(`error, address can't even get approximated`);
+                              // console.log(`error, address can't even get approximated`);
                               return false;
                             }
                           }
