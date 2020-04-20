@@ -68,16 +68,23 @@ export class LoginreduxComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // toggles the login window on the home page.
   toggleLogin() {
+    // this flips the isLogin boolean so the login window opens/closes.
     this.isLogin = !this.isLogin;
   }
 
+  // toggles the signup/registration window on home page.
   toggleSignUp() {
+    // this flips the isSignUP boolean so the registration window opens/closes.
     this.isSignUp = !this.isSignUp;
+    // this clears the current user field.
+    this.user = new User();
   }
 
-  //Login Functions
 
+  // this method is triggered when the login button on the login form is clicked.
+  // it sends login info to the back end for verification and sends the user info to the front end.
   login() {
     this.pwdError = '';
     this.usernameError = '';
@@ -109,8 +116,12 @@ export class LoginreduxComponent implements OnInit {
 
   }
 
+
+  // this method is triggered when the registration button on the registration form is clicked
+  // and sends the information on the form to the backend.
   signUp() {
-    console.log('before switch');
+    // console.log('before switch');
+    // this switch case resolves the work location selected on the registration page.
     switch (this.user.wCity) {
       case 'Morgantown':
           this.user.wState = 'WV';
@@ -150,18 +161,20 @@ export class LoginreduxComponent implements OnInit {
           this.user.batch = new Batch(6, 'Orlando');
           break;
     }
+    // these three fields cannot be null/undifined when being sent to the back end.
+    // since these are not selected/changed on this page, all are defaulted to false.
     this.user.acceptingRides = false;
     this.user.active = false;
     this.user.driver = false;
-    console.log(this.user);
+    // console.log(this.user);
     this.userService.addUser(this.user).subscribe( res => {
-      console.log(res);
-      this.login()
+      // console.log(res);
+      this.login();
     });
    
   }
 
-  // this function will check for filled out fields in the address form and if it is a valid address
+  // this method will check for filled out fields in the address form and if it is a valid address
   async checkAddressStatus() {
     // this check to see all the address fields are "dirty" or not
     // if they are all dirty it will use the address validation service to check if the address is valid or not
@@ -179,6 +192,10 @@ export class LoginreduxComponent implements OnInit {
 
   // this sends a request to the backend to see if the inputted username exists or not
   checkUserName() {
+    // if userName field is empty exit function;
+    if (!this.user.userName) {
+      return;
+    }
     // console.log('checking username');
     // check for username availability
     this.userService.checkUserNameAvailable(this.user.userName)
