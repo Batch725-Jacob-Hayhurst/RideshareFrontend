@@ -166,36 +166,31 @@ export class LoginreduxComponent implements OnInit {
     // this check to see all the address fields are "dirty" or not
     // if they are all dirty it will use the address validation service to check if the address is valid or not
     if (this.user.hZip && this.user.hAddress && this.user.hCity && this.user.hState) {
-      console.log('checking address!');
+      // all required fields are filled out and now the address chack can run
+      //console.log('checking address!');
       await this.addressVery.isAddressValid(this.user.hAddress, this.user.hCity, this.user.hState, this.user.hZip.toString())
         .then(response => this.addressValid = response);
     } else {
-      console.log('need more info for address!');
+      // all required fields are not yet filled out
+      // console.log('need more info for address!');
     }
   }
 
 
   // this sends a request to the backend to see if the inputted username exists or not
   checkUserName() {
-    // this is the options settings for the http request to the back end
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'text/plain',
-      })
-    };
-
-    console.log('checking username');
+    // console.log('checking username');
     // check for username availability
     this.userService.checkUserNameAvailable(this.user.userName)
     .subscribe(response => {
         // this is that logic that assignes a boolean on whether the username is in use or not so it can
         // can the registration button can be blocked and stop user creation.
-        console.log(response);
+        // console.log(response);
         if (response.toString() === 'true') {
-          console.log('that username does not exist!');
+          // console.log('that username does not exist!');
           this.userAvailable = true;
         } else {
-          console.log('that username is currently in use');
+          // console.log('that username is currently in use');
           this.userAvailable = false;
         }
       }
