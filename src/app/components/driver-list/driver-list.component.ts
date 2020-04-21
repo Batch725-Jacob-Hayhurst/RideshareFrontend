@@ -29,7 +29,6 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
 })
 export class DriverListComponent implements OnInit {
   activedrivers: any = [];
-  location: string = '';
   //location: string = 'Morgantown, WV 26506';
   //location: string = '11730 Plaza America Dr Reston, VA 20190';
   mapProperties: {};
@@ -52,7 +51,6 @@ export class DriverListComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private http: HttpClient, private carService: CarService, overlayContainer: OverlayContainer) {
-    this.getGoogleApi();
     // Object to create Filter for distance dropdown
     this.filterSelectObj = [
       {
@@ -72,11 +70,14 @@ export class DriverListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getGoogleApi(this.createList)
+  }
 
-    this.drivers = [];
-    this.location = sessionStorage.getItem("batchLoc");
+  createList(){
+    console.log(sessionStorage.getItem("batchLoc"));
+    let location = sessionStorage.getItem("batchLoc");
     // console.log(this.location);
-    this.carService.getCarsForLocation(this.location).subscribe(
+    this.carService.getCarsForLocation(location).subscribe(
       res => {
         res.forEach(element => {
 
@@ -106,11 +107,11 @@ export class DriverListComponent implements OnInit {
         
         this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
         // get all routes
-        this.displayDriversList(this.location, this.drivers);
+        this.displayDriversList(location, this.drivers);
         // show drivers on map
-        this.showDriversOnMap(this.location, this.drivers);
+        this.showDriversOnMap(location, this.drivers);
       });
-    // allows pagination to work with the dataSource that is presented on the table
+          // allows pagination to work with the dataSource that is presented on the table
     this.dataSource.paginator = this.paginator;
     // allows the sorter to work with the dataSource that is presented on the table
     this.dataSource.sort = this.sort;
@@ -120,7 +121,7 @@ export class DriverListComponent implements OnInit {
 
   
 
-  getGoogleApi() {
+  getGoogleApi(_createList: Function) {
     this.http.get(`${environment.loginUri}getGoogleApi`)
       .subscribe(
         (response) => {
@@ -130,7 +131,9 @@ export class DriverListComponent implements OnInit {
               script.addEventListener('load', r => resolve());
               script.src = `http://maps.googleapis.com/maps/api/js?key=${response['googleMapAPIKey'][0]}`;
               document.head.appendChild(script);
+              
             });
+            _createList();
           }
         }
       );
