@@ -2,6 +2,9 @@ import { Directive } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, Validator, ValidationErrors, ValidatorFn, FormGroup } from '@angular/forms';
 import { UserService } from '../../services/user-service/user.service';
 
+//Checks if username exists in database before form submission
+//Not used. Directives are needed to make the mat-error work, but this directive doesn't work properly. 
+//If fixed implement in the same way that the fields-match directive is
 
 @Directive({
   selector: '[appUsernameCheck]',
