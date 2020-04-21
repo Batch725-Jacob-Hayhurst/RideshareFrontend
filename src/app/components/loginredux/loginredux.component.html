@@ -142,7 +142,8 @@
                                 <div class="row">
                                     <mat-form-field class="addressInput">
                                         <mat-label>Home Address</mat-label>
-                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress" (blur)='checkAddressStatus()'>
+                                        <input matInput [(ngModel)]="user.hAddress" name="hAddress" (blur)='checkAddressStatus()' pattern="[^.]+" #hAddress="ngModel">
+                                        <mat-error *ngIf="hAddress.invalid && hAddress.dirty">Periods are not allowed</mat-error>
                                     </mat-form-field>
                                 </div>
 
