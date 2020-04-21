@@ -22,7 +22,7 @@ Scenario('check for component information display', (I) => {
     I.see('Car Information');
     I.see('Membership:');
     I.see('Batch:');
-    I.see('1 - Morgantown');
+    I.see('1 - Morgantown, WV 26506');
     I.see('Status:');
 });
 

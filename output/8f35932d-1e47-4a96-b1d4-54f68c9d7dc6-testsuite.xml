@@ -1,0 +1,94 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587134241816' stop='1587134263606'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587134241819' status='failed' stop='1587134263070'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587134242701' status='passed' stop='1587134246833'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134246834' status='passed' stop='1587134247093'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134247094' status='passed' stop='1587134247529'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134247529' status='passed' stop='1587134247820'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134247821' status='passed' stop='1587134248137'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134248137' status='passed' stop='1587134249652'>
+                    <name>I grab text from "#state"</name>
+                    <title>I grab text from "#state"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134249660' status='passed' stop='1587134250042'>
+                    <name>I select option "State", "NY"</name>
+                    <title>I select option "State", "NY"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134250042' status='passed' stop='1587134250278'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587134250278' status='failed' stop='1587134263067'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='e131a585-7b5d-43da-824b-a2a75e82a2fa-attachment.png' type='image/png' size='471409'/>
+            </attachments>
+            <failure>
+                <message>element click intercepted: Element &lt;mat-select _ngcontent-qyl-c2="" class="mat-select ng-tns-c8-14 ng-untouched ng-pristine ng-valid mat-select-empty ng-star-inserted" name="wCity" role="listbox" ng-reflect-name="wCity" id="mat-select-1" tabindex="0" aria-labelledby="mat-form-field-label-25" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">...&lt;/mat-select> is not clickable at point (710, 563). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing">&lt;/div>
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>WebDriverError: element click intercepted: Element &lt;mat-select _ngcontent-qyl-c2="" class="mat-select ng-tns-c8-14 ng-untouched ng-pristine ng-valid mat-select-empty ng-star-inserted" name="wCity" role="listbox" ng-reflect-name="wCity" id="mat-select-1" tabindex="0" aria-labelledby="mat-form-field-label-25" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">...&lt;/mat-select> is not clickable at point (710, 563). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing">&lt;/div>
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebElement.click()
+                    at thenableWebDriverProxy.schedule (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at WebElement.schedule_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)
+                    at WebElement.click (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2092:17)
+                    at Protractor.click (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:452:15)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

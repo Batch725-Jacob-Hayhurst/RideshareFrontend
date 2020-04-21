@@ -7,7 +7,7 @@
             <small *ngIf="user.userName && !validationService.validateUserName(user.userName)">User Name Should Be 3 to 8 Characters</small>
         </div>
         <div class="form-group">
-            <label for="firstName">First Name <small>*</small></label><br>
+            <label for="firstName">First Name<small>*</small></label><br>
             <input id="firstName" type="text" placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required><br>
             <small *ngIf="user.firstName && !validationService.validateName(user.firstName)">Invalid Name</small>
         </div>

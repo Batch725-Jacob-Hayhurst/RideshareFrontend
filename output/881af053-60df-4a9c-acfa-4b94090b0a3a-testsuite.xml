@@ -1,0 +1,142 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587132678946' stop='1587132695409'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587132678948' status='failed' stop='1587132694892'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132680045' status='passed' stop='1587132684205'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132684206' status='passed' stop='1587132684425'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132684425' status='passed' stop='1587132684887'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132684887' status='passed' stop='1587132685105'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132685105' status='passed' stop='1587132685403'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132685403' status='passed' stop='1587132686126'>
+                    <name>I append field "State", "New York"</name>
+                    <title>I append field "State", "New York"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132686127' status='passed' stop='1587132686722'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132686723' status='passed' stop='1587132687003'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132687003' status='passed' stop='1587132687440'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132687440' status='passed' stop='1587132687565'>
+                    <name>I click "Register"</name>
+                    <title>I click "Register"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132687565' status='passed' stop='1587132687899'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132687899' status='passed' stop='1587132688002'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132688002' status='passed' stop='1587132688149'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132688150' status='passed' stop='1587132688550'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132688550' status='passed' stop='1587132689122'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dri"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dri"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132689122' status='passed' stop='1587132689320'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132689320' status='failed' stop='1587132694887'>
+                    <name>I clear field "State"</name>
+                    <title>I clear field "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='778ac72d-8172-422b-b9fb-69f28a967e22-attachment.png' type='image/png' size='464047'/>
+            </attachments>
+            <failure>
+                <message>invalid element state
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>InvalidElementStateError: invalid element state
+                  (Session info: chrome=81.0.4044.92)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'anthony-lpc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.19.114-1-MANJARO', java.version: '1.8.0_242'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                From: Task: WebElement.clear()
+                    at thenableWebDriverProxy.schedule (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at WebElement.schedule_ (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)
+                    at WebElement.clear (/home/anthonym/workspace/RideshareFrontend/node_modules/selenium-webdriver/lib/webdriver.js:2351:17)
+                    at Protractor.clearField (/home/anthonym/workspace/RideshareFrontend/node_modules/codeceptjs/lib/helper/Protractor.js:640:19)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

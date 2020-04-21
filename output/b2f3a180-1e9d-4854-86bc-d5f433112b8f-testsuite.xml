@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587136666715' stop='1587136683810'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587136666726' status='failed' stop='1587136682762'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587136670630' status='passed' stop='1587136675365'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136675365' status='passed' stop='1587136675685'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136675685' status='passed' stop='1587136676251'>
+                    <name>I append field "First Name *", "Timot"</name>
+                    <title>I append field "First Name *", "Timot"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676251' status='passed' stop='1587136676392'>
+                    <name>I click "#last_name"</name>
+                    <title>I click "#last_name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676392' status='passed' stop='1587136676506'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676506' status='passed' stop='1587136676591'>
+                    <name>I append field "Last Name *", "M"</name>
+                    <title>I append field "Last Name *", "M"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676591' status='passed' stop='1587136676660'>
+                    <name>I clear field "Last Name *"</name>
+                    <title>I clear field "Last Name *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676660' status='passed' stop='1587136676858'>
+                    <name>I click "#last_name"</name>
+                    <title>I click "#last_name"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676858' status='passed' stop='1587136676956'>
+                    <name>I append field "First Name *", "h"</name>
+                    <title>I append field "First Name *", "h"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587136676956' status='failed' stop='1587136682761'>
+                    <name>I see "*Required Field"</name>
+                    <title>I see "*Required Field"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='dda43af0-7649-4330-8228-e476d9808a59-attachment.png' type='image/png' size='431735'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

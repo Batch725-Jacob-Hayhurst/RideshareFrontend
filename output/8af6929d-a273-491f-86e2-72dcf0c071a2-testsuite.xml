@@ -1,0 +1,340 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587132561669' stop='1587132603277'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587132561671' status='failed' stop='1587132602741'>
+            <name>testing valid address</name>
+            <title>testing valid address</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587132562820' status='passed' stop='1587132566986'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132566987' status='passed' stop='1587132567253'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132567254' status='passed' stop='1587132577262'>
+                    <name>I wait 10</name>
+                    <title>I wait 10</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132577262' status='passed' stop='1587132577609'>
+                    <name>I append field "Home Address", "698 something pl"</name>
+                    <title>I append field "Home Address", "698 something pl"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132577610' status='passed' stop='1587132577806'>
+                    <name>I append field "City *", "city"</name>
+                    <title>I append field "City *", "city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132577806' status='passed' stop='1587132578111'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132578111' status='passed' stop='1587132578723'>
+                    <name>I append field "State", "New York"</name>
+                    <title>I append field "State", "New York"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132578723' status='passed' stop='1587132579318'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132579318' status='passed' stop='1587132579626'>
+                    <name>I click "Work Location"</name>
+                    <title>I click "Work Location"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132579626' status='passed' stop='1587132580036'>
+                    <name>I click "#city"</name>
+                    <title>I click "#city"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132580036' status='passed' stop='1587132580174'>
+                    <name>I click "Register"</name>
+                    <title>I click "Register"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132580174' status='passed' stop='1587132580505'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132580505' status='passed' stop='1587132580625'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132580625' status='passed' stop='1587132581015'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132581015' status='passed' stop='1587132581390'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132581391' status='passed' stop='1587132581907'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dri"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dri"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132581907' status='passed' stop='1587132582124'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132582124' status='passed' stop='1587132582876'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132582877' status='passed' stop='1587132584055'>
+                    <name>I append field "State", "South Carolina"</name>
+                    <title>I append field "State", "South Carolina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132584055' status='passed' stop='1587132584613'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132584613' status='passed' stop='1587132584839'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132584839' status='passed' stop='1587132585143'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132585143' status='passed' stop='1587132585249'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132585250' status='passed' stop='1587132586032'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132586032' status='passed' stop='1587132586405'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132586405' status='passed' stop='1587132587087'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132587087' status='passed' stop='1587132587331'>
+                    <name>I append field "City *", "Easle"</name>
+                    <title>I append field "City *", "Easle"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132587331' status='passed' stop='1587132588076'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132588076' status='passed' stop='1587132589114'>
+                    <name>I append field "State", "South Carolina"</name>
+                    <title>I append field "State", "South Carolina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132589114' status='passed' stop='1587132589648'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132589648' status='passed' stop='1587132590295'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132590295' status='passed' stop='1587132590599'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132590599' status='passed' stop='1587132590706'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132590706' status='passed' stop='1587132591082'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132591082' status='passed' stop='1587132591438'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132591438' status='passed' stop='1587132591942'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132591942' status='passed' stop='1587132592137'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132592137' status='passed' stop='1587132592379'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132592379' status='passed' stop='1587132592875'>
+                    <name>I append field "State", "South Carolina"</name>
+                    <title>I append field "State", "South Carolina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132592875' status='passed' stop='1587132593400'>
+                    <name>I append field "Zip Code *", "fsdf"</name>
+                    <title>I append field "Zip Code *", "fsdf"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132593400' status='passed' stop='1587132593602'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132593602' status='passed' stop='1587132593920'>
+                    <name>I see "*Required. Zip Code Not Valid."</name>
+                    <title>I see "*Required. Zip Code Not Valid."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132593920' status='passed' stop='1587132594245'>
+                    <name>I see "That address does not exist!"</name>
+                    <title>I see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594245' status='passed' stop='1587132594336'>
+                    <name>I clear field "Home Address"</name>
+                    <title>I clear field "Home Address"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594336' status='passed' stop='1587132594453'>
+                    <name>I clear field "City *"</name>
+                    <title>I clear field "City *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594453' status='passed' stop='1587132594554'>
+                    <name>I clear field "Zip Code *"</name>
+                    <title>I clear field "Zip Code *"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594554' status='passed' stop='1587132594826'>
+                    <name>I append field "Home Address", "509 Shadow Oaks Dr"</name>
+                    <title>I append field "Home Address", "509 Shadow Oaks Dr"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594826' status='passed' stop='1587132594988'>
+                    <name>I append field "City *", "Easley"</name>
+                    <title>I append field "City *", "Easley"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132594988' status='passed' stop='1587132595224'>
+                    <name>I click "State"</name>
+                    <title>I click "State"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132595225' status='passed' stop='1587132595667'>
+                    <name>I append field "State", "South Carolina"</name>
+                    <title>I append field "State", "South Carolina"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132595667' status='passed' stop='1587132596200'>
+                    <name>I append field "Zip Code *", "29642"</name>
+                    <title>I append field "Zip Code *", "29642"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132596200' status='passed' stop='1587132596375'>
+                    <name>I append field "Last Name *", "Mitchell"</name>
+                    <title>I append field "Last Name *", "Mitchell"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587132596375' status='failed' stop='1587132602740'>
+                    <name>I dont see "That address does not exist!"</name>
+                    <title>I dont see "That address does not exist!"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='8b8c1900-daae-4e01-953c-7d602703f4ec-attachment.png' type='image/png' size='467319'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

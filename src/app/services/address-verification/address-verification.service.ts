@@ -37,7 +37,7 @@ export class AddressVerificationService {
       // this is the short form of street suffixes.
       const shortNames = ['pkwy', 'st', 'st', 'cir', 'ct', 'ck', 'grv', 'ave', 'dr', 'ln', 'rd', 'pl'];
       // this is a map/dictionary of the street suffixes long form to short form.
-      // this is currently not being used.
+      // this is currently not being used but was left in case method for changing forms was need to be changed..
       const longToShort = {'parkway': 'pkwy',
       'saint': 'st',
       'street': 'st',
@@ -80,9 +80,10 @@ export class AddressVerificationService {
       this.formatedInput = (this.parseRoads(street)) + ', ' + (this.parseRoads(city)) + ', ' + state + ' ' + zip + ', USA';
       this.formatedInput = this.formatedInput.toLocaleLowerCase();
 
-      console.log(this.formatedInput);
+      // console.log(this.formatedInput);
 
-      // this will send the request to the google maps geocoding api with the parameters
+      // this will send the request to the google maps geocoding api with the parameters.
+      // note: this is a get method because the google map apis only accept get requests, so HTTPS is strongly suggested .
       return await this.http.get(this.url).toPromise()
                           .then(
                             (response2) => {
@@ -94,7 +95,7 @@ export class AddressVerificationService {
 
                                 // this will show the compairason of the inputted address versus the
                                 // returned address from google api in the console.
-                                console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
+                                // console.log('respsonse: ' + formatedResponse + '\n' + 'inputed:   ' + this.formatedInput);
 
                                 // this is the compairison to see if the address that was inputted has an exact
                                 // response from the google maps geocoding api.
@@ -110,7 +111,7 @@ export class AddressVerificationService {
                                 // this will return the boolean on whether it is a valid address or not.
                                 return this.valid;
                             } catch (err) {
-                              console.log(`error, address can't even get approximated`);
+                              // console.log(`error, address can't even get approximated`);
                               return false;
                             }
                           }

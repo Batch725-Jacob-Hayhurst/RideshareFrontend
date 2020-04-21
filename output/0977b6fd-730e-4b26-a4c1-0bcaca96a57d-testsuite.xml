@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1587062540003' stop='1587062552222'>
+    <name>sign-up:</name>
+    <title>sign-up:</title>
+    <test-cases>
+        <test-case start='1587062540005' status='failed' stop='1587062551880'>
+            <name>testing valid last name</name>
+            <title>testing valid last name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1587062540788' status='passed' stop='1587062544478'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062544478' status='passed' stop='1587062544708'>
+                    <name>I click "#signupid"</name>
+                    <title>I click "#signupid"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062544708' status='passed' stop='1587062545055'>
+                    <name>I append field "First Name *", "Timoth"</name>
+                    <title>I append field "First Name *", "Timoth"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062545055' status='passed' stop='1587062545211'>
+                    <name>I append field "Last Name *", "M"</name>
+                    <title>I append field "Last Name *", "M"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062545211' status='passed' stop='1587062545298'>
+                    <name>I append field "Last Name *", ""</name>
+                    <title>I append field "Last Name *", ""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062545302' status='passed' stop='1587062545449'>
+                    <name>I click "#logo"</name>
+                    <title>I click "#logo"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1587062545449' status='failed' stop='1587062551879'>
+                    <name>I see "*Required Field"</name>
+                    <title>I see "*Required Field"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='566f5d94-2cff-432f-96d9-d28122f6e559-attachment.png' type='image/png' size='280811'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

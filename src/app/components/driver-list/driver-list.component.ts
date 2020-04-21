@@ -52,6 +52,7 @@ export class DriverListComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private http: HttpClient, private carService: CarService, overlayContainer: OverlayContainer) {
+    this.getGoogleApi();
     // Object to create Filter for distance dropdown
     this.filterSelectObj = [
       {
@@ -75,7 +76,6 @@ export class DriverListComponent implements OnInit {
     this.drivers = [];
     this.location = sessionStorage.getItem("batchLoc");
     // console.log(this.location);
-
     this.carService.getCarsForLocation(this.location).subscribe(
       res => {
         res.forEach(element => {
@@ -94,14 +94,16 @@ export class DriverListComponent implements OnInit {
             'driver': element.user.driver,
             'acceptingRides': element.user.acceptingRides,
           });
-          console.log(element);
+          // console.log(element);
         });
 
+        
         this.mapProperties = {
           center: new google.maps.LatLng(Number(sessionStorage.getItem('lat')), Number(sessionStorage.getItem('lng'))),
           zoom: 15,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+        
         this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapProperties);
         // get all routes
         this.displayDriversList(this.location, this.drivers);
@@ -112,9 +114,11 @@ export class DriverListComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     // allows the sorter to work with the dataSource that is presented on the table
     this.dataSource.sort = this.sort;
-    this.getGoogleApi();
+    
 
   }
+
+  
 
   getGoogleApi() {
     this.http.get(`${environment.loginUri}getGoogleApi`)

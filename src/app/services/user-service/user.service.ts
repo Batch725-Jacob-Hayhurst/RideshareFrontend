@@ -235,6 +235,7 @@ export class UserService {
 		return this.http.get(this.url + 'driver/' + location)
 	}
 
+	// this funciton is to check the back-end for availability of requested username.
 	checkUserNameAvailable(username: string): Observable<boolean> {
 		const httpOptions = {
 			headers: new HttpHeaders({
