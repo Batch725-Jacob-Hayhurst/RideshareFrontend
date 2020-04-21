@@ -127,38 +127,38 @@ export class LoginreduxComponent implements OnInit {
           this.user.wState = 'WV';
           this.user.wAddress = '496 High st.';
           this.user.wZip = 26505;
-          this.user.batch = new Batch(1, 'Morgantown');
+          this.user.batch = new Batch(1, 'Morgantown, WV');
           break;
       case 'Reston':
           this.user.wState = 'VA';
           this.user.wAddress = '11730 Plaza America Dr 2nd Floor';
           this.user.wZip = 20190;
-          this.user.batch = new Batch(2, 'Reston');
+          this.user.batch = new Batch(2, 'Reston, VA');
           break;
       case 'Dallas':
           this.user.wState = 'TX';
           this.user.wAddress = '701 S. Nedderman Drive';
           this.user.wCity = 'Arlington';
           this.user.wZip = 76019;
-          this.user.batch = new Batch(3, 'Dallas');
+          this.user.batch = new Batch(3, 'Dallas, TX');
           break;
       case 'Tampa':
           this.user.wState = 'FL';
           this.user.wAddress = '4202 E. Fowler Avenue';
           this.user.wZip = 33620;
-          this.user.batch = new Batch(4, 'Tampa');
+          this.user.batch = new Batch(4, 'Tampa, FL');
           break;
       case 'New York City':
           this.user.wState = 'NY';
           this.user.wAddress = '65-30 Kissena Blvd. | Queens';
           this.user.wZip = 11367;
-          this.user.batch = new Batch(5, 'New York City');
+          this.user.batch = new Batch(5, 'New York City, NY');
           break;
       case 'Orlando':
           this.user.wState = 'FL';
           this.user.wAddress = '6200 Metrowest Blvd Suite 208';
           this.user.wZip = 32835;
-          this.user.batch = new Batch(6, 'Orlando');
+          this.user.batch = new Batch(6, 'Orlando, FL');
           break;
     }
     // these three fields cannot be null/undifined when being sent to the back end.
