@@ -127,38 +127,38 @@ export class LoginreduxComponent implements OnInit {
           this.user.wState = 'WV';
           this.user.wAddress = '496 High st.';
           this.user.wZip = 26505;
-          this.user.batch = new Batch(1, 'Morgantown, WV');
+          this.user.batch = new Batch(1, '496 High st. Morgantown, WV 26505');
           break;
       case 'Reston':
           this.user.wState = 'VA';
           this.user.wAddress = '11730 Plaza America Dr 2nd Floor';
           this.user.wZip = 20190;
-          this.user.batch = new Batch(2, 'Reston, VA');
+          this.user.batch = new Batch(2, '11730 Plaza America Dr Reston, VA 20190');
           break;
       case 'Dallas':
           this.user.wState = 'TX';
           this.user.wAddress = '701 S. Nedderman Drive';
           this.user.wCity = 'Arlington';
           this.user.wZip = 76019;
-          this.user.batch = new Batch(3, 'Dallas, TX');
+          this.user.batch = new Batch(3, '701 S. Nedderman Drive Arlington, TX 76019');
           break;
       case 'Tampa':
           this.user.wState = 'FL';
           this.user.wAddress = '4202 E. Fowler Avenue';
           this.user.wZip = 33620;
-          this.user.batch = new Batch(4, 'Tampa, FL');
+          this.user.batch = new Batch(4, '4202 E. Fowler Avenue Tampa, FL 33620');
           break;
       case 'New York City':
           this.user.wState = 'NY';
           this.user.wAddress = '65-30 Kissena Blvd. | Queens';
           this.user.wZip = 11367;
-          this.user.batch = new Batch(5, 'New York City, NY');
+          this.user.batch = new Batch(5, '65-30 Kissena Blvd. | Queens New York City, NY 11367');
           break;
       case 'Orlando':
           this.user.wState = 'FL';
           this.user.wAddress = '6200 Metrowest Blvd Suite 208';
           this.user.wZip = 32835;
-          this.user.batch = new Batch(6, 'Orlando, FL');
+          this.user.batch = new Batch(6, '6200 Metrowest Blvd Suite 208 Orlando, FL 32835');
           break;
     }
     // these three fields cannot be null/undifined when being sent to the back end.
