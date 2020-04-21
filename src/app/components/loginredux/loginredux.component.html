@@ -202,7 +202,9 @@
                             
                                 
                                 <div class="row">
+                                    <div *ngIf="userAvailable === false && userName.dirty"  id="userError">Username unavailable!</div>
                                     <mat-form-field>
+                                        <div></div>
                                         <mat-label>Username</mat-label>
                                         <input matInput
                                                #userName="ngModel"
@@ -212,7 +214,7 @@
                                                minlength="3"
                                                maxlength="12"
                                                required
-                                               [errorStateMatcher]="errorMatcher"
+                                               
                                                (blur)="checkUserName()"
                                                id="username">
                                                <mat-error *ngIf="userName.dirty && userName.invalid">*Required length of at least 3</mat-error>
@@ -255,7 +257,8 @@
                                 <div class="row">
                                     <mat-form-field class="workInput">
                                         <mat-label>Work Location</mat-label>
-                                        <mat-select [(ngModel)]="user.wCity" name="wCity">
+                                        <mat-select [(ngModel)]="user.wCity" name="wCity" required>
+
                                             <mat-option *ngFor="let city of workCities" id="city" [value]="city">{{city}}
                                             </mat-option>
                                         </mat-select>
@@ -275,7 +278,7 @@
                         </mat-grid-tile>
                     </mat-grid-list>
                     <div>
-                        <mat-error *ngIf='addressValid === false' style="font-size: small; color: red; position: relative; bottom:0em">That address does not exist!</mat-error>
+                        <mat-error *ngIf='addressValid === false' id="addressError">That address does not exist!</mat-error>
                     </div>
 
 

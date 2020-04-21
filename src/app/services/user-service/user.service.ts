@@ -58,10 +58,10 @@ export class UserService {
 	 * A GET method for one user
 	 * @param idParam 
 	 */
-	getUserById(idParam: number){
-		
-		// console.log(this.url)
-		return this.http.get<User>(this.url+idParam).toPromise();
+	getUserById(idParam: number) {
+
+		console.log(this.url)
+		return this.http.get<User>(this.url + idParam).toPromise();
 
 
 	}
@@ -85,7 +85,7 @@ export class UserService {
 		user.active = true;
 		user.driver = false;
 		user.acceptingRides = false;
-		// console.log(user);
+		console.log(user);
 
 		this.http.post(this.url, user, { observe: 'response' }).subscribe(
 			(response) => {
@@ -107,7 +107,7 @@ export class UserService {
 
 	// add user method
 	addUser(user: User): Observable<User> {
-		return this.http.post<User>(this.url, user, {headers: this.headers});
+		return this.http.post<User>(this.url, user, { headers: this.headers });
 	}
 
 	/**
@@ -235,6 +235,7 @@ export class UserService {
 		return this.http.get(this.url + 'driver/' + location)
 	}
 
+	// this funciton is to check the back-end for availability of requested username.
 	checkUserNameAvailable(username: string): Observable<boolean> {
 		const httpOptions = {
 			headers: new HttpHeaders({
